@@ -1,0 +1,10 @@
+id;name;link;diagram
+1;cqrs-microservice-sampler;https://github.com/benwilcock/cqrs-microservice-sampler;1-cqrs-microservice-sampler.png
+2;e-commerce-microservices-sample;https://github.com/venkataravuri/e-commerce-microservices-sample;2-e-commerce-microservices-sample.png
+3;3-enterprise-planer;https://github.com/gfawcett22/EnterprisePlanner;3-enterprise-planer.png
+4;e-shop-on-containers.png;https://github.com/dotnet-architecture/eShopOnContainers/tree/dev;4-e-shop-on-containers.png
+5;lakeside-mutual;https://github.com/Microservice-API-Patterns/LakesideMutual/blob/master/resources/overview-diagram.png;5-lakeside-mutual.png
+6;spinnaker;https://github.com/spinnaker/spinnaker/tree/8bd82037b5c2181ac9f39f9cf1c2af826332a094?tab=readme-ov-file;6-spinnaker.png
+7;spring-petclinic-microservices;https://github.com/spring-petclinic/spring-petclinic-microservices;7-spring-petclinic-microservices.jpg
+8;spring-cloud-netflix-example;https://github.com/yidongnan/spring-cloud-netflix-example;8-spring-cloud-netflix-example.png
+9;vehicle-tracking-microservices;https://github.com/mohamed-abdo/vehicle-tracking-microservices;9-vehicle-tracking-microservices.jpg
