@@ -8,6 +8,8 @@ Previous study: [From Detection to Refactoring of Microservice Bad Smells: A Sys
 - GPT-5.2-Codex
 - QWEN-3.5-Coder
 
+---
+
 ### Detecting microservice bad smells
 
 **Selected smells:**
@@ -19,9 +21,13 @@ Previous study: [From Detection to Refactoring of Microservice Bad Smells: A Sys
 
 Prompt used: [detection.txt](prompts/detection.txt)
 
+---
+
 ### Refactoring detected smells
 
 Prompt used: [refactoring.txt](prompts/refactoring.txt)
+
+---
 
 **Author:** Mateus Dutra
 
