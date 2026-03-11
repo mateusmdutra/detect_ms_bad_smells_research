@@ -2,6 +2,12 @@ from pydantic import BaseModel
 from enum import Enum
 from typing import List, Optional, Dict
 
+class ModelEnum(Enum):
+    OPENAI = 'gpt-5.2-codex'
+    CLAUDE = 'claude-sonnet-4.5'
+    DEEPSEEK = 'deepseek-coder-v2'
+    QWEN = 'qwen-3.5-coder'
+
 class ResponseConfidenceEnum(Enum):
     HIGH = "high"
     MEDIUM = "medium"
@@ -22,4 +28,5 @@ class DetectionResult(BaseModel):
     cycle: Optional[List[str]] = None
 
 class SmellsDetectionResponse(BaseModel):
+    model: ModelEnum
     smells: Dict[SmellType, DetectionResult]
