@@ -114,5 +114,5 @@ results/<model-name>_<YYYYMMDD_HHMMSS>.json
 
 ---
 
-**Author:** Mateus Dutra
+**Author:** Mateus Dutra <br/>
 **Affiliation:** Federal University of Minas Gerais
