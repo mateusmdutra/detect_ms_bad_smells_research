@@ -3,10 +3,10 @@
 Previous study: [From Detection to Refactoring of Microservice Bad Smells: A Systematic Literature Review](https://journals-sol.sbc.org.br/index.php/jserd/article/view/5224)
 
 ### Models to use
-- Claude Sonnet 4.5
+- Claude Opus 4.6
 - Deepseek Coder V2
-- GPT-5.4-Codex
-- QWEN-3.5-Coder
+- GPT-5.4
+- QWEN-Coder 3 plus
 
 ---
 

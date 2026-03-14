@@ -3,10 +3,10 @@ from enum import Enum
 from typing import List, Optional
 
 class ModelEnum(Enum):
-    OPENAI = 'gpt-5.4-codex'
+    OPENAI = 'gpt-5.4'
     CLAUDE = 'claude-opus-4-6'
     DEEPSEEK = 'deepseek-coder-v2'
-    QWEN = 'qwen-3.5-coder'
+    QWEN = 'qwen3-coder-plus'
 
 class LikertScaleOption(Enum):
     NOT_PRESENT = '1'
