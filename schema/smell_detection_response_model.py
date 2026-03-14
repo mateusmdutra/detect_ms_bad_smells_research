@@ -1,17 +1,18 @@
 from pydantic import BaseModel
 from enum import Enum
-from typing import List, Optional, Dict
+from typing import List, Optional
 
 class ModelEnum(Enum):
-    OPENAI = 'gpt-5.2-codex'
-    CLAUDE = 'claude-sonnet-4.5'
+    OPENAI = 'gpt-5.4-codex'
+    CLAUDE = 'claude-opus-4-6'
     DEEPSEEK = 'deepseek-coder-v2'
     QWEN = 'qwen-3.5-coder'
 
-class ResponseConfidenceEnum(Enum):
-    HIGH = "high"
-    MEDIUM = "medium"
-    LOW = "low"
+class LikertScaleOption(Enum):
+    NOT_PRESENT = '1'
+    UNLIKELY_PRESENT = '2'
+    LIKELY_PRESENT = '3'
+    CLEARLY_PRESENT = '4'
 
 class SmellType(Enum):
     NO_API_GATEWAY = "no_api_gateway"
@@ -21,12 +22,9 @@ class SmellType(Enum):
     CYCLIC_DEPENDENCY = "cyclic_dependency"
 
 class DetectionResult(BaseModel):
-    detected: bool
-    confidence: ResponseConfidenceEnum
-    justification: str
-    affected_services: Optional[List[str]] = None
-    cycle: Optional[List[str]] = None
-
-class SmellsDetectionResponse(BaseModel):
+    smell: str
     model: ModelEnum
-    smells: Dict[SmellType, DetectionResult]
+    diagram: str
+    confidence: LikertScaleOption
+    explanation: str
+    involved_services: Optional[List[str]] = None

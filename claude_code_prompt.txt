@@ -1,0 +1,31 @@
+Agora preciso criar o código para rodar o meu experimento.  Vou testar 4 modelos diferentes. 
+
+Para isso criei a seguinte estrutura do projeto: 
+
+/schema
+   aqui fica a estrutura do retorno dos modelos
+
+/utils
+   funções úteis para a execução dos scripts
+
+/prompts
+    pasta com os .txt de cada prompt, para cada microservice bad smell
+
+/models
+   aqui ficam os modelos a serem testados. Cada arquivo corresponde a um modelo. Criei uma class "Base Model" para conter as partes comuns na execução, como: carregamento dos prompts, exportar e salvar os resultados. 
+
+/diagrams
+  Aqui fica o dataset do experimento, no caso, os .png dos diagramas de arquitetura a serem analisados. 
+
+/runner
+  Classe de entrypoint do experimento, onde será executado o programa. 
+
+----
+
+O experimento vai ser da seguinte forma: cada vez que eu rodar, vou selecionar (via command-line) um modelo a ser testado.
+Em seguida, o modelo deve ler os 9 diagramas da pasta /diagrams; rodar (via API), anexando um diagrama por vez,
+os 5 prompts na pasta prompts. Dessa forma, pra cada modelo, vamos tentar detectar 5 smells para 9 diagramas diferente, totalizando 45 execuções por modelo.
+
+O output de cada execução deve ficar em um arquivo json, seguindo a estrutura definida nos schemas. De forma que facilite a análise de dados posteriormente.
+
+Crie o código necessário para rodar o experimento.
