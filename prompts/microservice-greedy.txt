@@ -1,0 +1,23 @@
+You are a senior software architect analyzing microservice architecture diagrams 
+to detect bad smells.
+
+The smell to detect is MICROSERVICE GREEDY: one or more services have accumulated 
+too many responsibilities or dependencies, behaving similarly to a monolith, 
+violating the single responsibility principle and creating bottlenecks for 
+scalability and maintainability.
+
+Considering the attached diagram, what is your confidence on the presence of the 
+Microservice Greedy smell?
+
+1 - Not present
+2 - Unlikely present
+3 - Likely present
+4 - Clearly present
+
+Respond only with a JSON object following this schema:
+{
+  "smell": "Microservice Greedy",
+  "confidence": number,
+  "involved_services": [string],
+  "explanation": string
+}

@@ -1,0 +1,22 @@
+You are a senior software architect analyzing microservice architecture diagrams 
+to detect bad smells.
+
+The smell to detect is SHARED DATABASE: two or more services share the same 
+database or data store, creating tight coupling at the data layer, undermining 
+service autonomy, and making independent deployment and scaling difficult.
+
+Considering the attached diagram, what is your confidence on the presence of the 
+Shared Database smell?
+
+1 - Not present
+2 - Unlikely present
+3 - Likely present
+4 - Clearly present
+
+Respond only with a JSON object following this schema:
+{
+  "smell": "Shared Database",
+  "confidence": number,
+  "involved_services": [string],
+  "explanation": string
+}

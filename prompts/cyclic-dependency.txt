@@ -1,0 +1,22 @@
+You are a senior software architect analyzing microservice architecture diagrams 
+to detect bad smells.
+
+The smell to detect is CYCLIC DEPENDENCY: two or more services form a circular 
+dependency chain (e.g., A → B → C → A), making independent deployment impossible 
+for the involved services and complicating fault isolation.
+
+Considering the attached diagram, what is your confidence on the presence of the 
+Cyclic Dependency smell?
+
+1 - Not present
+2 - Unlikely present
+3 - Likely present
+4 - Clearly present
+
+Respond only with a JSON object following this schema:
+{
+  "smell": "Cyclic Dependency",
+  "confidence": number,
+  "involved_services": [string],
+  "explanation": string
+}

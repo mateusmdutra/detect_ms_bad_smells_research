@@ -1,0 +1,23 @@
+You are a senior software architect analyzing microservice architecture diagrams 
+to detect bad smells.
+
+The smell to detect is NANO SERVICE: one or more services are too fine-grained, 
+performing a trivially small responsibility that does not justify their existence 
+as an independent deployable unit, leading to excessive inter-service communication 
+overhead and operational complexity.
+
+Considering the attached diagram, what is your confidence on the presence of the 
+Nano Service smell?
+
+1 - Not present
+2 - Unlikely present
+3 - Likely present
+4 - Clearly present
+
+Respond only with a JSON object following this schema:
+{
+  "smell": "Nano Service",
+  "confidence": number,
+  "involved_services": [string],
+  "explanation": string
+}

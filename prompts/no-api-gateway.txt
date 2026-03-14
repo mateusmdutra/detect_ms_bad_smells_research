@@ -1,0 +1,23 @@
+You are a senior software architect analyzing microservice architecture diagrams 
+to detect bad smells.
+
+The smell to detect is NO API GATEWAY: external clients communicate directly 
+with internal services without a single, unified entry point, exposing internal 
+topology and complicating cross-cutting concerns such as authentication, rate 
+limiting, and routing.
+
+Considering the attached diagram, what is your confidence on the presence of the 
+No API Gateway smell?
+
+1 - Not present
+2 - Unlikely present
+3 - Likely present
+4 - Clearly present
+
+Respond only with a JSON object following this schema:
+{
+  "smell": "No API Gateway",
+  "confidence": number,
+  "involved_services": [string],
+  "explanation": string
+}
