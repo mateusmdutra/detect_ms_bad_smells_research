@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "claude-sonnet-4-6",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "1",
+  "explanation": "The diagram does not depict any database or data store components. The architecture shows Zuul as an API gateway, Service-A and Service-B clusters, a Config Center, Eureka for service discovery, Spring Boot Admin, Hystrix Dashboard, RabbitMQ, and Zipkin. None of these components represent a shared database, and no data persistence layer is illustrated. Therefore, the Shared Database smell cannot be confirmed or even inferred from this diagram.",
+  "involved_services": []
+}

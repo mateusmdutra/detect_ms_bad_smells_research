@@ -39,32 +39,32 @@ class LLMModel(ABC):
 
         RESULTS_DIR.mkdir(exist_ok=True)
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        output_path = RESULTS_DIR / f"{self.name}_{timestamp}.json"
 
         results: List[DetectionResult] = []
         total = len(diagrams) * len(prompts)
         count = 0
 
         for diagram_path in diagrams:
+            diagram_key = Path(diagram_path).stem
             for smell_key, prompt_text in prompts.items():
+                output_path = RESULTS_DIR / self.name / diagram_key / smell_key / f"run_{timestamp}.json"
                 count += 1
                 print(f"[{count}/{total}] {diagram_path.name} | {smell_key}")
                 try:
                     result = self.analyze(diagram_path, prompt_text, smell_key)
                     results.append(result)
                     print(f"  -> confidence: {result.confidence.name}")
+                    self._save(result, output_path)
                 except Exception as e:
                     print(f"  ERROR: {e}")
 
-                self._save(results, output_path)
-
-        print(f"\nDone. {len(results)}/{total} results saved to {output_path}")
+        print(f"\nDone. {len(results)}/{total} results saved")
         return results
 
-    def _save(self, results: List[DetectionResult], output_path: Path) -> None:
-        data = [r.model_dump(mode="json") for r in results]
+    def _save(self, result: DetectionResult, output_path: Path) -> None:
+        output_path.parent.mkdir(parents=True, exist_ok=True)
         with open(output_path, "w") as f:
-            json.dump(data, f, indent=2, default=str)
+            json.dump(result.model_dump(mode="json"), f, indent=2, default=str)
 
     @abstractmethod
     def analyze(self, diagram_path: Path, prompt_text: str, smell_key: str) -> DetectionResult:

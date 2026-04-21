@@ -1,0 +1,10 @@
+{
+  "smell": "no_api_gateway",
+  "model": "claude-sonnet-4-6",
+  "diagram": "7-spring-petclinic-microservices.jpg",
+  "confidence": "1",
+  "explanation": "The architecture clearly includes a dedicated 'UI + API Gateway' component running on port 8080 that serves as the single, unified entry point for all external client interactions. Both static resources and REST requests from the browser client flow through this gateway before being routed via load-balanced HTTP requests to the internal microservices (customers-service, genai-service, vets-service, pets-service). The internal services run on random ports and are not directly exposed to external clients. This pattern correctly addresses cross-cutting concerns and hides the internal topology, meaning the No API Gateway smell is not present.",
+  "involved_services": [
+    "UI + API Gateway <port 8080>"
+  ]
+}

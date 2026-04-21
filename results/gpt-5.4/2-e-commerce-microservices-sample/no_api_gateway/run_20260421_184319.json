@@ -1,0 +1,14 @@
+{
+  "smell": "no_api_gateway",
+  "model": "gpt-5.4",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "4",
+  "explanation": "The diagram shows the e-commerce Store UI communicating directly with multiple internal microservices (Product Catalog, User, Shopping Cart, and Search). There is no single unified entry point, API gateway, or edge service depicted between the client-facing UI and these backend services. This exposes internal service topology and suggests cross-cutting concerns would need to be handled separately across services, which is a clear indication of the No API Gateway smell.",
+  "involved_services": [
+    "e-commerce Store UI",
+    "Product Catalog Microservice",
+    "User Microservice",
+    "Shopping Cart Microservice",
+    "Search Microservice"
+  ]
+}

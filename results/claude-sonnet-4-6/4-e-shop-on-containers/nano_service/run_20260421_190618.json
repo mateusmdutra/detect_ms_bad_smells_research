@@ -1,0 +1,10 @@
+{
+  "smell": "nano_service",
+  "model": "claude-sonnet-4-6",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "2",
+  "explanation": "The diagram shows a generally well-decomposed microservice architecture where each service (Identity, Catalog, Ordering, Basket) has clear, substantial responsibilities backed by their own databases. The only candidate for a potential Nano Service is 'Ordering.BackgroundTasks', which appears as a separate deployable unit within the Ordering microservice boundary. Background task processing (e.g., polling, cleanup, scheduled jobs) could arguably be co-located within the Ordering.API service rather than deployed independently, as it may not justify the operational overhead of a separate service. However, since it is depicted within the Ordering microservice dashed boundary, it may simply represent an internal separation of concerns rather than a truly independent microservice. The rest of the architecture shows appropriately sized services with distinct domains, own data stores, and event-driven communication, making a Nano Service smell unlikely at the overall architectural level.",
+  "involved_services": [
+    "Ordering.BackgroundTasks"
+  ]
+}

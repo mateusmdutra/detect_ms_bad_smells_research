@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "qwen-vl-max",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "2",
+  "explanation": "The API Gateway appears to act as a central hub for all microservices, handling routing, protocol conversion (JSON to protobuf), and coordination between services. While this is a common pattern, the gateway's role in managing communication and format translation across multiple services suggests it may be accumulating responsibilities beyond simple request routing. However, it does not exhibit clear signs of domain logic or business functionality, which are typical indicators of a monolithic behavior. Therefore, the smell is unlikely present but warrants monitoring.",
+  "involved_services": [
+    "API Gateway"
+  ]
+}

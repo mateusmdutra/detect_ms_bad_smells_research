@@ -1,0 +1,19 @@
+{
+  "smell": "shared_database",
+  "model": "gpt-5.4",
+  "diagram": "6-spinnaker.png",
+  "confidence": "2",
+  "explanation": "The diagram shows many service-to-service interactions, but it does not explicitly depict any database or data store nodes being shared by multiple services. Fiat and Front50 appear as heavily connected services, yet they are represented as services rather than databases. Since the smell requires evidence of multiple services using the same database/data store, the diagram provides insufficient direct support for a shared database.",
+  "involved_services": [
+    "Gate",
+    "Keel",
+    "Igor",
+    "Echo",
+    "Orca",
+    "Clouddriver",
+    "Front50",
+    "Fiat",
+    "Rosco",
+    "Kayenta"
+  ]
+}

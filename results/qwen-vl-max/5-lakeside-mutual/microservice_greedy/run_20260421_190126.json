@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "qwen-vl-max",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "4",
+  "explanation": "The 'Customer Core' service is heavily depended upon by multiple backend services (Customer Management Backend, Customer Self-Service Backend, Policy Management Backend), indicating it has accumulated a broad range of responsibilities related to customer data and business logic. Similarly, 'Spring Boot Admin' is connected to all backend services, suggesting it manages monitoring and administrative functions across the entire system, which is a sign of centralized control and excessive responsibility. Both services exhibit characteristics of monolithic behavior, violating the single responsibility principle and creating potential bottlenecks in scalability and maintainability.",
+  "involved_services": [
+    "Customer Core",
+    "Spring Boot Admin"
+  ]
+}

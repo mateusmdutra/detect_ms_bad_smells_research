@@ -1,0 +1,8 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "qwen-vl-max",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "1",
+  "explanation": "The diagram shows a clear hierarchical structure where the API Gateway acts as a central point of communication between the front-end application and various microservices. All dependencies flow from the API Gateway to the individual microservices (Customers, Orders, Shipping, etc.) and to Authentication and Authorization services. There are no bidirectional or circular dependencies visible among the microservices. The Authentication and Authorization services appear to be called by the API Gateway but do not show any reverse dependency back to it or to other services in a way that would create a cycle. Therefore, there is no evidence of cyclic dependencies.",
+  "involved_services": []
+}

@@ -42,7 +42,13 @@ class ClaudeModel(LLMModel):
             ],
         )
 
-        raw = json.loads(response.content[0].text)
+        text = response.content[0].text
+        text = text.strip()
+        if text.startswith("```"):
+            text = text.split("```")[1]
+            if text.startswith("json"):
+                text = text[4:]
+        raw = json.loads(text.strip())
         return DetectionResult(
             smell=smell_key,
             model=ModelEnum.CLAUDE,

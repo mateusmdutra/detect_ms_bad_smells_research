@@ -1,0 +1,13 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.4",
+  "diagram": "6-spinnaker.png",
+  "confidence": "4",
+  "explanation": "The diagram shows strong concentration of responsibilities and dependencies around a few services, especially Gate. Gate is the main entry point for multiple clients and directly connects to many downstream services, making it a central hub and likely bottleneck. Orca also has numerous inbound and outbound dependencies, suggesting orchestration logic has accumulated broadly. Keel and Fiat additionally appear highly connected relative to other services. This level of coupling and dependency concentration indicates one or more services are behaving like mini-monoliths, which is a clear sign of the Microservice Greedy smell.",
+  "involved_services": [
+    "Gate",
+    "Orca",
+    "Keel",
+    "Fiat"
+  ]
+}

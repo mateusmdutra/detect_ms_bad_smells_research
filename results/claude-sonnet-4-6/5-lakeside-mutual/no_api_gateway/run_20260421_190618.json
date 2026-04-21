@@ -1,0 +1,17 @@
+{
+  "smell": "no_api_gateway",
+  "model": "claude-sonnet-4-6",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "4",
+  "explanation": "The diagram clearly shows multiple external clients (Customer Management Frontend, Customer Self-Service Frontend, Policy Management Frontend, Risk Management Client) communicating directly with their respective backend services via HTTP, HTTP+WebSocket, and gRPC, without any intermediary API Gateway. Each frontend has direct point-to-point connections to one or more backend services, exposing the internal topology. There is no single unified entry point to handle cross-cutting concerns such as authentication, rate limiting, SSL termination, or routing. This is a textbook example of the No API Gateway smell.",
+  "involved_services": [
+    "Customer Management Frontend",
+    "Customer Self-Service Frontend",
+    "Policy Management Frontend",
+    "Risk Management Client",
+    "Customer Management Backend",
+    "Customer Self-Service Backend",
+    "Policy Management Backend",
+    "Risk Management Server"
+  ]
+}

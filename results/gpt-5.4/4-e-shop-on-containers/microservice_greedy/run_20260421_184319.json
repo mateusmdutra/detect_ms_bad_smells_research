@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.4",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "2",
+  "explanation": "The architecture is largely decomposed into focused services (Identity, Catalog, Ordering, Basket) with separate data stores and an API gateway/BFF layer, which argues against a clearly greedy microservice. The Ordering microservice shows some internal breadth because it includes both Ordering.API and Ordering.BackgroundTasks and integrates with its own database and the event bus, but this still appears to be a cohesive bounded context rather than a monolithic accumulation of unrelated responsibilities. Overall, the diagram suggests reasonable separation of concerns, so the smell is unlikely present.",
+  "involved_services": [
+    "Ordering microservice"
+  ]
+}

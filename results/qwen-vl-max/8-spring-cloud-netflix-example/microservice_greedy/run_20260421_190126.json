@@ -1,0 +1,8 @@
+{
+  "smell": "microservice_greedy",
+  "model": "qwen-vl-max",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "1",
+  "explanation": "The diagram shows a well-structured microservices architecture with clearly separated services (Service-A and Service-B) in their own clusters, each with distinct responsibilities. There is no evidence of any single service accumulating excessive responsibilities or dependencies. The presence of dedicated components like Zuul (API gateway), Eureka (service discovery), Config Center, Rabbit MQ (message broker), and monitoring tools (Spring Boot Admin, Hystrix Dashboard, ZipKin) indicates proper separation of concerns. Therefore, the Microservice Greedy smell is not present.",
+  "involved_services": []
+}

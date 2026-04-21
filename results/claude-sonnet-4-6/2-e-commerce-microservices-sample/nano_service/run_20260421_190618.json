@@ -1,0 +1,10 @@
+{
+  "smell": "nano_service",
+  "model": "claude-sonnet-4-6",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "2",
+  "explanation": "The Search Microservice (Node, TypeScript, Express, ElasticSearch) is a potential candidate for a nano service concern, as search functionality could arguably be embedded within the Product Catalog Microservice rather than existing as a standalone deployable unit. However, separating search into its own service with a dedicated ElasticSearch backend is a recognized and common architectural pattern that provides independent scalability, specialized indexing logic, and decoupled evolution of search capabilities. The other services (Product Catalog, Shopping Cart, User) each carry sufficiently distinct and substantial domain responsibilities with different technology stacks justifying their independence. Overall, the architecture appears reasonably decomposed for a mid-sized e-commerce system, and no service is clearly trivially small, though the Search Microservice sits closest to the boundary of potentially insufficient responsibility to fully justify its operational overhead.",
+  "involved_services": [
+    "Search Microservice"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "smell": "nano_service",
+  "model": "gpt-5.4",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "2",
+  "explanation": "The diagram shows only two business services, Service-A and Service-B, each deployed as clustered instances behind Zuul and supported by common infrastructure components (Config Center, Eureka, RabbitMQ, Zipkin, Hystrix Dashboard, Spring Boot Admin). From the diagram alone, there is no clear evidence that either service has a trivially small responsibility or that the system is split into excessively fine-grained business capabilities. The presence of multiple infrastructure services does add operational complexity, but these are standard platform components rather than clear examples of nano business services.",
+  "involved_services": [
+    "Service-A",
+    "Service-B"
+  ]
+}

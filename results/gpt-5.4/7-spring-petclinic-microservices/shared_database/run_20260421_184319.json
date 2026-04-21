@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "gpt-5.4",
+  "diagram": "7-spring-petclinic-microservices.jpg",
+  "confidence": "1",
+  "explanation": "The diagram shows each business service with its own dedicated data store: customers-service has its own RDBMS, genai-service has its own vector store, vets-service has its own RDBMS, and pets-service has its own RDBMS. There are no depicted connections indicating that multiple services access the same database or datastore.",
+  "involved_services": []
+}

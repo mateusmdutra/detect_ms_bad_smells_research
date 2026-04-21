@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.4",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "2",
+  "explanation": "The diagram shows the API Gateway as a central entry point connected to all backend microservices and also handling protocol translation, which creates high fan-in/fan-out. However, this is a common gateway responsibility in microservice architectures and does not by itself indicate that a business microservice has accumulated too many domain responsibilities. The domain services (Customers, Orders, Shipping, Production, Quality, Administration) appear separated by concern, and Authentication/Authorization are also split out. So there is only weak evidence of a Microservice Greedy smell, mainly around possible over-centralization in the API Gateway rather than a clearly greedy microservice.",
+  "involved_services": [
+    "API Gateway"
+  ]
+}

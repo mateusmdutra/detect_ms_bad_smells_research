@@ -1,0 +1,19 @@
+{
+  "smell": "no_api_gateway",
+  "model": "qwen-vl-max",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "4",
+  "explanation": "The diagram shows multiple frontend applications (React and Vue.js) directly communicating with backend services using HTTP/HTTPS, without any intermediate API gateway. External clients such as the 'Risk Management Client' also connect directly to the 'Risk Management Server' via gRPC. There is no centralized entry point for handling cross-cutting concerns like authentication, rate limiting, or routing, which indicates the presence of the No API Gateway smell.",
+  "involved_services": [
+    "Customer Management Frontend",
+    "Customer Self-Service Frontend",
+    "Policy Management Frontend",
+    "Risk Management Client",
+    "Customer Management Backend",
+    "Customer Self-Service Backend",
+    "Policy Management Backend",
+    "Risk Management Server",
+    "Customer Core",
+    "Spring Boot Admin"
+  ]
+}

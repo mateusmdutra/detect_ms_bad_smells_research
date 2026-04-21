@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "claude-sonnet-4-6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "3",
+  "explanation": "The API Gateway accumulates multiple responsibilities beyond simple routing: it acts as the single access point for the front-end, handles JSON-to-Google-Protobuf conversion (and back), orchestrates authentication by redirecting unauthenticated users to the Identity Server, retrieves auth tokens, and coordinates authorization checks. It also fans out to six downstream microservices. This concentration of cross-cutting concerns (protocol translation, auth orchestration, routing) in a single component is a strong indicator of the Microservice Greedy smell, as it creates a potential bottleneck for scalability and maintainability and violates the single responsibility principle. Confidence is 'likely' rather than 'clearly' because the diagram does not reveal internal implementation details that would confirm the full extent of logic embedded in the gateway.",
+  "involved_services": [
+    "API Gateway"
+  ]
+}

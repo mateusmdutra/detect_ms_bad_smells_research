@@ -1,0 +1,18 @@
+{
+  "smell": "shared_database",
+  "model": "claude-sonnet-4-6",
+  "diagram": "6-spinnaker.png",
+  "confidence": "2",
+  "explanation": "The diagram shows only service-to-service communication links and does not explicitly depict any shared database or data store. In the Spinnaker architecture (which this clearly represents), some services like Front50 historically share a common persistent store (e.g., S3, GCS, or SQL), and Fiat relies on Front50's data. However, this coupling is not visually represented in the diagram \u2014 no database nodes are shown. The architectural pattern of Spinnaker does carry some risk of shared data stores (particularly around Front50 and Fiat), but based solely on what is depicted here, there is no direct evidence of a Shared Database smell. The confidence is low-to-unlikely based on diagram evidence alone, though domain knowledge of Spinnaker raises slight suspicion.",
+  "involved_services": [
+    "Front50",
+    "Fiat",
+    "Orca",
+    "Clouddriver",
+    "Rosco",
+    "Echo",
+    "Keel",
+    "Igor",
+    "Kayenta"
+  ]
+}

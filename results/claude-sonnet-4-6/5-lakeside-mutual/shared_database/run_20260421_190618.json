@@ -1,0 +1,14 @@
+{
+  "smell": "shared_database",
+  "model": "claude-sonnet-4-6",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "2",
+  "explanation": "The diagram does not explicitly show any database nodes or data store connections, so a Shared Database smell cannot be directly confirmed. However, the presence of a central 'Customer Core' Spring Boot service that is accessed via HTTP by multiple backend services (Customer Management Backend, Customer Self-Service Backend, and Policy Management Backend) raises suspicion. If 'Customer Core' acts as a shared data access layer or wraps a single shared database, this would constitute a logical shared database pattern. The architecture suggests Customer Core may centralize customer data access for multiple services, which could imply an underlying shared data store. Without explicit database symbols or documentation, confidence remains low but not negligible.",
+  "involved_services": [
+    "Customer Management Backend",
+    "Customer Self-Service Backend",
+    "Policy Management Backend",
+    "Customer Core",
+    "Spring Boot Admin"
+  ]
+}

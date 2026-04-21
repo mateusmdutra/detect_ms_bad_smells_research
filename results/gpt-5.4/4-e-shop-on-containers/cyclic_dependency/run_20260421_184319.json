@@ -1,0 +1,8 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "gpt-5.4",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "1",
+  "explanation": "The diagram shows client apps and API gateways/BFF calling backend microservices, and several services publishing/subscribing through an event bus. However, there is no visible circular chain of direct service-to-service dependencies such as A \u2192 B \u2192 C \u2192 A. The interactions appear hub-and-spoke via gateways and the event bus rather than cyclic between the microservices themselves.",
+  "involved_services": []
+}

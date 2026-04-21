@@ -1,0 +1,12 @@
+{
+  "smell": "nano_service",
+  "model": "gpt-5.4",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "3",
+  "explanation": "The diagram suggests some backend services may be too narrowly scoped relative to the overall system. In particular, Customer Core appears to act as a small shared backend dependency for multiple customer-related services, Spring Boot Admin is separated as its own deployable unit despite typically being an operational/support concern rather than a business capability, and Risk Management Server is isolated behind a single client with limited visible responsibilities. While the diagram alone does not prove these are trivial services, the decomposition indicates a risk of overly fine-grained services that increase communication paths and operational overhead without clear independent business value.",
+  "involved_services": [
+    "Customer Core",
+    "Spring Boot Admin",
+    "Risk Management Server"
+  ]
+}

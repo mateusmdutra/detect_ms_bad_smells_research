@@ -1,0 +1,12 @@
+{
+  "smell": "shared_database",
+  "model": "claude-sonnet-4-6",
+  "diagram": "7-spring-petclinic-microservices.jpg",
+  "confidence": "2",
+  "explanation": "The diagram shows three separate RDBMS icons, one each beneath customers-service, vets-service, and pets-service, and a Vector Store beneath genai-service. Visually, each service appears to have its own dedicated data store, which is the correct microservices pattern. However, the diagram does not provide details about the actual database instances or schemas (e.g., connection strings, database names). The three RDBMS icons look identical and could represent the same physical database instance with different schemas, or even the same schema, which is a common shortcut in real implementations. Without further detail, sharing is unlikely but cannot be fully ruled out based on the diagram alone.",
+  "involved_services": [
+    "customers-service",
+    "vets-service",
+    "pets-service"
+  ]
+}

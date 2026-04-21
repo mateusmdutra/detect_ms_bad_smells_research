@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "claude-sonnet-4-6",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "2",
+  "explanation": "The diagram shows a relatively standard Spring Cloud microservices architecture. Config Center acts as a centralized configuration provider for both Service A and Service B clusters, which is its intended single responsibility. Eureka serves as the service registry, also a well-defined role. However, Eureka appears to aggregate connections to Spring Boot Admin, Hystrix Dashboard, and interacts with the broader infrastructure, which could hint at growing coupling. The architecture does not clearly show any single microservice accumulating excessive business logic responsibilities. The clusters (Service A, Service B) each appear focused. The infrastructure services (Config Center, Eureka) handle cross-cutting concerns by design, not by smell. There is insufficient evidence from this diagram alone to confirm a Microservice Greedy smell, as the responsibilities shown align with standard Spring Cloud infrastructure patterns rather than a violation of single responsibility principle.",
+  "involved_services": [
+    "Config Center",
+    "Eureka"
+  ]
+}

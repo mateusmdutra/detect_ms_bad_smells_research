@@ -1,0 +1,13 @@
+{
+  "smell": "microservice_greedy",
+  "model": "claude-sonnet-4-6",
+  "diagram": "9-vehicle-tracking-microservices.jpg",
+  "confidence": "3",
+  "explanation": "Several components show signs of accumulated responsibilities. The API Gateway appears to serve as a central hub for all client-facing traffic (IoT devices, web/mobile apps for Ping, Tracking, and Vehicles), which risks turning it into a bottleneck and a greedy service. The Facade Service (Srv1..N) aggregates multiple backend services including Workflows, Reporting/Data/DSS, and Service N, suggesting it may be absorbing too many orchestration responsibilities. The Middleware messages broker sits centrally between nearly all internal services, making it a potential single point of coupling and responsibility overload. The Lambda Calc. Engine, positioned between internal services and Third Parties while also connecting to Adapters, may be accumulating cross-cutting computational and integration logic. The overall architecture shows a pattern where a few components act as central coordinators for many others, which is a hallmark of the Microservice Greedy smell, though the diagram's abstraction level prevents full certainty.",
+  "involved_services": [
+    "API Gateway",
+    "Facade Srv (Srv1, ..N)",
+    "Middleware messages broker",
+    "Lambda Calc. Engine"
+  ]
+}

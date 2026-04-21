@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "claude-sonnet-4-6",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "1",
+  "explanation": "Each microservice in the diagram has its own dedicated data store: the Product Catalog Microservice uses MongoDB, the User Microservice uses PostgreSQL, the Shopping Cart Microservice uses Redis, and the Search Microservice uses ElasticSearch. There is no evidence of any shared database between services. This follows the 'database per service' pattern correctly, ensuring data layer isolation and service autonomy.",
+  "involved_services": []
+}

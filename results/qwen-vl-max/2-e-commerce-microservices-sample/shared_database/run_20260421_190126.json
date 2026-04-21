@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "qwen-vl-max",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "1",
+  "explanation": "Each microservice in the diagram is shown to use a distinct data store: Product Catalog uses MongoDB, User Microservice uses PostgreSQL, Shopping Cart uses Redis, and Search Microservice uses Elasticsearch. There is no indication that any two or more services share the same database or data store. Therefore, the Shared Database smell is not present.",
+  "involved_services": []
+}

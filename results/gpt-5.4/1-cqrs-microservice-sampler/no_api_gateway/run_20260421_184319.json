@@ -1,0 +1,12 @@
+{
+  "smell": "no_api_gateway",
+  "model": "gpt-5.4",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "1",
+  "explanation": "The diagram explicitly includes a Gateway Microservice described as routing and load balancing traffic, which serves as a unified entry point for external access. This indicates the No API Gateway smell is not present.",
+  "involved_services": [
+    "Gateway Microservice",
+    "Query Microservice",
+    "Command Microservice"
+  ]
+}

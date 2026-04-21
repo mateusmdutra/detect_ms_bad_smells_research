@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "qwen-vl-max",
+  "diagram": "6-spinnaker.png",
+  "confidence": "4",
+  "explanation": "The Gate service acts as a central hub, receiving requests from multiple external clients (Deck, Custom Script/API Caller, Halyard Daemon) and forwarding them to nearly all other services in the system. It has direct dependencies on Keel, Orca, Kayenta, Rosco, Clouddriver, Front50, and Fiat, indicating it is handling routing, orchestration, and potentially business logic across the entire system. This high level of connectivity and responsibility violates the single responsibility principle and creates a bottleneck, characteristic of the Microservice Greedy smell.",
+  "involved_services": [
+    "Gate"
+  ]
+}

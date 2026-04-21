@@ -1,0 +1,11 @@
+{
+  "smell": "nano_service",
+  "model": "gpt-5.4",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "3",
+  "explanation": "The diagram suggests Authentication and Authorization are separated into standalone services with very narrow responsibilities: issuing/validating auth identity and checking permissions. These are cross-cutting concerns with limited business scope in this architecture, and the split may introduce extra network hops through the API Gateway for simple security checks. While the domain services (Customers, Orders, Shipping, Production, Quality, Administration) appear reasonably business-aligned, the dedicated Authentication and Authorization services look potentially too fine-grained, so Nano Service is likely present but not certain from the diagram alone.",
+  "involved_services": [
+    "Authentication",
+    "Authorization"
+  ]
+}

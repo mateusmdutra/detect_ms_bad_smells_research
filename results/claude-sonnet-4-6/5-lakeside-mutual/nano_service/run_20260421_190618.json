@@ -1,0 +1,10 @@
+{
+  "smell": "nano_service",
+  "model": "claude-sonnet-4-6",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "2",
+  "explanation": "Spring Boot Admin is a well-known monitoring and administration tool that aggregates actuator endpoints from multiple Spring Boot services. In this architecture, it receives HTTP connections from Customer Management Backend, Customer Self-Service Backend, and Policy Management Backend. While it has a narrow, focused responsibility (monitoring/administration), it is a standard infrastructure component rather than a business microservice, so its fine-grained scope is intentional and justified. There is no strong evidence of a true Nano Service smell \u2014 no business logic service appears to be split into trivially small units. The architecture shows a reasonable decomposition into Customer, Policy, and Risk domains. The concern is mild and primarily directed at whether Spring Boot Admin warrants independent deployment in this context, but its cross-cutting monitoring role generally justifies it.",
+  "involved_services": [
+    "Spring Boot Admin"
+  ]
+}

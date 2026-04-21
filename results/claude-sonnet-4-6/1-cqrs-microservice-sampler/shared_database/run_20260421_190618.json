@@ -1,0 +1,12 @@
+{
+  "smell": "shared_database",
+  "model": "claude-sonnet-4-6",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "3",
+  "explanation": "The diagram shows MongoDB as a shared infrastructure component at the same architectural level as the other microservices, rather than being a private data store owned by a single service. In a CQRS architecture, the Command side typically writes to a persistent store and the Query side reads from a (possibly separate) read model. The presence of a single MongoDB node alongside both the Command Microservice and Query Microservice \u2014 with RabbitMQ handling event distribution \u2014 strongly suggests that MongoDB may serve as a shared data store accessed by multiple services. The annotation 'Persistent event storage' points to MongoDB, and the event stream flows via RabbitMQ suggest the Query Microservice may also read from the same MongoDB instance to build its read models. This pattern, where multiple services access the same database instance, constitutes a Shared Database smell, undermining service autonomy and independent deployability.",
+  "involved_services": [
+    "Command Microservice",
+    "Query Microservice",
+    "MongoDB"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "smell": "nano_service",
+  "model": "claude-sonnet-4-6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "2",
+  "explanation": "The Authentication and Authorization components are separated into distinct services, which raises a mild concern about nano service granularity. These two responsibilities are closely related and often thin in terms of business logic \u2014 Authentication validates identity tokens via an identity server, and Authorization checks permissions on resources. Both are depicted as small, narrowly scoped services that interact exclusively through the API Gateway rather than owning broader domain logic. However, separating Auth and Authz is a recognized and often justified architectural pattern (e.g., OAuth2/OIDC separation of concerns), so this is not a clear-cut nano service smell. The six domain microservices (Customers, Orders, Shipping, Production, Quality, Administration) appear reasonably scoped at this level of abstraction. Overall, the smell is unlikely but worth monitoring, particularly for the Authentication and Authorization services if their implementations are trivially thin.",
+  "involved_services": [
+    "Authentication",
+    "Authorization"
+  ]
+}

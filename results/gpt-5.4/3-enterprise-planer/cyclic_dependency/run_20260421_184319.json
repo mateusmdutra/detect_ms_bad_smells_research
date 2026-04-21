@@ -1,0 +1,12 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "gpt-5.4",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "2",
+  "explanation": "The diagram mainly shows a hub-and-spoke structure: the Front end application communicates with the API Gateway, and the API Gateway calls Authentication, Authorization, and the domain microservices. There are bidirectional arrows between API Gateway and Authentication, and between API Gateway and Authorization, but these appear to represent request/response interactions rather than clear mutual service dependencies. No circular chain among multiple services (e.g., A \u2192 B \u2192 C \u2192 A) is explicitly shown.",
+  "involved_services": [
+    "API Gateway",
+    "Authentication",
+    "Authorization"
+  ]
+}

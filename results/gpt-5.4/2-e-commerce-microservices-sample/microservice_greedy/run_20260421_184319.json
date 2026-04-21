@@ -1,0 +1,8 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.4",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "1",
+  "explanation": "The diagram shows responsibilities split across distinct domain-oriented services: Product Catalog, Shopping Cart, Search, and User. Each service appears focused on a specific business capability, and there is no visible evidence that a single microservice has accumulated excessive responsibilities or an unusually high number of dependencies. The UI interacts with multiple backend services, but that does not indicate a greedy microservice.",
+  "involved_services": []
+}

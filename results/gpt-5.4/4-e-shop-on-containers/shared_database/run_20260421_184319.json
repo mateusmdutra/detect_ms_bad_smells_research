@@ -1,0 +1,11 @@
+{
+  "smell": "shared_database",
+  "model": "gpt-5.4",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "2",
+  "explanation": "The diagram mostly shows database-per-service: Identity, Catalog, Ordering, and Basket each have their own dedicated data store. The only visible shared data store is within the Ordering microservice, where Ordering.API and Ordering.BackgroundTasks both access the same SQL Server database. However, these appear to be components of the same microservice rather than separate microservices, so this is not strong evidence of the Shared Database smell across services.",
+  "involved_services": [
+    "Ordering.API",
+    "Ordering.BackgroundTasks"
+  ]
+}

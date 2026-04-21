@@ -1,0 +1,14 @@
+{
+  "smell": "no_api_gateway",
+  "model": "gpt-5.4",
+  "diagram": "7-spring-petclinic-microservices.jpg",
+  "confidence": "1",
+  "explanation": "The diagram explicitly includes a centralized 'UI + API Gateway' component that receives client static resources and REST requests, then routes/load-balances requests to internal microservices. This indicates the presence of a unified entry point rather than clients calling internal services directly.",
+  "involved_services": [
+    "UI + API Gateway",
+    "customers-service",
+    "genai-service",
+    "vets-service",
+    "pets-service"
+  ]
+}

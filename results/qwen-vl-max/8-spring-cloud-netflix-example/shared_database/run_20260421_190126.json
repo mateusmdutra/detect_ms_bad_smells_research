@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "qwen-vl-max",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "1",
+  "explanation": "The diagram does not show any shared database or data store being accessed by multiple services. Each service (Service-A and Service-B) appears to be independent, with no visible connections to a common database. The presence of Eureka, Config Center, Rabbit MQ, and other components suggests a well-structured microservices architecture without explicit data layer coupling.",
+  "involved_services": []
+}

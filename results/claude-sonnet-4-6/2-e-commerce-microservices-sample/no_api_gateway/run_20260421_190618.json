@@ -1,0 +1,14 @@
+{
+  "smell": "no_api_gateway",
+  "model": "claude-sonnet-4-6",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "4",
+  "explanation": "The diagram clearly shows the e-commerce Store UI communicating directly with all four backend microservices (Product Catalog, User, Shopping Cart, and Search) without any intermediary API Gateway layer. The arrows go straight from the UI to each individual microservice, exposing the internal topology to the client. There is no unified entry point to handle cross-cutting concerns such as authentication, rate limiting, load balancing, or request routing. This is a textbook example of the No API Gateway smell, as each microservice must independently handle concerns that would typically be centralized in a gateway.",
+  "involved_services": [
+    "e-commerce Store UI",
+    "Product Catalog Microservice",
+    "User Microservice",
+    "Shopping Cart Microservice",
+    "Search Microservice"
+  ]
+}

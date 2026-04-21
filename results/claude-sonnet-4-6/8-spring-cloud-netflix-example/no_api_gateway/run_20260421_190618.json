@@ -1,0 +1,12 @@
+{
+  "smell": "no_api_gateway",
+  "model": "claude-sonnet-4-6",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "1",
+  "explanation": "The architecture clearly includes Zuul as an API Gateway acting as the single entry point for external clients. All incoming traffic from the user passes through Zuul before being routed to Service A Cluster or Service B Cluster. This pattern correctly abstracts the internal topology from external clients and centralizes cross-cutting concerns such as authentication, rate limiting, and routing. The No API Gateway smell is not present.",
+  "involved_services": [
+    "Zuul",
+    "Service-A",
+    "Service-B"
+  ]
+}

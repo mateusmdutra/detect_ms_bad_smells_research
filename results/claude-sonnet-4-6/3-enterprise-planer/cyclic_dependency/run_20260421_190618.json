@@ -1,0 +1,11 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "claude-sonnet-4-6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "2",
+  "explanation": "The diagram shows a bidirectional arrow between the API Gateway and the Authentication service (the API Gateway calls Authentication to validate users without a valid auth token, and Authentication returns an Auth Token back to the API Gateway). While this bidirectional communication could suggest a cyclic dependency, it is more likely a standard request-response pattern rather than a true circular dependency chain. The Authentication service does not appear to call back into the API Gateway as an initiator of new requests. All other microservices (Customers, Orders, Shipping, Production, Quality, Administration) are leaf nodes with no visible return dependencies to upstream services. No clear A\u2192B\u2192C\u2192A cycle is evident in the diagram, making a true cyclic dependency unlikely but not entirely dismissible given the bidirectional API Gateway \u2194 Authentication relationship.",
+  "involved_services": [
+    "API Gateway",
+    "Authentication"
+  ]
+}

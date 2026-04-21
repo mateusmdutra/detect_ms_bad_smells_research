@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "claude-sonnet-4-6",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "2",
+  "explanation": "The Command Microservice sits at the center of the architecture and appears to be a hub that other services interact with, which could suggest an emerging greedy pattern. However, the diagram actually reflects a deliberate CQRS pattern where command and query responsibilities are explicitly separated. The central positioning of the Command Microservice is architectural by design rather than accidental accumulation of responsibilities. Each hexagon represents a distinct bounded context (Gateway, Discovery, Query, Config, MongoDB, RabbitMQ), and the separation of concerns appears intentional. The diagram does not provide enough detail about internal responsibilities of each service to conclusively identify a greedy microservice, but the Command Microservice's central role and apparent coupling with multiple services (MongoDB for persistence, RabbitMQ for event streaming, and potentially others) warrants mild concern. Overall, the architecture seems reasonably decomposed for a CQRS pattern, making the smell unlikely but not dismissible.",
+  "involved_services": [
+    "Command Microservice"
+  ]
+}

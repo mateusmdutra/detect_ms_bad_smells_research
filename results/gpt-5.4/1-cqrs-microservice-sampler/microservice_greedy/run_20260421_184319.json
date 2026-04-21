@@ -1,0 +1,14 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.4",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "2",
+  "explanation": "The diagram shows a fairly standard CQRS-oriented decomposition where responsibilities are separated across gateway, command, query, discovery, and configuration services, with MongoDB and RabbitMQ supporting persistence and messaging. No single service is depicted as owning many unrelated responsibilities or excessive dependencies in a monolithic way. The Gateway Microservice is central, but that is expected for routing and load balancing rather than clear evidence of greedy responsibility accumulation. Based on the diagram alone, the Microservice Greedy smell is unlikely present.",
+  "involved_services": [
+    "Gateway Microservice",
+    "Command Microservice",
+    "Query Microservice",
+    "Discovery Microservice",
+    "Config Microservice"
+  ]
+}

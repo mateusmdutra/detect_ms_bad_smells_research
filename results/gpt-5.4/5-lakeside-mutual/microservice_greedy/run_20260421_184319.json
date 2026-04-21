@@ -1,0 +1,13 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.4",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "3",
+  "explanation": "The diagram suggests some concentration of responsibilities and dependencies, especially around Policy Management Backend. It is connected to its frontend, Customer Self-Service Frontend, Customer Self-Service Backend, Risk Management Server, Customer Core, and Spring Boot Admin, making it a central integration hub. Customer Management Backend and Customer Self-Service Backend also each interact with multiple frontends and backend/core services. Spring Boot Admin is additionally connected to several services, though this may be expected for administration. Overall, there are signs of dependency accumulation and centralization, but not enough evidence that a single service has clearly absorbed excessive business responsibilities like a monolith. Therefore the smell is likely present rather than clearly present.",
+  "involved_services": [
+    "Policy Management Backend",
+    "Customer Management Backend",
+    "Customer Self-Service Backend",
+    "Spring Boot Admin"
+  ]
+}

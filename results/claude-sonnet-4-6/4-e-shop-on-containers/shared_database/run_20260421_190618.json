@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "claude-sonnet-4-6",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "1",
+  "explanation": "The diagram explicitly shows each microservice owning its own dedicated data store: the Identity microservice has its own SQL Server database, the Catalog microservice has its own SQL Server database, the Ordering microservice has its own SQL Server database, and the Basket microservice uses its own Redis cache. Although multiple services use SQL Server as a technology, the diagram clearly depicts separate, isolated database instances per service (each drawn within the service's own bounded box). Inter-service communication is handled asynchronously through the Event Bus (RabbitMQ or Azure Service Bus), which is the correct pattern to avoid shared data coupling. There is no visual or structural indication that any two services share the same database instance.",
+  "involved_services": []
+}

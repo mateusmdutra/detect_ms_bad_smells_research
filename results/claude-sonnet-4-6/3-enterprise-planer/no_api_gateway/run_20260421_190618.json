@@ -1,0 +1,19 @@
+{
+  "smell": "no_api_gateway",
+  "model": "claude-sonnet-4-6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "1",
+  "explanation": "The architecture explicitly includes a dedicated API Gateway that serves as the single entry point for the front-end application. It handles JSON-to-protobuf conversion for inter-microservice communication, delegates authentication (via an Identity Server) and authorization checks, and routes requests to the six downstream microservices using Google protobuf format. There is no evidence of clients bypassing the gateway to communicate directly with internal services. The No API Gateway smell is clearly not present.",
+  "involved_services": [
+    "Front end application",
+    "API Gateway",
+    "Authentication",
+    "Authorization",
+    "Customers Microservice",
+    "Orders Microservice",
+    "Shipping Microservice",
+    "Production Microservice",
+    "Quality Microservice",
+    "Administration Microservice"
+  ]
+}

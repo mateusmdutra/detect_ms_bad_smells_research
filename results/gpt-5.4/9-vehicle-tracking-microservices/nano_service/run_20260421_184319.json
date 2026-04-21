@@ -1,0 +1,19 @@
+{
+  "smell": "nano_service",
+  "model": "gpt-5.4",
+  "diagram": "9-vehicle-tracking-microservices.jpg",
+  "confidence": "3",
+  "explanation": "The diagram shows a large number of narrowly scoped deployable units and platform-level capabilities separated into individual services. Several boxes appear to represent very small responsibilities (for example Identity, Scheduling, Archiving/History, Search, CMS, Monitoring/Audit, Adapters), which may indicate over-fragmentation. However, the diagram is high-level and does not provide enough behavioral or team-boundary detail to prove these are truly trivial services rather than justified bounded contexts or infrastructure components. Therefore Nano Service is likely present, but not clearly certain.",
+  "involved_services": [
+    "Identity",
+    "Scheduling",
+    "Archiving / History",
+    "Monitoring / Audit.",
+    "Search",
+    "CMS",
+    "Adapters",
+    "Facade Srv (Srv1, ..N)",
+    "Service 1",
+    "Service N"
+  ]
+}

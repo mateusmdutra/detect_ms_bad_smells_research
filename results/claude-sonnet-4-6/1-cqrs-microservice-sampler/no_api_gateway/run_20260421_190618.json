@@ -1,0 +1,10 @@
+{
+  "smell": "no_api_gateway",
+  "model": "claude-sonnet-4-6",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "1",
+  "explanation": "The architecture explicitly includes a dedicated 'Gateway Microservice' at the top of the diagram, which is annotated as allowing 'traffic to be routed and load balanced'. This clearly serves as a unified entry point for external clients, handling routing and cross-cutting concerns. The presence of this component directly negates the No API Gateway smell.",
+  "involved_services": [
+    "Gateway Microservice"
+  ]
+}

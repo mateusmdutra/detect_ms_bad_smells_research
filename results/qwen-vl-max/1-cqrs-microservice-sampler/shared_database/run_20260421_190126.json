@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "qwen-vl-max",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "1",
+  "explanation": "The diagram shows a CQRS (Command Query Responsibility Segregation) architecture where the Command Microservice and Query Microservice are separated, with MongoDB serving as persistent event storage for commands and RabbitMQ handling event distribution. The Query Microservice processes queries independently, suggesting it may have its own read-optimized data store derived from events. There is no indication that multiple services directly share the same database instance or schema. Instead, data flows through event streams, maintaining loose coupling. Thus, the Shared Database smell is not present.",
+  "involved_services": []
+}

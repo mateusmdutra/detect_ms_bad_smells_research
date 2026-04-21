@@ -1,0 +1,17 @@
+{
+  "smell": "no_api_gateway",
+  "model": "gpt-5.4",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "4",
+  "explanation": "The diagram shows multiple external clients/frontends communicating directly with individual backend services: Customer Management Frontend -> Customer Management Backend, Customer Self-Service Frontend -> Customer Management Backend / Customer Self-Service Backend / Policy Management Backend, Policy Management Frontend -> Policy Management Backend, and Risk Management Client -> Risk Management Server. There is no single unified entry point or gateway component mediating external access. This clearly indicates the No API Gateway smell, since internal services are exposed directly to clients.",
+  "involved_services": [
+    "Customer Management Frontend",
+    "Customer Self-Service Frontend",
+    "Policy Management Frontend",
+    "Risk Management Client",
+    "Customer Management Backend",
+    "Customer Self-Service Backend",
+    "Policy Management Backend",
+    "Risk Management Server"
+  ]
+}

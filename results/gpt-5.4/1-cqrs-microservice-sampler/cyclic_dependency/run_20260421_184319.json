@@ -1,0 +1,8 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "gpt-5.4",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "1",
+  "explanation": "The diagram shows a CQRS-style setup with Gateway, Discovery, Query, Command, Config, MongoDB, and RabbitMQ, but it does not depict explicit service-to-service dependency arrows forming a closed loop. The visible annotations describe roles and infrastructure components rather than mutual dependencies. Without a clear circular chain such as A \u2192 B \u2192 C \u2192 A, cyclic dependency is not evidenced.",
+  "involved_services": []
+}

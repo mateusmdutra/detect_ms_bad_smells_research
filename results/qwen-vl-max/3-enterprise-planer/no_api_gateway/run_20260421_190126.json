@@ -1,0 +1,8 @@
+{
+  "smell": "no_api_gateway",
+  "model": "qwen-vl-max",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "1",
+  "explanation": "The diagram clearly shows an 'API Gateway' component that serves as a single entry point for the front-end application to communicate with various microservices. The gateway handles authentication, authorization, and protocol conversion, fulfilling the role of a centralized API gateway. Therefore, the 'No API Gateway' smell is not present.",
+  "involved_services": []
+}

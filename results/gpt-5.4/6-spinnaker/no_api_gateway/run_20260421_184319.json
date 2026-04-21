@@ -1,0 +1,12 @@
+{
+  "smell": "no_api_gateway",
+  "model": "gpt-5.4",
+  "diagram": "6-spinnaker.png",
+  "confidence": "1",
+  "explanation": "The diagram shows external clients such as Deck and Custom Script/API Caller connecting through Gate, which acts as a unified entry point to internal services. This indicates the presence of an API gateway rather than its absence.",
+  "involved_services": [
+    "Gate",
+    "Deck",
+    "Custom Script/API Caller"
+  ]
+}

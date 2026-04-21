@@ -1,0 +1,8 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.4",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "1",
+  "explanation": "The diagram shows a small set of clearly separated infrastructure components (Zuul, Config Center, Eureka, RabbitMQ, Spring Boot Admin, Hystrix Dashboard, Zipkin) and two business services (Service-A and Service-B) deployed as replicated instances. No single business service appears to accumulate many distinct responsibilities or excessive dependencies relative to the others. The central components are typical platform/infrastructure services rather than evidence of one greedy microservice.",
+  "involved_services": []
+}

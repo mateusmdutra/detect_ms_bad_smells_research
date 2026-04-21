@@ -1,0 +1,12 @@
+{
+  "smell": "nano_service",
+  "model": "gpt-5.4",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "2",
+  "explanation": "The diagram shows a fairly standard CQRS microservice setup with infrastructure-oriented services such as discovery, config, and gateway separated from command/query responsibilities. These services each appear to have recognizable platform-level responsibilities rather than obviously trivial business logic. While Discovery, Config, and Gateway could be considered small in scope, their separation is common and justified in many microservice architectures. Based on the diagram alone, there is insufficient evidence that any service is excessively fine-grained to the point of being a Nano Service smell.",
+  "involved_services": [
+    "Discovery Microservice",
+    "Config Microservice",
+    "Gateway Microservice"
+  ]
+}

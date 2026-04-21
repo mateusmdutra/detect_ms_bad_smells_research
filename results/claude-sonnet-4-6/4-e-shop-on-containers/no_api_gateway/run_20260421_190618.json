@@ -1,0 +1,18 @@
+{
+  "smell": "no_api_gateway",
+  "model": "claude-sonnet-4-6",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "1",
+  "explanation": "The architecture clearly implements the API Gateway / BFF (Backend for Frontend) pattern. There are two dedicated API Gateway instances visible: 'Mobile-Shopping' for the eShop mobile app and 'Web-Shopping' for the eShop WebApp MVC and SPA Web app. External clients do not communicate directly with internal microservices (Catalog, Ordering, Basket, Identity); all traffic is routed through these gateways, which serve as unified entry points handling routing and cross-cutting concerns. The Identity microservice receives direct connections from the gateways for authentication purposes, which is a standard and acceptable pattern. No API Gateway smell is not present.",
+  "involved_services": [
+    "API Gateways/BFF (Mobile-Shopping)",
+    "API Gateways/BFF (Web-Shopping)",
+    "eShop mobile app",
+    "eShop traditional Web app",
+    "eShop SPA Web app",
+    "Identity microservice",
+    "Catalog microservice",
+    "Ordering microservice",
+    "Basket microservice"
+  ]
+}

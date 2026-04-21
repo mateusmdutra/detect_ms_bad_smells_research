@@ -4,9 +4,9 @@ from typing import List, Optional
 
 class ModelEnum(Enum):
     OPENAI = 'gpt-5.4'
-    CLAUDE = 'claude-opus-4-6'
-    DEEPSEEK = 'deepseek-coder-v2'
-    QWEN = 'qwen3-coder-plus'
+    CLAUDE = 'claude-sonnet-4-6'
+    DEEPSEEK = 'mmdutra14_3974/deepseek-ai/DeepSeek-OCR-2-b91bd70c'
+    QWEN = 'qwen-vl-max'
 
 class LikertScaleOption(Enum):
     NOT_PRESENT = '1'

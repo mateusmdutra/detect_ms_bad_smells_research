@@ -1,0 +1,12 @@
+{
+  "smell": "microservice_greedy",
+  "model": "claude-sonnet-4-6",
+  "diagram": "6-spinnaker.png",
+  "confidence": "4",
+  "explanation": "Gate acts as a central hub receiving requests from all external clients (Deck, Custom Script/API Caller, Halyard Daemon) and dispatching to nearly every downstream service (Keel, Orca, Kayenta, Rosco, Clouddriver, Front50, Fiat), making it a clear bottleneck with too many dependencies \u2014 a classic API Gateway overload. Orca similarly aggregates calls to multiple services (Echo, Clouddriver, Rosco, Fiat, Front50), acting as an orchestration monolith rather than a focused microservice. Fiat receives connections from a wide range of services (Gate, Orca, Clouddriver, Front50, Keel), suggesting it has become a cross-cutting dependency that many services rely on, which can indicate it has accumulated too many authorization/responsibility concerns. These services violate the single responsibility principle by becoming central coordination points, creating scalability and maintainability bottlenecks characteristic of the Microservice Greedy smell.",
+  "involved_services": [
+    "Gate",
+    "Orca",
+    "Fiat"
+  ]
+}

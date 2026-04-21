@@ -1,0 +1,11 @@
+{
+  "smell": "nano_service",
+  "model": "claude-sonnet-4-6",
+  "diagram": "6-spinnaker.png",
+  "confidence": "2",
+  "explanation": "From the diagram alone, Igor and Keel appear as relatively narrow intermediary services. Igor in Spinnaker is a CI/CD integration bridge (connecting to Jenkins, Travis CI, etc.) and Keel handles automated delivery/constraints \u2014 both have well-defined but potentially thin responsibilities. However, in the actual Spinnaker ecosystem these services encapsulate non-trivial domain logic (event triggering, artifact management, policy enforcement), so what appears structurally as a narrow node in the diagram is not necessarily a nano service in practice. The diagram does not provide enough evidence of trivially small responsibilities to confidently assert the smell. The overall architecture reflects intentional domain decomposition rather than over-fragmentation, making nano service unlikely but not dismissible without deeper behavioral analysis.",
+  "involved_services": [
+    "Igor",
+    "Keel"
+  ]
+}

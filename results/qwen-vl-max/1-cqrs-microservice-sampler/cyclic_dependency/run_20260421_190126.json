@@ -1,0 +1,8 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "qwen-vl-max",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "1",
+  "explanation": "The diagram shows a CQRS microservice architecture with clearly defined services (Gateway, Command, Query, Config, Discovery, MongoDB, RabbitMQ) and their responsibilities. There are no visible bidirectional or circular arrows indicating dependencies that form a loop. The flow appears to be unidirectional: Gateway \u2192 Command/Query, Command \u2192 MongoDB and RabbitMQ, Query \u2192 MongoDB, and Config and Discovery providing supporting services without forming cycles. No cyclic dependency is evident in the structure.",
+  "involved_services": []
+}

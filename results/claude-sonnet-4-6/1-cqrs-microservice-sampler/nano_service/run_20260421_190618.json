@@ -1,0 +1,11 @@
+{
+  "smell": "nano_service",
+  "model": "claude-sonnet-4-6",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "3",
+  "explanation": "The Config Microservice and Discovery Microservice are strong candidates for the Nano Service smell. The Config Microservice is explicitly described as handling only the 'externalisation of app configuration', which is a very narrow, infrastructural concern that in many frameworks (e.g., Spring Cloud Config) is a thin wrapper around a config store rather than a true business capability. Similarly, the Discovery Microservice solely handles flexible component location (service registry), a cross-cutting infrastructure concern. Both services perform a single, well-defined but trivially scoped function that could arguably be handled by a sidecar, a shared infrastructure layer, or a platform-level feature (e.g., Kubernetes-native service discovery and ConfigMaps) rather than independently deployed microservices. Their existence as standalone deployable units adds operational overhead (separate containers, health checks, network hops) disproportionate to the value they individually provide. The Gateway Microservice, while also infrastructural, has a broader and more justified role in traffic routing and load balancing.",
+  "involved_services": [
+    "Config Microservice",
+    "Discovery Microservice"
+  ]
+}

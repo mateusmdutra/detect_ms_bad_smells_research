@@ -14,8 +14,8 @@ class DeepseekModel(LLMModel):
 
     def __init__(self):
         self.client = OpenAI(
-            api_key=os.getenv("DEEPSEEK_API_KEY"),
-            base_url="https://api.deepseek.com",
+            api_key=os.getenv("TOGETHER_API_KEY"),
+            base_url="https://api.together.xyz/v1",
         )
         super().__init__()
 
@@ -41,7 +41,9 @@ class DeepseekModel(LLMModel):
             response_format={"type": "json_object"},
         )
 
-        raw = json.loads(response.choices[0].message.content)
+        raw_text = response.choices[0].message.content
+        print(f"  RAW: {raw_text}")
+        raw = json.loads(raw_text)
         return DetectionResult(
             smell=smell_key,
             model=ModelEnum.DEEPSEEK,
