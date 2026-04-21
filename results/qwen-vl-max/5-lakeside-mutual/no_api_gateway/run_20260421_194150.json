@@ -1,0 +1,19 @@
+{
+  "smell": "no_api_gateway",
+  "model": "qwen-vl-max",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "4",
+  "explanation": "The diagram shows multiple frontend applications directly communicating with backend services using HTTP, WebSocket, or gRPC without any centralized entry point. External clients (frontends) are connecting directly to backend services such as Customer Management Backend, Customer Self-Service Backend, and Policy Management Backend. This direct communication exposes the internal service topology and lacks a unified API gateway to handle cross-cutting concerns like authentication, rate limiting, and request routing. The absence of a dedicated API gateway layer is clearly evident.",
+  "involved_services": [
+    "Customer Management Frontend",
+    "Customer Self-Service Frontend",
+    "Policy Management Frontend",
+    "Risk Management Client",
+    "Customer Management Backend",
+    "Customer Self-Service Backend",
+    "Policy Management Backend",
+    "Risk Management Server",
+    "Customer Core",
+    "Spring Boot Admin"
+  ]
+}

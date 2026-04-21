@@ -1,0 +1,10 @@
+{
+  "smell": "nano_service",
+  "model": "claude-sonnet-4-6",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "2",
+  "explanation": "The architecture is generally well-structured with appropriately scoped microservices (Identity, Catalog, Ordering, Basket). However, 'Ordering.BackgroundTasks' stands out as a potential nano service concern \u2014 it appears as a separate deployable unit within the Ordering microservice boundary, seemingly handling only background/scheduled tasks for ordering. If its sole responsibility is running periodic jobs (e.g., grace period checks, payment confirmations) that are tightly coupled to the Ordering domain, it could be argued this is too fine-grained to justify independent deployment. That said, separating background processing from the main API is a recognized pattern to avoid blocking the request pipeline, so this separation has legitimate architectural justification. The confidence is therefore low \u2014 it is a borderline case rather than a clear nano service smell.",
+  "involved_services": [
+    "Ordering.BackgroundTasks"
+  ]
+}

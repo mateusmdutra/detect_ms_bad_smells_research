@@ -1,0 +1,12 @@
+{
+  "smell": "shared_database",
+  "model": "claude-sonnet-4-6",
+  "diagram": "7-spring-petclinic-microservices.jpg",
+  "confidence": "2",
+  "explanation": "The diagram shows three separate RDBMS icons, one each beneath customers-service, vets-service, and pets-service. Visually, each of these services appears to have its own dedicated relational database, which would be the correct pattern. However, the diagram does not provide details about the actual database instances, schemas, or connection strings. The fact that all three use the same RDBMS symbol type raises a mild concern that they could be separate schemas within the same physical database instance (a common deployment shortcut), but there is no explicit evidence of sharing. The genai-service correctly uses a distinct Vector Store. Overall, the diagram suggests intent toward database-per-service, but the lack of detail prevents ruling out a shared physical RDBMS instance, making the smell unlikely but not impossible.",
+  "involved_services": [
+    "customers-service",
+    "vets-service",
+    "pets-service"
+  ]
+}

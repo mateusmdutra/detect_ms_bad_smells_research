@@ -1,0 +1,8 @@
+{
+  "smell": "microservice_greedy",
+  "model": "qwen-vl-max",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "1",
+  "explanation": "The architecture diagram shows a well-structured microservices setup with clearly separated responsibilities: Identity, Catalog, Ordering, and Basket microservices each have distinct domains and databases. The services are decoupled using an event bus, and API gateways handle client routing appropriately. There is no evidence of any single service accumulating excessive responsibilities or dependencies, indicating that the Single Responsibility Principle is being followed. Therefore, the Microservice Greedy smell is not present.",
+  "involved_services": []
+}

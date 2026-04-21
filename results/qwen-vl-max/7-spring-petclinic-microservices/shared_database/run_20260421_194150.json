@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "qwen-vl-max",
+  "diagram": "7-spring-petclinic-microservices.jpg",
+  "confidence": "1",
+  "explanation": "Each microservice (customers-service, genai-service, vets-service, pets-service) has its own dedicated data store (RDBMS or Vector Store), indicating that there is no shared database among the services. This architecture adheres to the principle of database per service, which avoids tight coupling at the data layer.",
+  "involved_services": []
+}

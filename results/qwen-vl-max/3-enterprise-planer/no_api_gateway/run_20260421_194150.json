@@ -1,0 +1,8 @@
+{
+  "smell": "no_api_gateway",
+  "model": "qwen-vl-max",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "1",
+  "explanation": "The architecture clearly includes an API Gateway component that serves as a single entry point for the front-end application. It handles authentication, authorization, and routing requests to various microservices, which indicates that the No API Gateway smell is not present.",
+  "involved_services": []
+}

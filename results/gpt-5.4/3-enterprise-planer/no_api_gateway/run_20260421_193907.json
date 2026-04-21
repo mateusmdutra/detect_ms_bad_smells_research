@@ -1,0 +1,19 @@
+{
+  "smell": "no_api_gateway",
+  "model": "gpt-5.4",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "1",
+  "explanation": "The diagram explicitly includes an 'API Gateway' that is described as providing a single access point for the front end application. The front end communicates with the API Gateway, which then routes requests to the internal microservices and interacts with authentication and authorization components. This indicates the presence of a unified entry point, so the No API Gateway smell is not present.",
+  "involved_services": [
+    "API Gateway",
+    "Front end application",
+    "Customers Microservice",
+    "Orders Microservice",
+    "Shipping Microservice",
+    "Production Microservice",
+    "Quality Microservice",
+    "Administration Microservice",
+    "Authentication",
+    "Authorization"
+  ]
+}

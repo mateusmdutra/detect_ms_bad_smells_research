@@ -1,0 +1,15 @@
+{
+  "smell": "shared_database",
+  "model": "claude-sonnet-4-6",
+  "diagram": "6-spinnaker.png",
+  "confidence": "2",
+  "explanation": "The diagram shows only service-to-service communication flows and does not explicitly depict any database or data store layer. Therefore, a Shared Database smell cannot be directly confirmed from this diagram alone. However, in the well-known Spinnaker architecture (which this clearly represents), some services like Front50 historically share or rely on common persistent storage backends (e.g., Redis is used by multiple services including Orca, Echo, and Rosco for queuing and caching). The dense interconnections between services such as Fiat, Front50, Clouddriver, and Orca suggest potential shared state, but without explicit data store nodes in the diagram, this remains unlikely to confirm visually. The confidence is low because the diagram abstracts away the data layer entirely.",
+  "involved_services": [
+    "Front50",
+    "Fiat",
+    "Clouddriver",
+    "Orca",
+    "Echo",
+    "Rosco"
+  ]
+}

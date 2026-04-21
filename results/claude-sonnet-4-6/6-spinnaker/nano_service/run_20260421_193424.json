@@ -1,0 +1,11 @@
+{
+  "smell": "nano_service",
+  "model": "claude-sonnet-4-6",
+  "diagram": "6-spinnaker.png",
+  "confidence": "2",
+  "explanation": "From the diagram alone, Igor and Keel appear as relatively narrow intermediary services. Igor (Spinnaker's task orchestration helper) and Keel (declarative delivery) sit between Gate and Echo, acting as pass-through or thin coordination layers. However, in the actual Spinnaker ecosystem these services have well-defined, non-trivial responsibilities (Igor handles CI/SCM integrations and polling; Keel manages declarative infrastructure delivery). The diagram's visual representation makes them look like thin wrappers, but their real-world scope is substantial enough to justify independent deployment. Without deeper knowledge of each service's actual codebase and responsibility scope, the nano service smell is unlikely but cannot be fully ruled out based purely on the architectural diagram.",
+  "involved_services": [
+    "Igor",
+    "Keel"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "smell": "nano_service",
+  "model": "gpt-5.4",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "3",
+  "explanation": "The diagram suggests Authentication and Authorization are separated into very narrowly scoped services, each handling a single small security responsibility. This can indicate nano services because their functionality may be too fine-grained relative to the operational overhead of deploying and coordinating them independently through the API Gateway. However, security concerns are also commonly separated for valid architectural reasons, so the smell is likely present rather than clearly present.",
+  "involved_services": [
+    "Authentication",
+    "Authorization"
+  ]
+}

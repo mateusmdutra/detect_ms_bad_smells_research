@@ -1,0 +1,14 @@
+{
+  "smell": "no_api_gateway",
+  "model": "gpt-5.4",
+  "diagram": "9-vehicle-tracking-microservices.jpg",
+  "confidence": "1",
+  "explanation": "The diagram explicitly includes an 'API Gateway' component positioned between external clients/channels and backend services, indicating a unified entry point is present rather than absent. Therefore, the No API Gateway smell is not present.",
+  "involved_services": [
+    "API Gateway",
+    "IoT devices",
+    "Ping (web/mobile)",
+    "Tracking (web/mobile)",
+    "Vehicles (web/mobile)"
+  ]
+}

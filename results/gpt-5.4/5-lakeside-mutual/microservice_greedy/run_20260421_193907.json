@@ -1,0 +1,13 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.4",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "4",
+  "explanation": "The diagram shows signs of responsibility and dependency concentration, especially around Policy Management Backend. It is connected to multiple frontends and backends, communicates through both HTTP and ActiveMQ, and appears to act as a central integration hub with Customer Self-Service Backend, Risk Management Server, Customer Core, and Spring Boot Admin. Customer Management Backend and Customer Self-Service Backend also have several direct dependencies to shared backend services, suggesting broad responsibility scopes. Spring Boot Admin is additionally connected to multiple services, reinforcing centralization. This level of coupling and dependency concentration is consistent with the Microservice Greedy smell.",
+  "involved_services": [
+    "Policy Management Backend",
+    "Customer Management Backend",
+    "Customer Self-Service Backend",
+    "Spring Boot Admin"
+  ]
+}

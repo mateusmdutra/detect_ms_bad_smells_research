@@ -1,0 +1,11 @@
+{
+  "smell": "nano_service",
+  "model": "gpt-5.4",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "2",
+  "explanation": "The diagram shows only two business services (Service-A and Service-B), each deployed as a small cluster, plus standard infrastructure components such as Zuul, Config Center, Eureka, RabbitMQ, Zipkin, Hystrix Dashboard, and Spring Boot Admin. There is not enough evidence that either business service has a trivially small responsibility or that the system is excessively decomposed into many tiny deployable units. The infrastructure is typical for a Spring Cloud microservice setup and does not by itself indicate Nano Services.",
+  "involved_services": [
+    "Service-A",
+    "Service-B"
+  ]
+}

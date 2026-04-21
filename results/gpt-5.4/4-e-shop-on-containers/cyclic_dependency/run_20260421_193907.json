@@ -1,0 +1,8 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "gpt-5.4",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "1",
+  "explanation": "The diagram shows client apps and web apps calling API gateways/BFFs, which in turn call backend microservices (Identity, Catalog, Ordering, Basket). The microservices also publish/subscribe through an event bus, but there are no visible arrows indicating that these services depend on each other in a closed loop such as A \u2192 B \u2192 C \u2192 A. Based on the depicted relationships, a cyclic dependency is not present.",
+  "involved_services": []
+}

@@ -1,0 +1,14 @@
+{
+  "smell": "shared_database",
+  "model": "claude-sonnet-4-6",
+  "diagram": "9-vehicle-tracking-microservices.jpg",
+  "confidence": "2",
+  "explanation": "The diagram does not explicitly depict any database or data store components, so a Shared Database smell cannot be confirmed directly. However, there are indirect indicators that raise mild concern: the presence of a centralized 'Middleware messages broker', a shared 'Reporting / Data / DSS' layer, and 'Archiving / History' service suggest that multiple services may converge on common data infrastructure. The 'Reporting / Data / DSS' component in particular is architecturally suspicious, as DSS (Decision Support System) layers often imply a shared data warehouse or aggregated data store accessed by multiple services. Without explicit database nodes or annotations, confidence remains low, but the pattern of centralized data-oriented components makes a shared database scenario unlikely yet plausible.",
+  "involved_services": [
+    "Facade Srv (Srv1, ..N)",
+    "Service 1",
+    "Service N",
+    "Reporting / Data / DSS",
+    "Archiving / History"
+  ]
+}

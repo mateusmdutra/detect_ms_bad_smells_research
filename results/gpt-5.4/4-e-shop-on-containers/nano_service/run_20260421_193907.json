@@ -1,0 +1,14 @@
+{
+  "smell": "nano_service",
+  "model": "gpt-5.4",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "2",
+  "explanation": "The diagram shows a small set of business-aligned services with distinct data stores and responsibilities: identity, catalog, ordering, and basket. This suggests reasonable bounded contexts rather than obviously trivial deployable units. Although some services are narrow in scope and Webhooks API appears especially small, the diagram alone does not show excessive fragmentation into many tiny services. Therefore the Nano Service smell is unlikely present, but there is mild suspicion around Webhooks API and possibly Basket if their implementations are very limited.",
+  "involved_services": [
+    "Identity microservice",
+    "Catalog microservice",
+    "Ordering microservice",
+    "Basket microservice",
+    "Webhooks API"
+  ]
+}

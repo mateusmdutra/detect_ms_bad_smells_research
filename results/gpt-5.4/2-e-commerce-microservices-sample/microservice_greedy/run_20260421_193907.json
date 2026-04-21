@@ -1,0 +1,8 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.4",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "1",
+  "explanation": "The diagram shows responsibilities split across distinct domain-focused services: Product Catalog, Shopping Cart, Search, and User. Each service appears to own a specific business capability and its own technology/data stack. There is no visible service with an unusually large number of dependencies or an accumulation of unrelated responsibilities that would suggest a monolithic 'greedy' microservice.",
+  "involved_services": []
+}

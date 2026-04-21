@@ -1,0 +1,14 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.4",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "2",
+  "explanation": "The diagram shows a fairly standard CQRS decomposition with separate services for gateway, command handling, query handling, discovery, and configuration, plus dedicated infrastructure components (MongoDB and RabbitMQ). Responsibilities appear partitioned rather than concentrated in a single oversized service. While the Gateway and Command services may become central coordination points, the diagram alone does not indicate that any one service has accumulated too many unrelated responsibilities or excessive dependencies characteristic of a greedy microservice.",
+  "involved_services": [
+    "Gateway Microservice",
+    "Command Microservice",
+    "Query Microservice",
+    "Discovery Microservice",
+    "Config Microservice"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "claude-sonnet-4-6",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "2",
+  "explanation": "The Command Microservice sits at the center of the hexagonal layout and appears to be a hub that other services interact with, which could suggest a degree of centralization. However, the architecture explicitly follows CQRS principles, which intentionally separates command and query responsibilities. The central positioning of the Command Microservice is likely an architectural choice for command routing rather than an accumulation of unrelated responsibilities. The diagram shows a relatively balanced distribution of concerns: Gateway handles routing, Discovery handles service location, Query handles read models, Config handles externalized configuration, MongoDB handles persistence, and RabbitMQ handles event streaming. There is no strong visual or textual evidence that any single service has accumulated excessive responsibilities beyond its intended scope. The CQRS pattern itself justifies the separation, making a Greedy smell unlikely but not entirely dismissible given the Command Microservice's apparent centrality.",
+  "involved_services": [
+    "Command Microservice"
+  ]
+}

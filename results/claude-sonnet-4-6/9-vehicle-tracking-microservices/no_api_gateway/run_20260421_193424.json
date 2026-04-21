@@ -1,0 +1,13 @@
+{
+  "smell": "no_api_gateway",
+  "model": "claude-sonnet-4-6",
+  "diagram": "9-vehicle-tracking-microservices.jpg",
+  "confidence": "1",
+  "explanation": "The architecture diagram explicitly includes an 'API Gateway' component in the infrastructure layer, positioned between the client-facing applications (IoT devices, Ping, Tracking, Vehicles) and the internal services. Additionally, a 'Facade Srv (Srv1, ..N)' layer further abstracts internal service topology. The presence of CDN and Lambda at the edge also suggests a well-structured entry point strategy. There is no evidence of the No API Gateway smell; external clients are not communicating directly with internal services.",
+  "involved_services": [
+    "API Gateway",
+    "CDN",
+    "Lambda",
+    "Facade Srv (Srv1, ..N)"
+  ]
+}

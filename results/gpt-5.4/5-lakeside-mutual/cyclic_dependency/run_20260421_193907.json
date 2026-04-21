@@ -1,0 +1,14 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "gpt-5.4",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "4",
+  "explanation": "The diagram shows clear service-to-service cycles. Most explicitly, Customer Self-Service Backend and Policy Management Backend have a bidirectional dependency via ActiveMQ. There is also a larger cycle: Customer Self-Service Backend \u2192 Spring Boot Admin \u2192 Policy Management Backend \u2192 Customer Self-Service Backend. Another cycle is Customer Management Backend \u2192 Customer Core \u2192 Customer Management Backend. These circular chains indicate cyclic dependency is clearly present.",
+  "involved_services": [
+    "Customer Self-Service Backend",
+    "Policy Management Backend",
+    "Spring Boot Admin",
+    "Customer Management Backend",
+    "Customer Core"
+  ]
+}

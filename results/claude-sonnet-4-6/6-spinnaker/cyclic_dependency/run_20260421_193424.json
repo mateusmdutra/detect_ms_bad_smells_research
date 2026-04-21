@@ -1,0 +1,13 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "claude-sonnet-4-6",
+  "diagram": "6-spinnaker.png",
+  "confidence": "4",
+  "explanation": "The diagram clearly shows cyclic dependencies among multiple services. Most notably: Gate \u2192 Keel \u2192 Echo \u2192 (back connections visible), and Keel \u2194 Igor \u2194 Echo form a cycle where arrows go in both directions between these nodes. Additionally, Gate has direct connections to Echo and Keel while those services also connect back through the graph. The bidirectional arrows between Keel\u2192Igor, Igor\u2192Echo, and Echo\u2192Keel (and back to Gate/Keel) form clear circular dependency chains. This means these services cannot be deployed independently and fault isolation becomes extremely difficult, as a failure in any one of them can cascade in multiple directions through the cycle.",
+  "involved_services": [
+    "Gate",
+    "Keel",
+    "Igor",
+    "Echo"
+  ]
+}

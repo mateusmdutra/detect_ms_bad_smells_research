@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "claude-sonnet-4-6",
+  "diagram": "7-spring-petclinic-microservices.jpg",
+  "confidence": "2",
+  "explanation": "The UI + API Gateway combines two distinct responsibilities: serving static resources (UI) and acting as an API gateway for routing REST requests to downstream microservices. This dual role is a mild indicator of the Microservice Greedy smell, as it merges frontend asset delivery with backend routing/load-balancing logic into a single service. However, this pattern (BFF - Backend for Frontend) is relatively common and may be an intentional design choice rather than an accidental accumulation of responsibilities. The four backend microservices (customers, genai, vets, pets) appear reasonably scoped with single datastores each. The gateway's fan-out to all four services could become a bottleneck, but the overall architecture does not show severe responsibility overloading typical of a clearly greedy microservice. The smell is possible but not strongly evidenced.",
+  "involved_services": [
+    "UI + API Gateway <port 8080>"
+  ]
+}

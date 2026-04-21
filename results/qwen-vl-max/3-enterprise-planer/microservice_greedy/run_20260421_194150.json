@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "qwen-vl-max",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "2",
+  "explanation": "The API Gateway appears to be central to the architecture, routing requests to multiple microservices and handling protocol conversion (JSON to Google protobuf). While it performs common gateway functions, it does not exhibit signs of accumulating excessive business logic or responsibilities beyond its intended role. The other services remain focused on specific domains, suggesting a well-distributed responsibility. Therefore, the smell is unlikely present.",
+  "involved_services": [
+    "API Gateway"
+  ]
+}

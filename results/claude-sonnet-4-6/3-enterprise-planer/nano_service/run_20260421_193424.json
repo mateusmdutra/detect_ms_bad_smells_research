@@ -1,0 +1,11 @@
+{
+  "smell": "nano_service",
+  "model": "claude-sonnet-4-6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "2",
+  "explanation": "The Authentication and Authorization components are separated into distinct services, which raises a mild concern about nano service granularity. These two concerns are closely related and often thin in terms of business logic \u2014 Authentication simply validates tokens via an identity server, and Authorization merely checks permissions on a resource. Splitting them into separate deployable units can introduce unnecessary inter-service communication overhead (both route through the API Gateway) and operational complexity for what are essentially cross-cutting concerns. However, there is a legitimate architectural pattern (separation of concerns, single responsibility) that justifies keeping AuthN and AuthZ separate, especially at enterprise scale where they may grow independently. The six domain microservices (Customers, Orders, Shipping, Production, Quality, Administration) appear reasonably scoped to distinct business domains and do not raise nano service concerns based on the information visible. Overall, the smell is unlikely but not dismissible, primarily due to the thin, infrastructure-level Authentication and Authorization services.",
+  "involved_services": [
+    "Authentication",
+    "Authorization"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "smell": "shared_database",
+  "model": "gpt-5.4",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "2",
+  "explanation": "The diagram shows each core microservice connected to its own dedicated data store: Identity to its own SQL Server database, Catalog to its own SQL Server database, Ordering to its own SQL Server database, and Basket to its own Redis cache. Although multiple services use the same database technology, they do not appear to share the same database instance/schema. The Ordering service includes multiple internal components accessing the same database, but those components belong to the same service boundary, so this does not indicate a shared database smell across services.",
+  "involved_services": [
+    "Identity microservice",
+    "Catalog microservice",
+    "Ordering microservice",
+    "Basket microservice"
+  ]
+}

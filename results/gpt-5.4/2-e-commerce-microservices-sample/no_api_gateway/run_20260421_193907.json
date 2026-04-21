@@ -1,0 +1,14 @@
+{
+  "smell": "no_api_gateway",
+  "model": "gpt-5.4",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "4",
+  "explanation": "The diagram shows the e-commerce Store UI calling multiple backend microservices directly (Product Catalog, User, Shopping Cart, and Search) with no intermediary component acting as a single entry point. There is no API Gateway, BFF, ingress routing layer, or unified edge service depicted, so external access appears to expose internal service topology directly.",
+  "involved_services": [
+    "e-commerce Store UI",
+    "Product Catalog Microservice",
+    "User Microservice",
+    "Shopping Cart Microservice",
+    "Search Microservice"
+  ]
+}

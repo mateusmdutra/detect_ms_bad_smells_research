@@ -1,0 +1,13 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "claude-sonnet-4-6",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "2",
+  "explanation": "The diagram does not explicitly show cyclic dependencies between services. The communication flow appears largely unidirectional: client apps \u2192 API Gateways/BFF \u2192 microservices \u2192 databases. The Event Bus (RabbitMQ/Azure Service Bus) is used for publish/subscribe messaging between microservices (indicated by the envelope icons on Catalog, Ordering, Basket, and Identity services), which is an asynchronous decoupled pattern. While pub/sub can mask indirect cycles (e.g., Ordering publishes an event that Basket consumes, and Basket publishes an event that Ordering consumes), no explicit bidirectional or circular synchronous call chain is visible in this diagram. The architecture appears intentionally designed to avoid cyclic dependencies through the event-driven pattern. Without additional detail on which services subscribe to which events, a cycle cannot be confirmed, making it unlikely but not impossible.",
+  "involved_services": [
+    "Catalog microservice",
+    "Ordering microservice",
+    "Basket microservice",
+    "Identity microservice"
+  ]
+}

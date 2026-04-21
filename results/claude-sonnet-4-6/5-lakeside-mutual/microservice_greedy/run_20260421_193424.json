@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "claude-sonnet-4-6",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "4",
+  "explanation": "Policy Management Backend shows clear signs of Microservice Greedy: it receives HTTP connections from both Customer Self-Service Backend and Customer Management Backend, communicates via ActiveMQ with both Customer Self-Service Backend and Risk Management Server, receives HTTP from Policy Management Frontend, and also connects to both Customer Core and Spring Boot Admin. This gives it an excessive number of dependencies and communication channels, suggesting it has accumulated too many responsibilities as a central hub. Customer Core is also suspect as it receives HTTP calls from all three backend services (Customer Management Backend, Customer Self-Service Backend, and Policy Management Backend), acting as a shared data store or utility layer that multiple services depend on, which creates a bottleneck and tight coupling reminiscent of a monolithic shared database pattern.",
+  "involved_services": [
+    "Policy Management Backend",
+    "Customer Core"
+  ]
+}

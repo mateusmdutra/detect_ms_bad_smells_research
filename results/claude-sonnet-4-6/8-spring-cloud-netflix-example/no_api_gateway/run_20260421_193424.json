@@ -1,0 +1,12 @@
+{
+  "smell": "no_api_gateway",
+  "model": "claude-sonnet-4-6",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "1",
+  "explanation": "The architecture clearly shows a Zuul gateway acting as the single entry point for all external client traffic. The user/client connects exclusively through Zuul, which then routes requests to the internal Service A Cluster and Service B Cluster. Internal services are not directly exposed to external clients. Zuul, as a Netflix OSS API Gateway, handles cross-cutting concerns such as routing, authentication, and rate limiting. The No API Gateway smell is definitively not present in this architecture.",
+  "involved_services": [
+    "Zuul",
+    "Service-A",
+    "Service-B"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "claude-sonnet-4-6",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "2",
+  "explanation": "There are mild indicators but no clear evidence of Microservice Greedy. The Ordering microservice shows a slight concern by bundling both 'Ordering.API' and 'Ordering.BackgroundTasks' within a single microservice boundary, suggesting it handles both synchronous request processing and asynchronous background processing responsibilities. The API Gateways/BFF layer aggregates routing for both Mobile-Shopping and Web-Shopping channels, which is its intended purpose (BFF pattern), so it is not inherently a smell. Overall, the architecture appears reasonably decomposed into distinct bounded contexts (Identity, Catalog, Ordering, Basket), each with its own database, and the responsibilities seem appropriately separated. The Ordering microservice's dual components are the strongest candidate but could also be a deliberate design choice to keep related ordering logic cohesive. Confidence is low that a true Greedy smell is present.",
+  "involved_services": [
+    "Ordering microservice",
+    "API Gateways/BFF"
+  ]
+}

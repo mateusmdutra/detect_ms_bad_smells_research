@@ -1,0 +1,12 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.4",
+  "diagram": "9-vehicle-tracking-microservices.jpg",
+  "confidence": "2",
+  "explanation": "The diagram shows a broad platform with many distinct services and infrastructure components rather than one obviously oversized microservice. There are a few potentially broad components\u2014especially the Facade service layer, API Gateway, and Reporting / Data / DSS\u2014that may aggregate multiple responsibilities, but the diagram is too high-level to conclude they behave like monoliths. Overall, Microservice Greedy is unlikely present based on this view alone, though these components would merit closer inspection.",
+  "involved_services": [
+    "Facade Srv (Srv1, ..N)",
+    "API Gateway",
+    "Reporting / Data / DSS"
+  ]
+}

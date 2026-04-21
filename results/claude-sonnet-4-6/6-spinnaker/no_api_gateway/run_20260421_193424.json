@@ -1,0 +1,14 @@
+{
+  "smell": "no_api_gateway",
+  "model": "claude-sonnet-4-6",
+  "diagram": "6-spinnaker.png",
+  "confidence": "1",
+  "explanation": "The architecture clearly shows a dedicated API Gateway pattern in place. 'Gate' serves as the single, unified entry point for all external clients (Deck, Custom Script/API Caller). External clients do not communicate directly with internal services such as Orca, Clouddriver, Front50, Fiat, etc. All traffic is routed through Gate, which handles cross-cutting concerns. Halyard CLI communicates through Halyard Daemon, which is a separate administrative/configuration path, not a bypass of the gateway for operational traffic. The No API Gateway smell is not present.",
+  "involved_services": [
+    "Gate",
+    "Deck",
+    "Custom Script/API Caller",
+    "Halyard CLI",
+    "Halyard Daemon"
+  ]
+}

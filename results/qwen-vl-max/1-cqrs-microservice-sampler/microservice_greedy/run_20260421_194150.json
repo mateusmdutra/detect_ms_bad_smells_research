@@ -1,0 +1,8 @@
+{
+  "smell": "microservice_greedy",
+  "model": "qwen-vl-max",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "1",
+  "explanation": "The diagram depicts a well-structured CQRS microservice architecture with clearly separated concerns: Gateway, Command, Query, Discovery, Config, and supporting infrastructure services like MongoDB and RabbitMQ. Each microservice has a distinct responsibility, and there is no evidence of any single service accumulating excessive responsibilities or dependencies. The architecture adheres to the single responsibility principle, with services focused on specific functions (e.g., command processing, query handling, configuration management). Therefore, the Microservice Greedy smell is not present.",
+  "involved_services": []
+}

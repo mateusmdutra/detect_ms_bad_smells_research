@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "qwen-vl-max",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "4",
+  "explanation": "The 'Customer Core' service is being accessed by multiple backend services (Customer Management Backend, Customer Self-Service Backend, Policy Management Backend), indicating it has become a central dependency and likely handles core business logic for multiple domains. Similarly, 'Spring Boot Admin' is connected to all backend services, suggesting it's managing monitoring and administration across the entire system, which is not typical for a microservice architecture where such concerns should be decentralized. This centralized dependency pattern indicates a violation of the single responsibility principle and suggests these services are acting as monolithic hubs, creating scalability and maintainability bottlenecks.",
+  "involved_services": [
+    "Customer Core",
+    "Spring Boot Admin"
+  ]
+}

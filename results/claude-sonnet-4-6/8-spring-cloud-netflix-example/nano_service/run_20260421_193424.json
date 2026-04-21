@@ -1,0 +1,11 @@
+{
+  "smell": "nano_service",
+  "model": "claude-sonnet-4-6",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "2",
+  "explanation": "The diagram shows only two business services (Service-A and Service-B), each deployed in a cluster of two instances. With only two services visible, there is insufficient evidence to conclusively determine nano service granularity. The architecture actually appears to lean toward coarse-grained services rather than overly fine-grained ones. However, the very generic naming ('Service-A', 'Service-B') and the relatively heavy infrastructure overhead (Zuul gateway, Eureka, Config Center, Hystrix Dashboard, RabbitMQ, Zipkin, Spring Boot Admin) compared to just two business services raises a mild concern: if each of these services encapsulates only a trivially small domain responsibility, the operational complexity of the surrounding infrastructure would be disproportionate. Without more detail on what each service actually does, a definitive nano service smell cannot be confirmed.",
+  "involved_services": [
+    "Service-A",
+    "Service-B"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "gpt-5.4",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "2",
+  "explanation": "The diagram shows bidirectional interactions between API Gateway and Authentication, and between API Gateway and Authorization. However, it does not show a closed dependency chain among the microservices themselves (e.g., A \u2192 B \u2192 C \u2192 A). The business microservices appear to depend only on the API Gateway, with no visible inter-service links forming a cycle. So a cyclic dependency is unlikely, though the bidirectional gateway-auth interactions may indicate coupling.",
+  "involved_services": [
+    "API Gateway",
+    "Authentication",
+    "Authorization"
+  ]
+}

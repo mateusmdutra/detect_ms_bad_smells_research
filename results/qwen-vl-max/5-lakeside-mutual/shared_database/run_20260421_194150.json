@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "qwen-vl-max",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "2",
+  "explanation": "The diagram shows multiple backend services (Customer Management Backend, Customer Self-Service Backend, Policy Management Backend) communicating with a shared 'Customer Core' service via HTTP. While this indicates a centralized component for customer data, there is no explicit indication of a shared database or data store being used by multiple services. The 'Customer Core' appears to be a dedicated service that may encapsulate customer data logic, but without visible database connections or data store labels, the presence of a shared database cannot be confirmed. Therefore, the smell is unlikely present.",
+  "involved_services": []
+}

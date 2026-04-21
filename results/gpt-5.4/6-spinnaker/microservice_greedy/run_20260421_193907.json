@@ -1,0 +1,13 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.4",
+  "diagram": "6-spinnaker.png",
+  "confidence": "4",
+  "explanation": "The diagram shows a few services acting as major hubs with many incoming and outgoing dependencies. Gate is especially central, connecting to numerous backend services and external clients, suggesting it concentrates too much orchestration and integration responsibility. Orca and Keel also interact with several services, indicating broad coordination roles. Fiat appears widely depended on as well. This level of dependency concentration around a small set of services is a strong indicator of the Microservice Greedy smell, as these services risk becoming bottlenecks and monolith-like centers of responsibility.",
+  "involved_services": [
+    "Gate",
+    "Orca",
+    "Keel",
+    "Fiat"
+  ]
+}

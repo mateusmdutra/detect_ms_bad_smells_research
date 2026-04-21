@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "qwen-vl-max",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "1",
+  "explanation": "The diagram does not show any shared database or data store being accessed by multiple services. Each service (Service-A and Service-B) appears to be independently deployed in clusters, and there is no indication of a common database being used. The presence of Eureka, Config Center, Rabbit MQ, and other supporting components suggests a well-structured microservices architecture with clear separation. Therefore, the Shared Database smell is not present.",
+  "involved_services": []
+}

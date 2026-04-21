@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "claude-sonnet-4-6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "1",
+  "explanation": "The architecture diagram shows no database or data store components whatsoever. It depicts only the communication layer: a Front End Application communicating via JSON with an API Gateway, which handles Authentication and Authorization, and routes requests in Google protobuf format to six microservices (Customers, Orders, Shipping, Production, Quality, and Administration). Since no databases are represented in the diagram, there is no evidence of a Shared Database smell. Each microservice's data storage strategy is entirely undocumented here, making it impossible to confirm or deny shared databases, but the diagram itself provides no indication of this anti-pattern.",
+  "involved_services": []
+}

@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "claude-sonnet-4-6",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "2",
+  "explanation": "The e-commerce Store UI acts as a central hub connecting to all four microservices (Product Catalog, User, Shopping Cart, and Search), which could suggest it is accumulating too many direct dependencies and orchestration responsibilities. However, this is a common and acceptable pattern for a frontend BFF (Backend for Frontend) or API gateway role. The individual microservices themselves appear to have reasonably focused responsibilities and technology stacks aligned with their domains. There is no strong evidence of a single microservice accumulating multiple unrelated business capabilities. The UI's fan-out connectivity is a mild concern but not conclusive of the Greedy smell in the backend microservices themselves.",
+  "involved_services": [
+    "e-commerce Store UI"
+  ]
+}

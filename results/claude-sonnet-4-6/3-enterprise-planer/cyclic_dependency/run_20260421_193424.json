@@ -1,0 +1,11 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "claude-sonnet-4-6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "2",
+  "explanation": "The diagram shows a bidirectional arrow between the API Gateway and the Authentication service (request goes to Authentication, Auth Token returns back to API Gateway), which could superficially resemble a cycle. However, this is a standard request-response pattern rather than a true cyclic dependency: the API Gateway calls Authentication to validate users, and Authentication returns an auth token \u2014 this is not a circular dependency chain where A depends on B which depends back on A in a problematic way. The six downstream microservices (Customers, Orders, Shipping, Production, Quality, Administration) all appear as leaf nodes with no back-dependencies shown. There is no evidence of a true cyclic dependency chain (A \u2192 B \u2192 C \u2192 A) in this architecture. The overall design follows a clean hub-and-spoke pattern through the API Gateway.",
+  "involved_services": [
+    "API Gateway",
+    "Authentication"
+  ]
+}

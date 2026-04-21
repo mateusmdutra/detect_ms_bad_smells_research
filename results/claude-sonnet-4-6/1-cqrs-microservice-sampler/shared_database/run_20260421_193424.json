@@ -1,0 +1,12 @@
+{
+  "smell": "shared_database",
+  "model": "claude-sonnet-4-6",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "2",
+  "explanation": "The diagram shows MongoDB as a shared persistent event storage component, and in CQRS architectures it is common for both the Command and Query sides to access the same event store. However, the diagram does not explicitly draw data access lines between multiple services and MongoDB \u2014 it only labels MongoDB as 'persistent event storage' without clearly showing which services connect to it. In a typical CQRS pattern, the Command service writes events to the event store and the Query service reads from a separate read model, which would not constitute a shared database smell. Without explicit connection lines showing multiple services directly sharing the same MongoDB instance for their own data needs, the smell is unlikely but cannot be fully ruled out based on the diagram alone.",
+  "involved_services": [
+    "MongoDB",
+    "Command Microservice",
+    "Query Microservice"
+  ]
+}

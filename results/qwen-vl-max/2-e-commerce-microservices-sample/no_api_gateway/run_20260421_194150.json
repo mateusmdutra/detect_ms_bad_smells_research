@@ -1,0 +1,13 @@
+{
+  "smell": "no_api_gateway",
+  "model": "qwen-vl-max",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "4",
+  "explanation": "The diagram shows the e-commerce Store UI directly communicating with multiple microservices (Product Catalog, User, Shopping Cart, and Search) without any intermediary layer. There is no indication of an API Gateway acting as a unified entry point for external clients. This exposes internal service topology and makes it difficult to manage cross-cutting concerns like authentication, rate limiting, and routing centrally.",
+  "involved_services": [
+    "Product Catalog Microservice",
+    "User Microservice",
+    "Shopping Cart Microservice",
+    "Search Microservice"
+  ]
+}

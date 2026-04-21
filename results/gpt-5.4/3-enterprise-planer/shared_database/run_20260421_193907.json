@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "gpt-5.4",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "1",
+  "explanation": "The diagram shows a front end, API Gateway, Authentication, Authorization, and several microservices, but it does not depict any database or data store, nor any shared persistence layer accessed by multiple services. Therefore there is no visible evidence of the Shared Database smell in this diagram.",
+  "involved_services": []
+}

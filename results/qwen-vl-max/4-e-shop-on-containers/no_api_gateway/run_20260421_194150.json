@@ -1,0 +1,8 @@
+{
+  "smell": "no_api_gateway",
+  "model": "qwen-vl-max",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "1",
+  "explanation": "The diagram clearly shows the presence of API Gateways/BFF (Backend for Frontend) components labeled 'Mobile-Shopping' and 'Web-Shopping' that serve as unified entry points for client applications. These gateways route requests to the appropriate microservices, such as Catalog, Ordering, and Basket, indicating that external clients do not communicate directly with internal services. This architecture effectively hides the internal topology and centralizes cross-cutting concerns like authentication and routing, thus avoiding the No API Gateway smell.",
+  "involved_services": []
+}

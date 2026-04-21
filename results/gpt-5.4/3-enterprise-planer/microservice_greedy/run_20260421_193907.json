@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.4",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "2",
+  "explanation": "The diagram shows the API Gateway as a central entry point connected to all domain microservices and also interacting with authentication and authorization. This indicates high dependency centralization, but the gateway responsibilities shown are still typical for an API gateway: request routing, protocol translation, and front-end access mediation. There is no clear evidence that a domain microservice has accumulated multiple business responsibilities or that the gateway contains business logic beyond orchestration concerns. So the smell is unlikely present, though the API Gateway is the main component to watch for potential overgrowth.",
+  "involved_services": [
+    "API Gateway"
+  ]
+}

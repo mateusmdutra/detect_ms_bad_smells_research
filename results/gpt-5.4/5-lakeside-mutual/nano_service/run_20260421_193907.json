@@ -1,0 +1,12 @@
+{
+  "smell": "nano_service",
+  "model": "gpt-5.4",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "3",
+  "explanation": "The diagram suggests some services may be overly fine-grained relative to the overall system. In particular, Customer Core appears to be a low-level backend component used by multiple customer-related services rather than a clearly autonomous business capability, which is a common nano-service indicator. Spring Boot Admin also looks like a very narrow operational/support service rather than a standalone business microservice. Risk Management Server is isolated behind a single client and may represent a thin wrapper around a limited responsibility. However, the diagram does not expose internal responsibilities in enough detail to conclude this smell is clearly present, so the evidence is suggestive but not definitive.",
+  "involved_services": [
+    "Customer Core",
+    "Spring Boot Admin",
+    "Risk Management Server"
+  ]
+}

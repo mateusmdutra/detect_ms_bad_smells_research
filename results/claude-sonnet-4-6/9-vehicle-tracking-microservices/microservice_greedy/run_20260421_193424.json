@@ -1,0 +1,12 @@
+{
+  "smell": "microservice_greedy",
+  "model": "claude-sonnet-4-6",
+  "diagram": "9-vehicle-tracking-microservices.jpg",
+  "confidence": "3",
+  "explanation": "Several components show signs of accumulated responsibilities. The API Gateway appears to serve as a central hub for all client-facing traffic (IoT devices, Ping, Tracking, Vehicles across web/mobile), which risks turning it into a bottleneck and a greedy service. The Facade Service (Srv1..N) aggregates multiple downstream services including Workflows, Service 1, Service N, Reporting/Data/DSS, suggesting it may be absorbing too many orchestration and aggregation concerns rather than delegating them. The Middleware messages broker spans the entire internal communication layer, acting as a universal intermediary for all services, which centralizes too much responsibility in a single component. These patterns suggest a tendency toward centralization that undermines the independence and single-responsibility principle expected in a healthy microservice architecture. However, since the diagram is high-level and lacks detail on internal service boundaries, the confidence is 'likely' rather than 'clearly' present.",
+  "involved_services": [
+    "API Gateway",
+    "Facade Srv (Srv1, ..N)",
+    "Middleware messages broker"
+  ]
+}

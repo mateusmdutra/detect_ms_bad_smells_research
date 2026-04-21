@@ -1,0 +1,13 @@
+{
+  "smell": "nano_service",
+  "model": "gpt-5.4",
+  "diagram": "7-spring-petclinic-microservices.jpg",
+  "confidence": "2",
+  "explanation": "The diagram shows several domain-oriented services plus one specialized genai-service. While genai-service appears narrowly focused, the overall decomposition still maps to recognizable business capabilities (customers, vets, pets, AI support) and each service has its own datastore, which suggests intentional bounded contexts rather than obviously trivial deployables. Based on the diagram alone, Nano Service is unlikely but not impossible, with genai-service being the main candidate if its responsibility is only a thin wrapper around a single function call.",
+  "involved_services": [
+    "genai-service",
+    "customers-service",
+    "vets-service",
+    "pets-service"
+  ]
+}

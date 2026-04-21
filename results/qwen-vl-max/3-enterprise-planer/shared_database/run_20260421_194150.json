@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "qwen-vl-max",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "1",
+  "explanation": "The diagram does not show any shared database or data store being used by multiple services. Each microservice is depicted independently, and there are no explicit connections to a common database. The API Gateway routes requests to individual services, but there is no indication of shared data persistence. Therefore, the Shared Database smell is not present.",
+  "involved_services": []
+}
