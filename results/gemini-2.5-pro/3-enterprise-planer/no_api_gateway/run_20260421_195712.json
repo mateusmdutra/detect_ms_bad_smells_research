@@ -1,0 +1,8 @@
+{
+  "smell": "no_api_gateway",
+  "model": "gemini-2.5-pro",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "1",
+  "explanation": "The architecture diagram explicitly includes a component labeled 'API Gateway'. Its description confirms its role is to 'Provide single access point for front end application'. The communication flow clearly shows that the 'Front end application' communicates only with this gateway, which then interacts with the internal microservices. This is a correct implementation of the API Gateway pattern, meaning the 'No API Gateway' smell is not present.",
+  "involved_services": []
+}

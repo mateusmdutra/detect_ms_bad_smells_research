@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "gemini-2.5-pro",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "1",
+  "explanation": "The architecture diagram clearly follows the 'database per service' pattern. Each microservice (Identity, Catalog, Ordering, Basket) is depicted with its own dedicated and separate data store (SQL Server database or Redis cache). There are no visual indicators of two or more distinct microservices accessing the same database instance. While the Ordering microservice has two components (Ordering.API and Ordering.BackgroundTasks) accessing the same database, they are part of the same service boundary, which is a valid implementation and not an instance of the Shared Database smell.",
+  "involved_services": []
+}

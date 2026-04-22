@@ -1,0 +1,15 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "gemini-2.5-pro",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "4",
+  "explanation": "While the primary business services (Service A and Service B) have a clear unidirectional dependency (A -> B), the diagram explicitly shows multiple cyclic dependencies within the infrastructure and observability layers. These are represented by bidirectional arrows, indicating a direct two-way dependency. The cycles are present between: 1) Config Center and Eureka, 2) Eureka and Spring Boot Admin, 3) Eureka and Hystrix Dashboard, and 4) Rabbit MQ and ZipKin. Such cycles, especially between core platform components like the Config Center and Eureka, can complicate their deployment, upgrade, and fault isolation, as each service in the cycle depends on the other to be available.",
+  "involved_services": [
+    "Config Center",
+    "Eureka",
+    "Spring Boot Admin",
+    "Hystrix Dashboard",
+    "Rabbit MQ",
+    "ZipKin"
+  ]
+}

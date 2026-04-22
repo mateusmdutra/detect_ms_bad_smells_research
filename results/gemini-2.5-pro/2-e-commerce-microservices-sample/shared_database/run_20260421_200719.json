@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "gemini-2.5-pro",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "1",
+  "explanation": "The architecture diagram explicitly shows that each microservice has its own dedicated and distinct data store. The Product Catalog service uses MongoDB, the User service uses PostgreSQL, the Shopping Cart service uses Redis, and the Search service uses Elasticsearch. There is no indication of any database being shared between two or more services, which is a good practice for maintaining service autonomy and loose coupling.",
+  "involved_services": []
+}

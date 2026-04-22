@@ -1,0 +1,8 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "gemini-2.5-pro",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "1",
+  "explanation": "The architecture follows a classic API Gateway pattern. All communication flows from the Front end application to the API Gateway, which then communicates with the various backend microservices. The diagram does not depict any communication between the backend microservices themselves. Since all dependencies radiate outwards from the API Gateway and there are no circular call chains shown between any set of services, the Cyclic Dependency smell is not present.",
+  "involved_services": []
+}

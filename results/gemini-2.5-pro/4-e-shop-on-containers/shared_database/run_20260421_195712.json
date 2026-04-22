@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "gemini-2.5-pro",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "1",
+  "explanation": "The architecture diagram clearly follows the 'database per service' pattern. Each business microservice (Identity, Catalog, Ordering, Basket) is explicitly shown with its own dedicated and separate data store. The Identity, Catalog, and Ordering microservices each have their own SQL Server database, visually distinguished by color and placement within the service boundary. The Basket microservice uses its own Redis cache. There are no connections indicating that multiple services access the same database.",
+  "involved_services": []
+}

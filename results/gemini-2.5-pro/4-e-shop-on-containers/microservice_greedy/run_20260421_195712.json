@@ -1,0 +1,8 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gemini-2.5-pro",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "1",
+  "explanation": "The architecture demonstrates a clear separation of concerns, with each microservice responsible for a distinct business capability (e.g., Identity, Catalog, Ordering, Basket). Services are decoupled through an Event Bus and API Gateways, adhering to the single responsibility principle. No single service appears to have accumulated an excessive number of responsibilities or dependencies that would classify it as 'greedy' or a mini-monolith. The design promotes independent scalability and maintainability for each component.",
+  "involved_services": []
+}

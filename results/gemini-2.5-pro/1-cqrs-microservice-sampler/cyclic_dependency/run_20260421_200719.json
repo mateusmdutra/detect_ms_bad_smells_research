@@ -1,0 +1,11 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "gemini-2.5-pro",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "3",
+  "explanation": "The diagram shows an explicit arrow from the Discovery Microservice to the Command Microservice. In a standard microservice architecture, the Command Microservice would need to register with the Discovery Microservice, implying a dependency in the opposite direction (Command -> Discovery). If both dependencies exist, this forms a direct cyclic dependency between the two services. While the reverse dependency is implicit, the explicit arrow makes a cycle likely.",
+  "involved_services": [
+    "Discovery Microservice",
+    "Command Microservice"
+  ]
+}

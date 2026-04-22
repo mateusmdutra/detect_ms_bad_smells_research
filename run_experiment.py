@@ -10,6 +10,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from models.claude_model import ClaudeModel
 from models.deepseek_model import DeepseekModel
+from models.gemini_model import GeminiModel
 from models.openai_model import GPTModel
 from models.qwen_model import QwenModel
 
@@ -18,6 +19,7 @@ MODELS = {
     "claude": ClaudeModel,
     "deepseek": DeepseekModel,
     "qwen": QwenModel,
+    "gemini": GeminiModel,
 }
 
 

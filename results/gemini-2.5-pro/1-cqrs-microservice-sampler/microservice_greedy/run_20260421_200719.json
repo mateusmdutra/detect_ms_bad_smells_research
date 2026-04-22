@@ -1,0 +1,8 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gemini-2.5-pro",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "1",
+  "explanation": "The architecture explicitly implements the Command Query Responsibility Segregation (CQRS) pattern, which is designed to enforce a strong separation of concerns. Each microservice has a very specific and singular role: the Gateway for routing, Discovery for service location, Command for write operations, Query for read operations, and Config for externalized configuration. This clear division of responsibilities is the antithesis of the Microservice Greedy smell, as no single service accumulates multiple, unrelated functions.",
+  "involved_services": []
+}

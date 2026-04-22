@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "gemini-2.5-pro",
+  "diagram": "6-spinnaker.png",
+  "confidence": "1",
+  "explanation": "The diagram does not show a shared database. While multiple services (such as Orca, Keel, Echo, and Gate) communicate with the 'Front50' component, this represents a 'Data Service' pattern. 'Front50' acts as a dedicated service that owns and manages persistence for application and pipeline metadata, exposing this data to other services through an API. The arrows indicate service-to-service communication, not direct database connections from multiple services to a single data store. This encapsulation of data access is a recommended practice to avoid the Shared Database smell.",
+  "involved_services": []
+}

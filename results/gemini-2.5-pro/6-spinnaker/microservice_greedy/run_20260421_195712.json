@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gemini-2.5-pro",
+  "diagram": "6-spinnaker.png",
+  "confidence": "4",
+  "explanation": "The 'Gate' service exhibits a very high fan-out, connecting to almost every other service in the architecture (Keel, Orca, Kayenta, Rosco, Clouddriver, Front50, Fiat). This indicates it has aggregated an excessive number of responsibilities, acting as a single, complex entry point rather than a simple gateway. This centralization creates a significant bottleneck and a single point of failure. Additionally, the 'Orca' service acts as a central orchestration hub with numerous dependencies, suggesting it contains a large amount of business and workflow logic, which is another characteristic of a greedy service.",
+  "involved_services": [
+    "Gate",
+    "Orca"
+  ]
+}

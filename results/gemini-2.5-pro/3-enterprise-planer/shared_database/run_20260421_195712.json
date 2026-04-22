@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "gemini-2.5-pro",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "1",
+  "explanation": "The architecture diagram is at a high level, focusing on service communication through an API Gateway. It does not depict the persistence layer for any of the microservices (e.g., Customers, Orders, Shipping). Since no databases or data stores are shown, there is no visual evidence of two or more services sharing a single database. Therefore, the Shared Database smell cannot be confirmed from this diagram.",
+  "involved_services": []
+}

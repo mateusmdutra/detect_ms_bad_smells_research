@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gemini-2.5-pro",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "4",
+  "explanation": "The API Gateway exhibits characteristics of the Microservice Greedy smell. It is a central hub with dependencies on every other backend service shown in the diagram (Authentication, Authorization, Customers, Orders, Shipping, Production, Quality, and Administration). This high fan-out makes it a single point of failure and a potential bottleneck for both performance and development. It concentrates multiple critical responsibilities, including being the single access point, performing protocol translation (JSON to Protobuf), and handling requests for all business domains. This centralization of logic and coupling can hinder the independent deployment and scalability of the microservices it fronts, essentially acting as a monolithic layer.",
+  "involved_services": [
+    "API Gateway"
+  ]
+}

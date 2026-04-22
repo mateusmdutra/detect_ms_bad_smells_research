@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "gemini-2.5-pro",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "1",
+  "explanation": "The architecture diagram does not depict any databases or data stores. All communication between the backend services is shown to occur over network protocols like HTTP, gRPC, and a message broker (ActiveMQ). This indicates that services are likely decoupled and communicate via APIs rather than sharing a common data layer. Without any visual evidence of a database being accessed by more than one service, the Shared Database smell is considered not present.",
+  "involved_services": []
+}

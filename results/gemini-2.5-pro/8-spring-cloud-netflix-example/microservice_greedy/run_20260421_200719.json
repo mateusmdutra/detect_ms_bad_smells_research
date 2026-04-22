@@ -1,0 +1,8 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gemini-2.5-pro",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "1",
+  "explanation": "The architecture diagram displays a well-defined separation of concerns. There are two distinct business services, 'Service-A' and 'Service-B', which interact in a simple chain. The other components (Zuul, Eureka, Config Center, RabbitMQ, etc.) are standard infrastructure and platform services, each with a clear, single responsibility (e.g., API Gateway, Service Discovery, Configuration). There is no indication that any single service has accumulated an excessive number of responsibilities or dependencies to be considered 'greedy' or monolithic.",
+  "involved_services": []
+}

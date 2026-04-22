@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "gemini-2.5-pro",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "1",
+  "explanation": "The architecture diagram does not show any database or persistence layer components. It focuses on the communication flow between services via the API Gateway. Since no data stores are depicted, it is impossible to identify if any are shared between the microservices. Therefore, based on the provided visual information, the Shared Database smell is not present.",
+  "involved_services": []
+}

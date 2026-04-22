@@ -1,0 +1,8 @@
+{
+  "smell": "no_api_gateway",
+  "model": "gemini-2.5-pro",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "1",
+  "explanation": "The architecture diagram explicitly includes a component labeled 'API Gateways/BFF'. All traffic from the client applications (eShop mobile app, eShop traditional Web app, eShop SPA Web app) is routed through these gateways ('Mobile-Shopping' and 'Web-Shopping') before reaching the internal microservices. This demonstrates a proper implementation of the API Gateway pattern, thus the 'No API Gateway' smell is not present.",
+  "involved_services": []
+}

@@ -1,0 +1,17 @@
+{
+  "smell": "no_api_gateway",
+  "model": "gemini-2.5-pro",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "4",
+  "explanation": "The architecture diagram clearly shows multiple external clients (Customer Management Frontend, Customer Self-Service Frontend, Policy Management Frontend, Risk Management Client) communicating directly with various internal backend services. For instance, the Customer Self-Service Frontend makes calls to three different backends (Customer Management Backend, Customer Self-Service Backend, and Policy Management Backend). There is no single, unified entry point, which exposes the internal service topology and forces each backend service to handle cross-cutting concerns like authentication, rate limiting, and routing independently. This lack of an API Gateway complicates client-side logic and makes the overall system brittle and difficult to evolve.",
+  "involved_services": [
+    "Customer Management Frontend",
+    "Customer Self-Service Frontend",
+    "Policy Management Frontend",
+    "Risk Management Client",
+    "Customer Management Backend",
+    "Customer Self-Service Backend",
+    "Policy Management Backend",
+    "Risk Management Server"
+  ]
+}

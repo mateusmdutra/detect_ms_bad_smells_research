@@ -1,0 +1,11 @@
+{
+  "smell": "nano_service",
+  "model": "gemini-2.5-pro",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "3",
+  "explanation": "The Authentication and Authorization services appear to be too fine-grained. These two concerns are very tightly coupled; authenticating a user (verifying identity) is almost always an immediate prerequisite for authorizing their access to a resource. Splitting them into two separate services likely forces the API Gateway to make two distinct network calls for what is logically a single security check on an incoming request. This pattern increases inter-service communication overhead, adds network latency, and raises operational complexity by requiring two services to be deployed, managed, and monitored. A more robust design would likely combine these responsibilities into a single 'Security' or 'Identity & Access Management' service.",
+  "involved_services": [
+    "Authentication",
+    "Authorization"
+  ]
+}

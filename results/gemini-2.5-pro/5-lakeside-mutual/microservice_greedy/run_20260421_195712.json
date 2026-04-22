@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gemini-2.5-pro",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "3",
+  "explanation": "The 'Policy Management Backend' service acts as a central communication hub, exhibiting a high number of both incoming and outgoing dependencies. It is called by two different frontends and another backend, and it communicates with three other backend services. This concentration of interactions suggests it has accumulated multiple responsibilities, potentially violating the single responsibility principle and creating a bottleneck. Additionally, the 'Customer Core' service is a dependency for three other major services, which could indicate that it is becoming a 'data monolith' by centralizing too much core logic and data access.",
+  "involved_services": [
+    "Policy Management Backend",
+    "Customer Core"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "gemini-2.5-pro",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "1",
+  "explanation": "The architecture diagram does not depict any databases or persistence layers for the services. The focus is on service discovery (Eureka), configuration (Config Center), routing (Zuul), and monitoring. As there is no visual representation of how Service-A and Service-B persist their data, it is impossible to determine if they share a database. Therefore, based on the provided information, the smell is not present.",
+  "involved_services": []
+}

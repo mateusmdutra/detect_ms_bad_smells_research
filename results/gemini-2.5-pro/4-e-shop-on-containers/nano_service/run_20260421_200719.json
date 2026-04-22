@@ -1,0 +1,10 @@
+{
+  "smell": "nano_service",
+  "model": "gemini-2.5-pro",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "3",
+  "explanation": "The 'Webhooks API' service is a strong candidate for the Nano Service smell. It appears to handle a very specific, technical function rather than a broader business capability. This type of functionality is often better integrated into the services that actually generate the events for the webhooks (e.g., the Ordering microservice notifying about order status changes). Maintaining it as a separate, independently deployable service likely introduces unnecessary operational overhead (deployment pipelines, monitoring, networking) for a responsibility that is too fine-grained. While the 'Basket microservice' is also small, its separation is more justifiable as it represents a distinct part of the user journey with different data storage requirements (a cache like Redis) compared to other services.",
+  "involved_services": [
+    "Webhooks API"
+  ]
+}

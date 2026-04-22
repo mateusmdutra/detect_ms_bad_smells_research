@@ -1,0 +1,13 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "gemini-2.5-pro",
+  "diagram": "6-spinnaker.png",
+  "confidence": "4",
+  "explanation": "The diagram clearly shows multiple cyclic dependencies. There is a direct bidirectional dependency between 'Orca' and 'Echo'. Another bidirectional dependency exists between 'Keel' and 'Echo'. Furthermore, a three-service cycle is present: 'Keel' calls 'Igor', which calls 'Echo', which in turn calls 'Keel' back, forming the cycle Keel \u2192 Igor \u2192 Echo \u2192 Keel. These cycles create tight coupling, making independent deployment and fault isolation for these services difficult.",
+  "involved_services": [
+    "Orca",
+    "Echo",
+    "Keel",
+    "Igor"
+  ]
+}

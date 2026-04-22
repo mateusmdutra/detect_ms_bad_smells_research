@@ -1,0 +1,11 @@
+{
+  "smell": "nano_service",
+  "model": "gemini-2.5-pro",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "3",
+  "explanation": "The 'Webhooks API' appears to have a very narrow responsibility, which might not justify its existence as a separate deployable unit. This functionality could potentially be merged into a broader 'Admin' or 'Notifications' service, or even handled by the services that emit the events. Similarly, the 'Basket microservice', while having a distinct responsibility, is also very fine-grained. While its use of a different data store (Redis) provides some justification for its separation, in many contexts, basket management is simple enough to be included within a larger 'Shopping' or 'Ordering' service to reduce operational complexity and communication overhead.",
+  "involved_services": [
+    "Webhooks API",
+    "Basket microservice"
+  ]
+}

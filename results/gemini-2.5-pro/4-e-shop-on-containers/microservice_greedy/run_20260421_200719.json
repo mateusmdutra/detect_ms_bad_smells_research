@@ -1,0 +1,8 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gemini-2.5-pro",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "1",
+  "explanation": "The architecture demonstrates a clear separation of concerns, which is a hallmark of good microservice design. Each service (Identity, Catalog, Ordering, Basket) is focused on a distinct business capability and maintains its own dedicated database. This follows the single responsibility principle. The use of API Gateways for client-specific aggregation and an Event Bus for asynchronous inter-service communication further promotes loose coupling. There is no evidence of any single service accumulating an excessive number of responsibilities or dependencies that would characterize it as 'greedy' or a mini-monolith.",
+  "involved_services": []
+}

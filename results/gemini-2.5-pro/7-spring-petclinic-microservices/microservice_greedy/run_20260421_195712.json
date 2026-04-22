@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gemini-2.5-pro",
+  "diagram": "7-spring-petclinic-microservices.jpg",
+  "confidence": "3",
+  "explanation": "The 'UI + API Gateway' component shows signs of being greedy by combining two major responsibilities: serving the user interface (static resources) and acting as a gateway for all backend REST requests. This violates the single responsibility principle. Such a component can easily accumulate business logic and complex routing rules, becoming a mini-monolith. It acts as a single point of failure and a bottleneck, coupling the evolution of the UI with the backend services and hindering independent deployment and scalability.",
+  "involved_services": [
+    "UI + API Gateway"
+  ]
+}

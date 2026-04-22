@@ -7,6 +7,7 @@ class ModelEnum(Enum):
     CLAUDE = 'claude-sonnet-4-6'
     DEEPSEEK = 'mmdutra14_3974/deepseek-ai/DeepSeek-OCR-2-b91bd70c'
     QWEN = 'qwen-vl-max'
+    GEMINI = 'gemini-2.5-pro'
 
 class LikertScaleOption(Enum):
     NOT_PRESENT = '1'

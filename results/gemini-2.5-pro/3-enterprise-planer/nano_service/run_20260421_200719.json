@@ -1,0 +1,11 @@
+{
+  "smell": "nano_service",
+  "model": "gemini-2.5-pro",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "3",
+  "explanation": "The Authentication and Authorization services are split into two separate components. While this can be a valid pattern, their responsibilities are highly cohesive and often handled by a single Identity and Access Management (IAM) service. The description for the Authorization service ('Tell if user has permissions to access requested resource') suggests a very fine-grained responsibility. This design likely requires the API Gateway to make a synchronous network call to the Authorization service for every protected request, which introduces significant latency and a performance bottleneck. The operational overhead of deploying, monitoring, and maintaining two separate services for such closely related functions may not be justified. Merging them into a single 'Security' service would likely be more efficient.",
+  "involved_services": [
+    "Authentication",
+    "Authorization"
+  ]
+}

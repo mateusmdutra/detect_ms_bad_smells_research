@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gemini-2.5-pro",
+  "diagram": "9-vehicle-tracking-microservices.jpg",
+  "confidence": "4",
+  "explanation": "The diagram clearly shows at least two services that aggregate multiple, distinct, and complex responsibilities. The 'Reporting / Data / DSS' service combines reporting, general data management, and decision support systems into a single component, which is a strong violation of the single responsibility principle. Similarly, the 'Orchestrating / Admin' service combines orchestration logic, which can lead to tight coupling, with general administrative functions, which are often a catch-all for unrelated tasks. These components are likely to become monolith-like bottlenecks, difficult to maintain, scale, and evolve independently.",
+  "involved_services": [
+    "Reporting / Data / DSS",
+    "Orchestrating / Admin"
+  ]
+}

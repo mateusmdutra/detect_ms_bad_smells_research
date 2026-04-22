@@ -1,0 +1,8 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "gemini-2.5-pro",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "1",
+  "explanation": "The diagram shows a clear unidirectional data flow between the primary application services. Requests flow from the user through Zuul to Service A, and then from Service A to Service B. There are no arrows indicating a dependency from Service B back to Service A, or any other circular path involving the core services. The bidirectional arrows are between infrastructure components (e.g., Eureka and Spring Boot Admin), which is typical for service discovery and monitoring and does not represent a cyclic dependency between business logic services.",
+  "involved_services": []
+}

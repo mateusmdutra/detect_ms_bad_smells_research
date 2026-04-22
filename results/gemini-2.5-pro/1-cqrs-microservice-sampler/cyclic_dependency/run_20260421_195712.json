@@ -1,0 +1,11 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "gemini-2.5-pro",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "4",
+  "explanation": "The diagram explicitly shows a dependency arrow pointing from the 'Discovery Microservice' to the 'Command Microservice'. In any standard microservice architecture, application services like the 'Command Microservice' must register with and/or query the 'Discovery Microservice' to find the network locations of other services. This creates a reciprocal dependency from 'Command Microservice' back to 'Discovery Microservice'. The resulting two-way dependency (Discovery \u2194 Command) forms a cycle, which tightly couples the services and prevents them from being deployed or scaled independently.",
+  "involved_services": [
+    "Discovery Microservice",
+    "Command Microservice"
+  ]
+}

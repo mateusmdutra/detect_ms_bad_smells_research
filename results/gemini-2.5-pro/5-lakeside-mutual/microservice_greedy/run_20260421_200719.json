@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gemini-2.5-pro",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "4",
+  "explanation": "The 'Policy Management Backend' and 'Customer Core' services show clear signs of the Microservice Greedy smell. The 'Policy Management Backend' has a high number of connections (6 total), acting as a central hub for multiple frontends and backends, indicating an accumulation of responsibilities. The 'Customer Core' service exhibits high fan-in, with three distinct backend services depending on it. This suggests it has become a 'god' service for all customer-related logic, creating a significant bottleneck and a single point of failure, which violates the principles of microservice architecture.",
+  "involved_services": [
+    "Policy Management Backend",
+    "Customer Core"
+  ]
+}

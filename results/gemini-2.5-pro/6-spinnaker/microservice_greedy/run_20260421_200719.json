@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gemini-2.5-pro",
+  "diagram": "6-spinnaker.png",
+  "confidence": "4",
+  "explanation": "The 'Gate' and 'Orca' services are clearly exhibiting the Microservice Greedy smell. 'Gate' serves as a central API gateway with a very high fan-out, having outgoing dependencies to at least eight other core services. This centralizes routing and access control, making it a significant bottleneck and a single point of failure that is coupled to a large portion of the system. Similarly, 'Orca' acts as a central orchestration engine, with numerous outgoing dependencies to services like Clouddriver, Front50, Rosco, and Fiat. This indicates a concentration of complex business logic and workflow management in a single service, making it resemble a mini-monolith. The high number of responsibilities and dependencies for both services makes them difficult to maintain, scale independently, and test.",
+  "involved_services": [
+    "Gate",
+    "Orca"
+  ]
+}

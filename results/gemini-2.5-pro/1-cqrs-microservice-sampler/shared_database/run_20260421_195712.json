@@ -1,0 +1,11 @@
+{
+  "smell": "shared_database",
+  "model": "gemini-2.5-pro",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "3",
+  "explanation": "The diagram illustrates a CQRS architecture with a single MongoDB instance for 'Persistent event storage'. The 'Command Microservice' is shown to be responsible for this storage. In a CQRS pattern, the 'Query Microservice' needs access to this data to build its read models. Although a direct connection from the 'Query Microservice' to MongoDB is not explicitly drawn, the presence of only one database strongly implies that both services share it. This sharing creates tight coupling at the data layer, which is characteristic of the Shared Database smell.",
+  "involved_services": [
+    "Command Microservice",
+    "Query Microservice"
+  ]
+}

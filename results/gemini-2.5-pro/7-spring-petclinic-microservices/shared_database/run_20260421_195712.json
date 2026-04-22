@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "gemini-2.5-pro",
+  "diagram": "7-spring-petclinic-microservices.jpg",
+  "confidence": "1",
+  "explanation": "The architecture diagram clearly follows the 'database per service' pattern. Each business microservice (customers-service, genai-service, vets-service, pets-service) is shown with its own dedicated and separate data store (RDBMS or Vector Store). There are no visual indicators that any two services share the same database instance.",
+  "involved_services": []
+}

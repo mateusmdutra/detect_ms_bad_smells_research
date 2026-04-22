@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gemini-2.5-pro",
+  "diagram": "9-vehicle-tracking-microservices.jpg",
+  "confidence": "4",
+  "explanation": "The service labeled 'Reporting / Data / DSS' is a strong indicator of the Microservice Greedy smell. Its name explicitly combines three distinct and complex responsibilities: generating reports, general data management/storage, and providing a Decision Support System (DSS). Each of these domains is typically large enough to be a separate microservice or even a collection of services. By consolidating them, this service likely violates the Single Responsibility Principle, becoming a central data hub with numerous dependencies. This creates a bottleneck for development, deployment, and scaling, and it risks evolving into a data-centric monolith within the microservice architecture.",
+  "involved_services": [
+    "Reporting / Data / DSS"
+  ]
+}

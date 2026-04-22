@@ -1,0 +1,12 @@
+{
+  "smell": "nano_service",
+  "model": "gemini-2.5-pro",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "4",
+  "explanation": "The architecture splits the 'Customer' domain into three services: 'Customer Core', 'Customer Management Backend', and 'Customer Self-Service Backend'. The two 'Backend' services appear to be thin layers (BFFs) that make synchronous HTTP calls to 'Customer Core' for fundamental operations. This suggests that 'Customer Core' may be an anemic entity service, or that the two BFFs are trivially small. This fine-grained separation within a single domain introduces unnecessary network overhead, tight coupling between services, and increased deployment and operational complexity. These three services are strong candidates for consolidation into a single, more cohesive 'Customer Service'.",
+  "involved_services": [
+    "Customer Core",
+    "Customer Management Backend",
+    "Customer Self-Service Backend"
+  ]
+}
