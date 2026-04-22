@@ -4,6 +4,7 @@ from typing import List, Optional
 
 class ModelEnum(Enum):
     OPENAI = 'gpt-5.4'
+    OPENAI_CODEX = 'gpt-5.3-codex'
     CLAUDE = 'claude-sonnet-4-6'
     DEEPSEEK = 'mmdutra14_3974/deepseek-ai/DeepSeek-OCR-2-b91bd70c'
     QWEN = 'qwen-vl-max'

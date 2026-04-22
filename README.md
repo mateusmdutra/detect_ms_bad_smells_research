@@ -24,8 +24,10 @@ Previous study: [From Detection to Refactoring of Microservice Bad Smells: A Sys
 |---|---|
 | `claude` | Claude Opus 4.6 |
 | `openai` | GPT-5.4 |
+| `codex` | GPT-5.3-Codex |
 | `deepseek` | DeepSeek Coder V2 |
 | `qwen` | Qwen3 Coder Plus |
+| `gemini` | Gemini 2.5 Pro |
 
 ---
 
@@ -66,8 +68,9 @@ Create a `.env` file at the project root:
 ```env
 ANTHROPIC_API_KEY=your_key_here
 OPENAI_API_KEY=your_key_here
-DEEPSEEK_API_KEY=your_key_here
-QWEN_API_KEY=your_key_here
+TOGETHER_API_KEY=your_key_here
+DASHSCOPE_API_KEY=your_key_here
+GEMINI_API_KEY=your_key_here
 ```
 
 ---
@@ -78,21 +81,23 @@ QWEN_API_KEY=your_key_here
 python run_experiment.py <model>
 ```
 
-Where `<model>` is one of: `claude`, `openai`, `deepseek`, `qwen`.
+Where `<model>` is one of: `claude`, `openai`, `codex`, `deepseek`, `qwen`, `gemini`.
 
 **Examples:**
 
 ```bash
 python run_experiment.py claude
 python run_experiment.py openai
+python run_experiment.py codex
 python run_experiment.py deepseek
 python run_experiment.py qwen
+python run_experiment.py gemini
 ```
 
 Output is saved to:
 
 ```
-results/<model-name>_<YYYYMMDD_HHMMSS>.json
+results/<model>/<diagram>/<smell>/run_<YYYYMMDD_HHMMSS>.json
 ```
 
 ---
