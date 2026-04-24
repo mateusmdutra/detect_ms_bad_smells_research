@@ -1,0 +1,17 @@
+{
+  "smell": "shared_database",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "6-spinnaker.png",
+  "confidence": "3",
+  "explanation": "The diagram shows multiple services (Keel, Igor, Echo, Orca, Rosco, Clouddriver, Front50, and Fiat) directly or indirectly interacting with 'Clouddriver' and 'Fiat'.  Without further information, it's highly likely that these services share the same database or data store represented by 'Clouddriver' and 'Fiat'. This creates a shared data layer, which is a strong indicator of the Shared Database anti-pattern. The diagram doesn't explicitly state this, but the architecture strongly suggests it.",
+  "involved_services": [
+    "Keel",
+    "Igor",
+    "Echo",
+    "Orca",
+    "Rosco",
+    "Clouddriver",
+    "Front50",
+    "Fiat"
+  ]
+}

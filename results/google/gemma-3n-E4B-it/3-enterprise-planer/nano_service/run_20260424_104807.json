@@ -1,0 +1,11 @@
+{
+  "smell": "nano_service",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "3",
+  "explanation": "The 'Authentication' and 'Authorization' services appear to be very fine-grained. 'Authentication' simply identifies users with a valid token. 'Authorization' tells if a user has permissions to access a resource. These responsibilities could potentially be combined into a single, more encompassing service. While separation of concerns is generally good, these services seem overly granular and might introduce unnecessary communication overhead. The API Gateway handles authentication and authorization, which suggests a potential for these functions to be integrated or consolidated.",
+  "involved_services": [
+    "Authentication",
+    "Authorization"
+  ]
+}

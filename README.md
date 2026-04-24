@@ -29,7 +29,7 @@ Previous study: [From Detection to Refactoring of Microservice Bad Smells: A Sys
 | `qwen` | Qwen3 Coder Plus |
 | `gemini` | Gemini 2.5 Pro |
 | `llama` |  Llama 4 Maverick |
-| `mistral` | Mistral Small Instruct | 
+| `gemma` | Gemma 3 | 
 
 ---
 
@@ -83,7 +83,7 @@ GEMINI_API_KEY=your_key_here
 python run_experiment.py <model>
 ```
 
-Where `<model>` is one of: `claude`, `openai`, `codex`, `deepseek`, `qwen`, `gemini`, `llama`, `mistral`.
+Where `<model>` is one of: `claude`, `openai`, `codex`, `deepseek`, `qwen`, `gemini`, `llama`, `gemma`.
 
 **Examples:**
 
@@ -95,7 +95,7 @@ python run_experiment.py deepseek
 python run_experiment.py qwen
 python run_experiment.py gemini
 python run_experiment.py llama
-python run_experiment.py mistral
+python run_experiment.py gemma
 ```
 
 Output is saved to:

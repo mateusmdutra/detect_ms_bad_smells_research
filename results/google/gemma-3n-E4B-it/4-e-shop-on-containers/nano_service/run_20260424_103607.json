@@ -1,0 +1,13 @@
+{
+  "smell": "nano_service",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "3",
+  "explanation": "The diagram shows several services (Web Status, Seq Logging, Webhooks API, Admin Services) that appear to perform very specific, potentially trivial tasks. These services seem like they could be easily incorporated into other services or even handled as internal utilities within the larger microservices. Their independent deployment and communication overhead might not justify their existence as separate microservices. The level of granularity suggests a potential for the Nano Service anti-pattern.",
+  "involved_services": [
+    "Web Status",
+    "Seq Logging",
+    "Webhooks API",
+    "Admin Services"
+  ]
+}

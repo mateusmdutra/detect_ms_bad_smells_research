@@ -1,0 +1,13 @@
+{
+  "smell": "no_api_gateway",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "3",
+  "explanation": "The diagram shows client applications (eShop mobile app, eShop traditional Web app, eShop SPA Web app) directly communicating with internal microservices like Identity, Catalog, Ordering, and Basket. There is no central API Gateway acting as a single entry point. This exposes the internal service topology and makes it difficult to implement cross-cutting concerns like authentication, rate limiting, and routing consistently across all services.",
+  "involved_services": [
+    "Identity microservice",
+    "Catalog microservice",
+    "Ordering microservice",
+    "Basket microservice"
+  ]
+}

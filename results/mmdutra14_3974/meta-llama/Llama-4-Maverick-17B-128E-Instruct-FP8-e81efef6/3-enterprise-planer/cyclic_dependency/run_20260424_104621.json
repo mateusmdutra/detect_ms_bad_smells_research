@@ -1,0 +1,8 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "1",
+  "explanation": "The diagram shows a clear hierarchical structure with the Front end application at the top and various microservices below it, all communicating through the API Gateway. There are no visible circular dependencies among the services as the arrows indicate a unidirectional flow from the API Gateway to the microservices and between Authentication/Authorization and API Gateway. The microservices do not directly communicate with each other, thus there's no cyclic dependency.",
+  "involved_services": []
+}

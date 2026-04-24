@@ -1,0 +1,12 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "4",
+  "explanation": "The services 'Customer Management Backend', 'Customer Self-Service Backend', and 'Policy Management Backend' form a cyclic dependency chain. 'Customer Management Backend' depends on 'Customer Self-Service Backend', 'Customer Self-Service Backend' depends on 'Policy Management Backend' via ActiveMQ, and 'Policy Management Backend' depends on 'Customer Management Backend'. This cycle makes independent deployment impossible for these services and complicates fault isolation.",
+  "involved_services": [
+    "Customer Management Backend",
+    "Customer Self-Service Backend",
+    "Policy Management Backend"
+  ]
+}

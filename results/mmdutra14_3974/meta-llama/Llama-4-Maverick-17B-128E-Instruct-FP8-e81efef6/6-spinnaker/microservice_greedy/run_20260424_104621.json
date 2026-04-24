@@ -1,0 +1,12 @@
+{
+  "smell": "microservice_greedy",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "6-spinnaker.png",
+  "confidence": "3",
+  "explanation": "The services 'Gate', 'Orca', and 'Keel' have a high number of connections, indicating they might be accumulating too many responsibilities or dependencies. 'Gate' is connected to multiple services and receives input from external entities, 'Orca' is central to many interactions, and 'Keel' interacts with several services, suggesting potential violations of the single responsibility principle.",
+  "involved_services": [
+    "Gate",
+    "Orca",
+    "Keel"
+  ]
+}

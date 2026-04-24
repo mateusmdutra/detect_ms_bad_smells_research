@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "9-vehicle-tracking-microservices.jpg",
+  "confidence": "3",
+  "explanation": "The 'Facade Srv (Srv1, ..N)' service appears to be a facade for multiple services (Service 1 to Service N), indicating it might be accumulating too many responsibilities or dependencies, behaving similarly to a monolith.",
+  "involved_services": [
+    "Facade Srv (Srv1, ..N)"
+  ]
+}

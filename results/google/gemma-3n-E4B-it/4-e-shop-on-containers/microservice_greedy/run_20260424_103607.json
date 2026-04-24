@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "3",
+  "explanation": "The Catalog and Ordering microservices appear to be tightly coupled and potentially accumulating too many responsibilities. The Ordering microservice interacts with the Catalog microservice, and also has 'Ordering Background Tasks' which suggests it's handling both the immediate order processing and background operations. This could indicate that the Ordering microservice is responsible for more than just order management, potentially including inventory updates, payment processing, and shipping notifications. Similarly, the Catalog microservice is directly accessed by the Ordering microservice, and its responsibilities might extend beyond just catalog data management. This could lead to increased complexity, tighter coupling, and potential bottlenecks. The presence of an Event Bus suggests an attempt to decouple, but the direct dependencies between these two services raise concerns about the single responsibility principle.",
+  "involved_services": [
+    "Catalog microservice",
+    "Ordering microservice"
+  ]
+}

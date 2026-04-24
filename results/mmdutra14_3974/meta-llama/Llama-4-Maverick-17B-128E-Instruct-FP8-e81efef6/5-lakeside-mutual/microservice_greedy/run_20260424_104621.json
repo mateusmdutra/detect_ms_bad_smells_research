@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "3",
+  "explanation": "The Customer Self-Service Backend and Customer Management Backend services have multiple dependencies and are connected to several other services, indicating a potential accumulation of responsibilities. Customer Self-Service Backend interacts with Customer Management Backend, Customer Core, Spring Boot Admin, and Policy Management Backend, while Customer Management Backend interacts with Customer Management Frontend, Customer Core, and Customer Self-Service Backend. This suggests that these services might be handling too many responsibilities, similar to a monolith, and could be violating the single responsibility principle.",
+  "involved_services": [
+    "Customer Self-Service Backend",
+    "Customer Management Backend"
+  ]
+}

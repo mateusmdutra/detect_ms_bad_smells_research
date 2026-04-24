@@ -1,0 +1,13 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "3",
+  "explanation": "The diagram shows dependencies between several microservices: Product Catalog -> User, User -> Shopping Cart, Shopping Cart -> Search, and Search -> Product Catalog. This creates a circular dependency chain.  A change in one service can ripple through the others, making independent deployment and updates difficult. Fault isolation is also compromised as failures in one service can cascade to others in the cycle.",
+  "involved_services": [
+    "Product Catalog Microservice",
+    "User Microservice",
+    "Shopping Cart Microservice",
+    "Search Microservice"
+  ]
+}

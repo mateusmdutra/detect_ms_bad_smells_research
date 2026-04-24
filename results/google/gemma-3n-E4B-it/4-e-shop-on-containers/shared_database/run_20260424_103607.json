@@ -1,0 +1,13 @@
+{
+  "smell": "shared_database",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "4",
+  "explanation": "The diagram clearly shows that multiple microservices (Identity, Catalog, Ordering, and Basket) are all connecting to the same SQL Server database. This represents a direct dependency on a shared data store, violating the principle of service autonomy and indicating a strong coupling at the data layer.  Independent deployment and scaling of these services would be significantly hampered due to this shared dependency.",
+  "involved_services": [
+    "Identity microservice",
+    "Catalog microservice",
+    "Ordering microservice",
+    "Basket microservice"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "smell": "shared_database",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "4",
+  "explanation": "The diagram shows that the Product Catalog Microservice, User Microservice, and Shopping Cart Microservice all interact with MongoDB and PostgreSQL respectively. This indicates that these services are sharing databases. This is a clear violation of the microservice principle of independent data management and constitutes the Shared Database anti-pattern.",
+  "involved_services": [
+    "Product Catalog Microservice",
+    "User Microservice",
+    "Shopping Cart Microservice"
+  ]
+}

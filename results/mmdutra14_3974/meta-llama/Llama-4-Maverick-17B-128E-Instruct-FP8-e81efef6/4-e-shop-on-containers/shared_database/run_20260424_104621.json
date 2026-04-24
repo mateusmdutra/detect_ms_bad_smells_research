@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "1",
+  "explanation": "The diagram shows that each microservice (Identity, Catalog, Ordering) has its own SQL Server database, and Basket microservice uses Redis cache. There is no indication of multiple services sharing the same database or data store.",
+  "involved_services": []
+}

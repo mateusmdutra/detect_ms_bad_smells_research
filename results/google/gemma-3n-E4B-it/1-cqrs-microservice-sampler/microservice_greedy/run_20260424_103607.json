@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "3",
+  "explanation": "The Query Microservice is responsible for both query processing and view processing, which could be considered separate responsibilities. This suggests a potential accumulation of responsibilities within a single service, potentially leading to increased complexity and reduced maintainability. Similarly, the Command Microservice's responsibilities are not explicitly defined, but it's likely handling both command processing and potentially some aspects of data validation or business logic, which could be better separated. While the diagram doesn't provide enough detail to definitively confirm a 'greedy' service, the broad descriptions of the Query and Command Microservices raise concerns about potential violations of the single responsibility principle.",
+  "involved_services": [
+    "Command Microservice",
+    "Query Microservice"
+  ]
+}

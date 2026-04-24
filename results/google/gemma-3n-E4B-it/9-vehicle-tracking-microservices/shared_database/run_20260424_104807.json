@@ -1,0 +1,11 @@
+{
+  "smell": "shared_database",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "9-vehicle-tracking-microservices.jpg",
+  "confidence": "3",
+  "explanation": "The diagram shows 'Reporting / Data/ DSS' as a shared component accessible to multiple services (Service 1 and Service N). This suggests a shared database or data store is likely being used to store and retrieve data for reporting and data services, creating a potential shared database anti-pattern. While not explicitly stated as a database, the 'Reporting / Data/ DSS' component strongly implies a shared data resource.",
+  "involved_services": [
+    "Service 1",
+    "Service N"
+  ]
+}

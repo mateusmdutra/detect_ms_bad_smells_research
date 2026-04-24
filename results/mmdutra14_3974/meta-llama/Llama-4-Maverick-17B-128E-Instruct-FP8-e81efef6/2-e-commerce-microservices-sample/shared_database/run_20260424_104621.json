@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "1",
+  "explanation": "The diagram shows that each microservice has its own database or data store (MongoDB for Product Catalog, Redis for Shopping Cart, ElasticSearch for Search, and PostgreSQL for User Microservice). There is no indication that any two services share the same database or data store.",
+  "involved_services": []
+}

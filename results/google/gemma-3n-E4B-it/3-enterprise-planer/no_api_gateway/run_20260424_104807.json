@@ -1,0 +1,15 @@
+{
+  "smell": "no_api_gateway",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "3",
+  "explanation": "The diagram explicitly shows an 'API Gateway' component. However, the 'Front end application' directly communicates with the 'API Gateway', and the 'API Gateway' then routes requests to the individual microservices. There is no indication of any other entry point for external clients. While an API Gateway *is* present, the diagram doesn't show any other entry point, implying that all external traffic goes through the API Gateway. If there were other entry points, it would indicate a lack of a single, unified entry point, which is the core issue of the 'No API Gateway' smell. Therefore, while an API Gateway exists, the diagram's structure suggests it's the *only* entry point, making the smell likely present.",
+  "involved_services": [
+    "Customers Microservice",
+    "Orders Microservice",
+    "Shipping Microservice",
+    "Production Microservice",
+    "Quality Microservice",
+    "Administration Microservice"
+  ]
+}

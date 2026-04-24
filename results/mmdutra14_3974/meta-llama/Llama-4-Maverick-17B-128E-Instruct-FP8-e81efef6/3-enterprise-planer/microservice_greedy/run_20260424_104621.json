@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "2",
+  "explanation": "The API Gateway is acting as an intermediary for all requests from the front-end application to various microservices, converting JSON requests to Google protobuf and vice versa. While it has a clear responsibility as a single access point, its role in converting request formats could be seen as taking on additional processing responsibilities. However, this is a common pattern in microservice architectures and not necessarily a bad smell. The confidence is 2 (Unlikely present) because, although the API Gateway has multiple interactions, its responsibilities are still relatively focused on request routing and format conversion, which is a typical function for an API Gateway.",
+  "involved_services": [
+    "API Gateway"
+  ]
+}

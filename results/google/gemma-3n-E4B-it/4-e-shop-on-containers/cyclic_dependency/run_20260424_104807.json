@@ -1,0 +1,12 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "3",
+  "explanation": "The diagram suggests a potential cyclic dependency. The Catalog microservice and Ordering microservice both interact with the Event Bus. The Ordering microservice also interacts with the Basket microservice. It's plausible that the Basket microservice might publish events that the Catalog and Ordering microservices consume, and vice-versa, creating a cycle. While not explicitly shown as a direct dependency *between* these three, the shared dependency on the Event Bus and the potential for event-driven interactions strongly suggest a cyclic dependency exists. Further investigation into the event flows is needed to confirm.",
+  "involved_services": [
+    "Catalog microservice",
+    "Ordering microservice",
+    "Basket microservice"
+  ]
+}

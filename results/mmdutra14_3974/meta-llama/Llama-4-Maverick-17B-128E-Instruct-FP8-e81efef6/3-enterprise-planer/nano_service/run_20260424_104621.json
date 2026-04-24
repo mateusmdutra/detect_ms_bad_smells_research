@@ -1,0 +1,11 @@
+{
+  "smell": "nano_service",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "2",
+  "explanation": "The diagram shows multiple microservices, but 'Authentication' and 'Authorization' services have relatively simple responsibilities. However, authentication and authorization are critical and complex tasks that often require separate handling due to their distinct nature and security implications. Without more detailed information about their internal complexity, it's hard to definitively classify them as nano services.",
+  "involved_services": [
+    "Authorization",
+    "Authentication"
+  ]
+}

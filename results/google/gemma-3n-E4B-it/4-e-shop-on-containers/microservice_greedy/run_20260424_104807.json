@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "3",
+  "explanation": "The Catalog and Ordering microservices appear to be tightly coupled and potentially accumulating too many responsibilities. The Ordering microservice handles both the Ordering API and Ordering Background Tasks, suggesting it's responsible for both immediate request handling and asynchronous processing. The Catalog microservice is responsible for data storage and likely business logic related to product information. This could indicate a violation of the single responsibility principle. While the diagram shows a separation, the close interaction and potential for shared dependencies raise concerns about the services becoming overly complex and difficult to maintain independently. The presence of an Event Bus helps, but doesn't guarantee loose coupling if the services themselves are too large.",
+  "involved_services": [
+    "Catalog microservice",
+    "Ordering microservice"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "smell": "no_api_gateway",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "3",
+  "explanation": "The diagram shows client applications (eShop mobile app, eShop traditional Web app, eShop SPA Web app) directly communicating with internal microservices like Identity, Catalog, Ordering, and Basket. There is no central API Gateway to handle routing, authentication, rate limiting, or other cross-cutting concerns. While there's an 'API Gateways/BFF' component, it appears to be primarily for internal communication between services (Mobile-Shopping) rather than acting as a single entry point for all external clients.",
+  "involved_services": [
+    "Identity microservice",
+    "Catalog microservice",
+    "Ordering microservice",
+    "Basket microservice"
+  ]
+}

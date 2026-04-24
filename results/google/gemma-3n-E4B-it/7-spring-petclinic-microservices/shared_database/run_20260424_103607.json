@@ -1,0 +1,13 @@
+{
+  "smell": "shared_database",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "7-spring-petclinic-microservices.jpg",
+  "confidence": "4",
+  "explanation": "The diagram clearly shows that all four microservices (customers-service, genai-service, vets-service, and pets-service) are connected to the same RDBMS (Relational Database Management System). This indicates a shared database, which is a strong indicator of the Shared Database anti-pattern.  Each service having direct access to the same database creates tight coupling and violates the principle of independent data management for each microservice.",
+  "involved_services": [
+    "customers-service",
+    "genai-service",
+    "vets-service",
+    "pets-service"
+  ]
+}

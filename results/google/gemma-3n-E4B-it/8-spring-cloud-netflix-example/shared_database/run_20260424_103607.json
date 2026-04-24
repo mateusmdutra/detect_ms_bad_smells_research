@@ -1,0 +1,11 @@
+{
+  "smell": "shared_database",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "3",
+  "explanation": "The diagram shows that both Service-A and Service-B are connected to 'Config Center'. While 'Config Center' itself might not be a database, it's highly likely that it stores configuration data that both services rely on. If this configuration data is persisted in a shared database, it represents a Shared Database anti-pattern. The diagram doesn't explicitly state this, but it's a strong possibility given the architecture.  The fact that both services are consuming from the same central component (Config Center) increases the likelihood of a shared database underneath.",
+  "involved_services": [
+    "Service-A",
+    "Service-B"
+  ]
+}

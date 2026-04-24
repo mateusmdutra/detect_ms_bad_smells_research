@@ -10,7 +10,7 @@ class ModelEnum(Enum):
     QWEN = 'qwen-vl-max'
     GEMINI = 'gemini-2.5-pro'
     LLAMA = 'mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6'
-    MISTRAL = 'mistralai/Mistral-Small-24B-Instruct-2501'
+    GEMMA = 'google/gemma-3n-E4B-it'
 
 class LikertScaleOption(Enum):
     NOT_PRESENT = '1'

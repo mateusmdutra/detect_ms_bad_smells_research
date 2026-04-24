@@ -15,7 +15,7 @@ from models.gemini_model import GeminiModel
 from models.openai_model import GPTModel
 from models.qwen_model import QwenModel
 from models.llama_model import LlamaModel
-from models.mistral_model import MistralModel
+from models.gemma_model import GemmaModel
 
 MODELS = {
     "openai": GPTModel,
@@ -25,7 +25,7 @@ MODELS = {
     "qwen": QwenModel,
     "gemini": GeminiModel,
     "llama": LlamaModel,
-    "mistral": MistralModel,
+    "gemma": GemmaModel,
 }
 
 

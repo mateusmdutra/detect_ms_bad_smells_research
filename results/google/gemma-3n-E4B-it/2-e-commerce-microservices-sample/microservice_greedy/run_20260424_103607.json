@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "3",
+  "explanation": "The diagram shows that the Product Catalog and User Microservices are directly accessed by the e-commerce Store UI. While this isn't inherently bad, it suggests these services might be handling a broader range of responsibilities than ideal. For example, the User Microservice might be responsible for authentication, authorization, and user profile management, which could be separated into distinct services. Similarly, the Product Catalog Microservice might be handling product information, inventory management, and potentially even product reviews, which could be split. This accumulation of responsibilities increases coupling and complexity, potentially leading to a 'Microservice Greedy' situation. The diagram doesn't provide enough detail to definitively say they *are* greedy, but the direct access from the UI raises a flag.",
+  "involved_services": [
+    "Product Catalog Microservice",
+    "User Microservice"
+  ]
+}

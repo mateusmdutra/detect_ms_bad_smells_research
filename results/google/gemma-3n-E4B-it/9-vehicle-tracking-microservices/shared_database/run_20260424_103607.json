@@ -1,0 +1,11 @@
+{
+  "smell": "shared_database",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "9-vehicle-tracking-microservices.jpg",
+  "confidence": "3",
+  "explanation": "The diagram shows 'Reporting / Data/ DSS' connected to 'Service 1' and 'Service N'. This suggests that both Service 1 and Service N might be accessing the same data store managed by 'Reporting / Data/ DSS'.  While not explicitly stated as a database, the close association and the nature of 'Reporting/Data/DSS' strongly imply a shared data resource, leading to tight coupling.  The diagram doesn't explicitly show a separate database for each service, making it likely that a shared database is being used.",
+  "involved_services": [
+    "Service 1",
+    "Service N"
+  ]
+}

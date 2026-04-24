@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "3",
+  "explanation": "The Query Microservice is described as handling both 'Query & view processing'. This suggests it might be taking on responsibilities beyond just querying data, potentially including some aspects of data presentation or even business logic related to views. Similarly, the Command Microservice is responsible for 'Command processing', which could encompass a broader range of actions than strictly command execution, potentially including state changes and related validations. While the diagram doesn't explicitly detail the internal responsibilities, the description hints at a potential overlap in responsibilities between the Query and Command microservices, making them likely candidates for the Microservice Greedy smell. Further investigation into the internal implementation of these services would be needed to confirm.",
+  "involved_services": [
+    "Command Microservice",
+    "Query Microservice"
+  ]
+}

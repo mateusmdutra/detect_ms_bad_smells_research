@@ -1,0 +1,11 @@
+{
+  "smell": "shared_database",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "3",
+  "explanation": "The diagram shows that both Service-A and Service-B are connected to 'Config Center'. While 'Config Center' could be a configuration management service, it's highly likely that it also serves as a shared data store for both services, especially given the diagram's simplicity. This shared dependency on 'Config Center' suggests a shared database or data store, leading to tight coupling between Service-A and Service-B, undermining their autonomy.",
+  "involved_services": [
+    "Service-A",
+    "Service-B"
+  ]
+}

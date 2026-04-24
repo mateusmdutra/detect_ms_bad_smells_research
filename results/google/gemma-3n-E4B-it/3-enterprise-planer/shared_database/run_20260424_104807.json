@@ -1,0 +1,15 @@
+{
+  "smell": "shared_database",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "3",
+  "explanation": "The diagram doesn't explicitly show a shared database, but the lack of any data store depicted for each microservice suggests a potential shared database.  It's highly likely that multiple microservices are accessing the same database to store and retrieve data, especially considering the nature of the services (Customers, Orders, Shipping, etc.) which often require shared data. The diagram only shows interactions through the API Gateway, not the underlying data storage mechanisms. Without explicit data store diagrams, it's difficult to be certain, but the absence of individual data stores for each service makes this a likely scenario.",
+  "involved_services": [
+    "Customers Microservice",
+    "Orders Microservice",
+    "Shipping Microservice",
+    "Production Microservice",
+    "Quality Microservice",
+    "Administration Microservice"
+  ]
+}

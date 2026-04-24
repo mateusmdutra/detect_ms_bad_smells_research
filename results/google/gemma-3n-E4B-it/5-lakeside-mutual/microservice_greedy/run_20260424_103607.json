@@ -1,0 +1,12 @@
+{
+  "smell": "microservice_greedy",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "3",
+  "explanation": "The 'Customer Management Backend' and 'Customer Self-Service Backend' appear to be tightly coupled and share significant responsibilities related to customer data and management. They both communicate with the 'Customer Core' and have overlapping functionalities. This suggests a potential violation of the single responsibility principle, where each service handles too many concerns. The 'Customer Core' also seems to be heavily relied upon by both customer-facing services, indicating a potential bottleneck. While the diagram doesn't explicitly detail the internal workings, the high degree of inter-dependency and shared responsibilities raises concerns about the 'Microservice Greedy' smell. The 'Customer Management Backend' and 'Customer Self-Service Backend' could likely be separated into smaller, more focused services.",
+  "involved_services": [
+    "Customer Management Backend",
+    "Customer Self-Service Backend",
+    "Customer Core"
+  ]
+}

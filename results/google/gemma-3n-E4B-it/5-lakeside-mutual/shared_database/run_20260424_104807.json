@@ -1,0 +1,13 @@
+{
+  "smell": "shared_database",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "4",
+  "explanation": "The diagram shows multiple services (Customer Management Backend, Customer Self-Service Backend, Customer Core, and Policy Management Backend) directly interacting with the 'Customer Core' service via HTTP.  The 'Customer Core' service is likely accessing a shared database, and all other services are accessing it directly. This indicates a shared database, creating a strong dependency between these services and violating the principle of service autonomy.  The Customer Self-Service Backend and Customer Management Backend both interact with the Customer Core, further reinforcing the shared database concern.",
+  "involved_services": [
+    "Customer Management Backend",
+    "Customer Self-Service Backend",
+    "Customer Core",
+    "Policy Management Backend"
+  ]
+}

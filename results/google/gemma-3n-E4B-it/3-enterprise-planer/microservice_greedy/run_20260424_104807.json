@@ -1,0 +1,12 @@
+{
+  "smell": "microservice_greedy",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "3",
+  "explanation": "The API Gateway is handling authentication and authorization, which are distinct responsibilities. While the API Gateway's role is to manage traffic and provide a single entry point, it shouldn't be responsible for security concerns like authentication and authorization. The Authentication and Authorization services appear to be tightly coupled with the API Gateway, suggesting the API Gateway has accumulated too many responsibilities. This violates the Single Responsibility Principle and could lead to maintainability issues. The diagram suggests the API Gateway is acting as a central point for both request routing and security, which is a common indicator of a microservice becoming too broad.",
+  "involved_services": [
+    "API Gateway",
+    "Authentication",
+    "Authorization"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "1",
+  "explanation": "The diagram does not show any database or data store being shared among services. It illustrates a microservices architecture with various components such as Service A Cluster, Service B Cluster, Config Center, Eureka, Spring Boot Admin, Hystrix Dashboard, Rabbit MQ, and Zipkin, but it does not depict any direct interaction between services and a shared database.",
+  "involved_services": []
+}

@@ -1,0 +1,12 @@
+{
+  "smell": "no_api_gateway",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "3",
+  "explanation": "The diagram shows external clients communicating directly with the Command and Query Microservices. While a 'Gateway Microservice' is present, the diagram doesn't explicitly show it acting as a single entry point for all external traffic. The description mentions the Gateway Microservice allows traffic to be routed and load balanced, but it's unclear if it's the *only* entry point. This suggests a potential lack of a centralized API Gateway, exposing the internal service topology.",
+  "involved_services": [
+    "Command Microservice",
+    "Query Microservice",
+    "Config Microservice"
+  ]
+}

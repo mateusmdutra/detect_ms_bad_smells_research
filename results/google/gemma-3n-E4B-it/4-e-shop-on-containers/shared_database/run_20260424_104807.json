@@ -1,0 +1,13 @@
+{
+  "smell": "shared_database",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "4",
+  "explanation": "The diagram clearly shows that multiple microservices (Identity, Catalog, Ordering, and Basket) are all connecting to the same SQL Server database. This represents a direct dependency and tight coupling at the data layer, violating the principle of independent data management for each microservice.  This makes independent deployment, scaling, and technology choices difficult for each service.",
+  "involved_services": [
+    "Identity microservice",
+    "Catalog microservice",
+    "Ordering microservice",
+    "Basket microservice"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "smell": "no_api_gateway",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "7-spring-petclinic-microservices.jpg",
+  "confidence": "1",
+  "explanation": "The diagram shows a 'UI + API Gateway' component that acts as a single entry point for external clients, receiving REST requests and serving static resources. This indicates the presence of an API Gateway, which mitigates the 'No API Gateway' smell.",
+  "involved_services": []
+}

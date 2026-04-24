@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "3",
+  "explanation": "The Config Center is connected to multiple services (Service A Cluster and Service B Cluster) and other infrastructure components (Eureka, Rabbit MQ), indicating a high number of dependencies and potentially accumulated responsibilities, which is characteristic of the Microservice Greedy smell.",
+  "involved_services": [
+    "Config Center"
+  ]
+}

@@ -9,8 +9,8 @@ from schema.smell_detection_response_model import DetectionResult, LikertScaleOp
 from utils.utils import encode_image
 
 
-class MistralModel(LLMModel):
-    name = ModelEnum.MISTRAL.value
+class GemmaModel(LLMModel):
+    name = ModelEnum.GEMMA.value
 
     def __init__(self):
         self.client = OpenAI(

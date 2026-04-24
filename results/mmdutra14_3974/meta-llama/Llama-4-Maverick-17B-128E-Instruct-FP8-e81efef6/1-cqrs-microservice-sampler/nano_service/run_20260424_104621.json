@@ -1,0 +1,10 @@
+{
+  "smell": "nano_service",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "2",
+  "explanation": "The Config Microservice is likely too fine-grained as it only allows the 'externalisation' of app configuration, which could potentially be handled by another service or as part of the application's codebase, thus not justifying its existence as an independent deployable unit.",
+  "involved_services": [
+    "Config Microservice"
+  ]
+}

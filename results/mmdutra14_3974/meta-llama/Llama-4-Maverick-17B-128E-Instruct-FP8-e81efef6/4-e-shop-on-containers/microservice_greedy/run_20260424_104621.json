@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "3",
+  "explanation": "The Ordering microservice appears to have multiple responsibilities, as it includes both 'Ordering API' and 'Ordering BackgroundTasks'. This could indicate that it is handling too many tasks, potentially violating the single responsibility principle.",
+  "involved_services": [
+    "Ordering microservice"
+  ]
+}

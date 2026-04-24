@@ -1,0 +1,12 @@
+{
+  "smell": "shared_database",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "7-spring-petclinic-microservices.jpg",
+  "confidence": "2",
+  "explanation": "The diagram shows three services (customers-service, vets-service, and pets-service) each connected to their own RDBMS database. Although they use the same type of database (RDBMS), there is no indication that they share the same database instance. Therefore, the presence of the Shared Database smell is unlikely.",
+  "involved_services": [
+    "customers-service",
+    "vets-service",
+    "pets-service"
+  ]
+}

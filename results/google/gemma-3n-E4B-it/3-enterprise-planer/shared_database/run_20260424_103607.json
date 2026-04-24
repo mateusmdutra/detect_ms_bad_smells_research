@@ -1,0 +1,15 @@
+{
+  "smell": "shared_database",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "3",
+  "explanation": "The diagram doesn't explicitly show a shared database, but the lack of any data store depicted for each microservice suggests a potential shared database.  It's highly likely that all these services are accessing a common database to store their respective data.  The diagram focuses on the API Gateway and authentication/authorization, omitting the data persistence layer, which is a strong indicator of a shared database pattern. Without explicit data store details, it's not definitively confirmed, but the absence of individual data stores makes it likely.",
+  "involved_services": [
+    "Customers Microservice",
+    "Orders Microservice",
+    "Shipping Microservice",
+    "Production Microservice",
+    "Quality Microservice",
+    "Administration Microservice"
+  ]
+}

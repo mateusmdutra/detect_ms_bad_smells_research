@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "3",
+  "explanation": "The diagram shows that Service-A and Service-B are deployed within their own clusters, suggesting a microservice approach. However, the diagram doesn't provide enough information to definitively rule out the Microservice Greedy smell. Both Service-A and Service-B appear to be handling multiple responsibilities, as they are interacting with various external components (Config Center, Rabbit MQ, Eureka, Spring Boot Admin, Hystrix Dashboard, Zipkin). Without knowing the specific functionalities of each service, it's plausible that they have accumulated too many responsibilities, potentially violating the single responsibility principle. The diagram suggests a degree of coupling between services and external systems, which is a common indicator of a microservice that has grown too large.",
+  "involved_services": [
+    "Service-A",
+    "Service-B"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "3",
+  "explanation": "The diagram shows that the 'Product Catalog Microservice' and 'User Microservice' are both directly accessed by the 'e-commerce Store UI'. This suggests they might be handling a broader range of responsibilities than ideally expected for a microservice. For example, the Product Catalog might be responsible for not only product information but also potentially product recommendations or related product suggestions. Similarly, the User Microservice might handle authentication, authorization, user profile management, and potentially user activity tracking. This accumulation of responsibilities increases coupling, reduces cohesion, and makes the services harder to maintain and scale independently. While not definitively a 'greedy' service, the diagram raises a significant concern about potential over-responsibilities.",
+  "involved_services": [
+    "Product Catalog Microservice",
+    "User Microservice"
+  ]
+}

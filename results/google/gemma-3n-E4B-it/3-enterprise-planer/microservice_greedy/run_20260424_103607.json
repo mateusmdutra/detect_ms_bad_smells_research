@@ -1,0 +1,12 @@
+{
+  "smell": "microservice_greedy",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "3",
+  "explanation": "The API Gateway is handling authentication and authorization, which are distinct responsibilities. While the API Gateway's role is to manage traffic and provide a single entry point, it shouldn't be responsible for core business logic like authentication and authorization.  The Authentication and Authorization services are also tightly coupled to the API Gateway, suggesting a potential for the API Gateway to become overly complex and a bottleneck. This violates the single responsibility principle and indicates a likely presence of the Microservice Greedy smell.",
+  "involved_services": [
+    "API Gateway",
+    "Authentication",
+    "Authorization"
+  ]
+}

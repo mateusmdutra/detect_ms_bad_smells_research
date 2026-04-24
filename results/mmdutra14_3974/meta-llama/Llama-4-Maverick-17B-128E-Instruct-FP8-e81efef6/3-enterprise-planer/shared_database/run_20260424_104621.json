@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "2",
+  "explanation": "The diagram does not explicitly show the databases or data stores associated with each microservice. However, it illustrates a well-structured microservices architecture where each service is separate and communicates through the API Gateway. Without direct evidence of shared databases, and given the typical design principle of microservices having their own databases, the presence of the Shared Database smell is considered unlikely.",
+  "involved_services": []
+}

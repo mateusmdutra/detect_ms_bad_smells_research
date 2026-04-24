@@ -1,0 +1,12 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "6-spinnaker.png",
+  "confidence": "3",
+  "explanation": "There appears to be a cyclic dependency between Keel, Igor, and Echo. Keel depends on Igor, Igor depends on Echo, and Echo depends on Keel, forming a circular chain. This makes independent deployment of these three services problematic and increases the risk of cascading failures.",
+  "involved_services": [
+    "Keel",
+    "Igor",
+    "Echo"
+  ]
+}

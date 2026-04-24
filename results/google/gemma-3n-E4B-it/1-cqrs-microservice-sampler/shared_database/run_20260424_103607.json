@@ -1,0 +1,11 @@
+{
+  "smell": "shared_database",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "4",
+  "explanation": "The diagram clearly shows both the Query Microservice and the Command Microservice interacting with the MongoDB database. This indicates a shared database, which is a strong indicator of the Shared Database anti-pattern.  Both services likely read and write data to the same MongoDB instance, creating a tight coupling between them.",
+  "involved_services": [
+    "Query Microservice",
+    "Command Microservice"
+  ]
+}

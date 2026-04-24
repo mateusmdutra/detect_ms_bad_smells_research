@@ -1,0 +1,19 @@
+{
+  "smell": "no_api_gateway",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "3",
+  "explanation": "The diagram shows direct communication between various client applications (Customer Management Frontend, Customer Self-Service Frontend, Policy Management Frontend, Risk Management Client) and internal microservices (Customer Management Backend, Customer Self-Service Backend, Policy Management Backend, Risk Management Server, Customer Core, Spring Boot Admin). There is no central API Gateway to handle routing, authentication, rate limiting, or other cross-cutting concerns. This indicates a potential 'No API Gateway' anti-pattern.",
+  "involved_services": [
+    "Customer Management Backend",
+    "Customer Self-Service Backend",
+    "Policy Management Backend",
+    "Risk Management Server",
+    "Customer Management Frontend",
+    "Customer Self-Service Frontend",
+    "Policy Management Frontend",
+    "Risk Management Client",
+    "Customer Core",
+    "Spring Boot Admin"
+  ]
+}
