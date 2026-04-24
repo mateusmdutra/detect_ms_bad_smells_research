@@ -1,0 +1,18 @@
+{
+  "smell": "nano_service",
+  "model": "gpt-5.3-codex",
+  "diagram": "9-vehicle-tracking-microservices.jpg",
+  "confidence": "3",
+  "explanation": "The diagram suggests a highly decomposed landscape with many narrowly scoped components (multiple Lambda units, generic small utility services, adapters, and separate operational capabilities). Several boxes appear to represent single technical functions rather than cohesive business capabilities, which is a common indicator of nano services. However, the diagram is high-level and lacks size/team/deployment details, so this is likely rather than certain.",
+  "involved_services": [
+    "Service 1",
+    "Service N",
+    "Lambda",
+    "Lambda calc. Engine",
+    "Adapters",
+    "Scheduling",
+    "Identity",
+    "Archiving/History",
+    "Monitoring/Audit."
+  ]
+}

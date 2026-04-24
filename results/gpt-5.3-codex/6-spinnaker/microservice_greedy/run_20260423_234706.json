@@ -1,0 +1,13 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.3-codex",
+  "diagram": "6-spinnaker.png",
+  "confidence": "4",
+  "explanation": "The diagram shows strong hub-like concentration, especially in Gate, which has many inbound and outbound dependencies and acts as a central coordinator across numerous services. Orca and Keel also appear highly connected, indicating orchestration and cross-cutting responsibility accumulation. Fiat is another shared dependency with many connections. This level of centralization suggests one or more services are taking on too many responsibilities, creating monolith-like bottlenecks and indicating a clearly present Microservice Greedy smell.",
+  "involved_services": [
+    "Gate",
+    "Orca",
+    "Keel",
+    "Fiat"
+  ]
+}

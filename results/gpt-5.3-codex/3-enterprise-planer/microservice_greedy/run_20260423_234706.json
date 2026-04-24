@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.3-codex",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "2",
+  "explanation": "The diagram shows a central API Gateway with many dependencies to downstream services, but its responsibilities appear mostly infrastructural (single entry point and protocol translation), which is normal for this pattern. Business domains (Customers, Orders, Shipping, Production, Quality, Administration) are still separated into distinct microservices. So while the gateway is highly connected, there is limited evidence that it has absorbed excessive business responsibilities characteristic of a greedy microservice.",
+  "involved_services": [
+    "API Gateway"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.3-codex",
+  "diagram": "9-vehicle-tracking-microservices.jpg",
+  "confidence": "3",
+  "explanation": "The diagram suggests central concentration around a few broad services/components: a Facade service layer, API Gateway, and Workflow/Reporting blocks that appear to coordinate many domains and integrations. This indicates likely responsibility aggregation and dependency centralization (potential bottlenecks), but the diagram is high-level and does not prove implementation-level overreach, so the smell is likely rather than clearly confirmed.",
+  "involved_services": [
+    "Facade Srv (Srv1..N)",
+    "API Gateway",
+    "Workflows",
+    "Reporting / Data / DSS"
+  ]
+}

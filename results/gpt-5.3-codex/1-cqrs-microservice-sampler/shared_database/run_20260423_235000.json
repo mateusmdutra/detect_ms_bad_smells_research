@@ -1,0 +1,12 @@
+{
+  "smell": "shared_database",
+  "model": "gpt-5.3-codex",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "2",
+  "explanation": "The diagram shows a single MongoDB component used for persistent event storage in a CQRS setup, but it does not clearly depict multiple services directly reading/writing the same operational database schema. Command and Query are separated and RabbitMQ is used for event distribution, which is consistent with decoupled CQRS/event-driven patterns rather than an obvious shared-database anti-pattern. Shared DB is possible, but not clearly indicated.",
+  "involved_services": [
+    "Command Microservice",
+    "Query Microservice",
+    "MongoDB"
+  ]
+}

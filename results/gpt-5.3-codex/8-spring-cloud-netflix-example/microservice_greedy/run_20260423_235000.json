@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.3-codex",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "2",
+  "explanation": "The diagram shows responsibilities split across distinct services (Service-A and Service-B) with replicated instances, while cross-cutting concerns are handled by infrastructure components (Zuul, Config Center, Eureka, RabbitMQ, Zipkin, Hystrix Dashboard, Spring Boot Admin). No single business service appears overloaded with many heterogeneous responsibilities or excessive direct dependencies. The architecture looks more like a standard microservice platform setup than a greedy microservice.",
+  "involved_services": [
+    "Service-A",
+    "Service-B"
+  ]
+}

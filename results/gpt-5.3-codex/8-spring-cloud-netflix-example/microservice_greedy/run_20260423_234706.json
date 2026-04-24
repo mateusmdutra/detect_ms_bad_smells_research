@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.3-codex",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "2",
+  "explanation": "The diagram shows Service-A and Service-B as separate, replicated services behind Zuul, with shared infrastructure components (Config Center, Eureka, RabbitMQ, Zipkin, Hystrix, Spring Boot Admin). No single business service appears overloaded with many distinct responsibilities or excessive direct dependencies compared to others. Most centralization is in platform/ops components, which is typical in microservice ecosystems rather than a clear greedy microservice.",
+  "involved_services": [
+    "Service-A",
+    "Service-B"
+  ]
+}

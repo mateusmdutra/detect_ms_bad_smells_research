@@ -1,0 +1,15 @@
+{
+  "smell": "no_api_gateway",
+  "model": "gpt-5.3-codex",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "1",
+  "explanation": "The diagram explicitly includes API Gateways/BFF components (Mobile-Shopping and Web-Shopping) between client apps and internal microservices. This indicates a unified entry layer per client type, so the 'No API Gateway' smell is not present.",
+  "involved_services": [
+    "Mobile-Shopping API Gateway/BFF",
+    "Web-Shopping API Gateway/BFF",
+    "Identity microservice",
+    "Catalog microservice",
+    "Ordering microservice",
+    "Basket microservice"
+  ]
+}

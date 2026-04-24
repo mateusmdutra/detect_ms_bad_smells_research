@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.3-codex",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "2",
+  "explanation": "The diagram shows responsibilities split across distinct services (Gateway, Discovery, Command, Query, Config) with separate infrastructure components (MongoDB, RabbitMQ), which aligns with CQRS and does not strongly indicate a single overgrown service. The Command service is central and may be dependency-heavy, and the Gateway can become a chokepoint if it accumulates business logic, but based on the diagram alone this appears architectural centrality rather than clear Microservice Greedy.",
+  "involved_services": [
+    "Command Microservice",
+    "Gateway Microservice"
+  ]
+}

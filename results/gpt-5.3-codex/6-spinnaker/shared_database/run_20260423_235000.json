@@ -1,0 +1,15 @@
+{
+  "smell": "shared_database",
+  "model": "gpt-5.3-codex",
+  "diagram": "6-spinnaker.png",
+  "confidence": "2",
+  "explanation": "The diagram shows many service-to-service calls, with Fiat acting as a shared service dependency for multiple components. However, it does not explicitly depict any database/data-store nodes or multiple services directly connected to the same database. So a shared database cannot be clearly confirmed from this diagram alone; at most it is only weakly suggested by centralized access patterns around Fiat/Front50.",
+  "involved_services": [
+    "Fiat",
+    "Front50",
+    "Clouddriver",
+    "Orca",
+    "Gate",
+    "Keel"
+  ]
+}

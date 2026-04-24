@@ -1,0 +1,8 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "gpt-5.3-codex",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "1",
+  "explanation": "The diagram shows client apps and API gateways calling individual microservices (Identity, Catalog, Ordering, Basket), with asynchronous integration through an event bus. Dependencies appear hub-and-spoke via the gateway/event bus rather than direct service-to-service loops, and no explicit circular chain (A \u2192 B \u2192 C \u2192 A) is depicted.",
+  "involved_services": []
+}

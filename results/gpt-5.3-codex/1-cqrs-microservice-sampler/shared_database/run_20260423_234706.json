@@ -1,0 +1,12 @@
+{
+  "smell": "shared_database",
+  "model": "gpt-5.3-codex",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "2",
+  "explanation": "The diagram shows a single MongoDB component used for persistent event storage in a CQRS setup, with Command and Query services around it. However, it does not explicitly show both services directly reading/writing the same database schema/tables. In CQRS, shared infrastructure like an event store can be intentional rather than a shared-database anti-pattern. So the smell is possible but not clearly evidenced.",
+  "involved_services": [
+    "Command Microservice",
+    "Query Microservice",
+    "MongoDB"
+  ]
+}

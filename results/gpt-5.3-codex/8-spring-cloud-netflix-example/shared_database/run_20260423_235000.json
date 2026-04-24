@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "gpt-5.3-codex",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "1",
+  "explanation": "The diagram shows Service-A and Service-B clusters interacting with infrastructure components (Zuul, Config Center, Eureka, RabbitMQ, Zipkin, Admin/Hystrix), but no database or datastore is depicted, and no shared data-layer access is shown. Therefore, there is no visible evidence of a Shared Database smell.",
+  "involved_services": []
+}

@@ -1,0 +1,13 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "gpt-5.3-codex",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "4",
+  "explanation": "A clear cycle is visible among backend services: Customer Management Backend \u2192 Spring Boot Admin \u2192 Customer Self-Service Backend \u2192 Customer Management Backend. Another cycle is also present via Policy Management Backend: Customer Self-Service Backend \u2194 Policy Management Backend (bidirectional ActiveMQ) and Spring Boot Admin \u2192 Policy Management Backend \u2192 Customer Core with returns into the same backend cluster. These circular chains indicate tightly coupled services and support a clear Cyclic Dependency smell.",
+  "involved_services": [
+    "Customer Management Backend",
+    "Spring Boot Admin",
+    "Customer Self-Service Backend",
+    "Policy Management Backend"
+  ]
+}

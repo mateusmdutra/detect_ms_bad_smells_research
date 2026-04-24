@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "gpt-5.3-codex",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "1",
+  "explanation": "The diagram shows each microservice paired with a different data store technology (Product Catalog\u2192MongoDB, Shopping Cart\u2192Redis, Search\u2192Elasticsearch, User\u2192PostgreSQL), and no datastore is depicted as being accessed by multiple services. Based on the visual evidence, a shared database is not present.",
+  "involved_services": []
+}

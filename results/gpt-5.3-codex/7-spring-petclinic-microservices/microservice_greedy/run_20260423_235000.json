@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.3-codex",
+  "diagram": "7-spring-petclinic-microservices.jpg",
+  "confidence": "3",
+  "explanation": "The \"UI + API Gateway\" appears to combine multiple concerns in a single component: serving static UI resources, handling client REST entry, service routing/load-balancing orchestration, and central integration with several backend services. This concentration of responsibilities and fan-out dependency pattern suggests a likely Microservice Greedy tendency (gateway becoming a mini-monolith/bottleneck). Other domain services (customers, genai, vets, pets) look more focused, each with its own datastore, so the smell is mainly centered on the gateway component.",
+  "involved_services": [
+    "UI + API Gateway"
+  ]
+}

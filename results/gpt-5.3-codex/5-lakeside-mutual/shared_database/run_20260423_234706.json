@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "gpt-5.3-codex",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "2",
+  "explanation": "The diagram shows multiple service-to-service communications (HTTP, gRPC, ActiveMQ) but does not depict any databases or data stores, nor multiple services connected to the same datastore. Therefore, shared database usage is not evidenced from this diagram.",
+  "involved_services": []
+}

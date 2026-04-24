@@ -1,0 +1,17 @@
+{
+  "smell": "no_api_gateway",
+  "model": "gpt-5.3-codex",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "4",
+  "explanation": "Multiple external clients/frontends connect directly to individual backend services (HTTP/WebSocket/gRPC), and there is no single ingress component shown acting as an API Gateway. This exposes internal service topology and implies cross-cutting concerns would need to be duplicated across services.",
+  "involved_services": [
+    "Customer Management Frontend",
+    "Customer Self-Service Frontend",
+    "Policy Management Frontend",
+    "Risk Management Client",
+    "Customer Management Backend",
+    "Customer Self-Service Backend",
+    "Policy Management Backend",
+    "Risk Management Server"
+  ]
+}

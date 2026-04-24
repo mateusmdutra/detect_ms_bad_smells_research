@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "gpt-5.3-codex",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "1",
+  "explanation": "The diagram shows each core microservice owning its own data store (Identity -> SQL Server DB, Catalog -> SQL Server DB, Ordering -> SQL Server DB, Basket -> Redis). Although several use the same DB technology, they are depicted as separate databases per service, not a single shared database instance/schema across services.",
+  "involved_services": []
+}

@@ -1,0 +1,11 @@
+{
+  "smell": "nano_service",
+  "model": "gpt-5.3-codex",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "2",
+  "explanation": "The domain services (Customers, Orders, Shipping, Production, Quality, Administration) look reasonably business-aligned rather than trivially fine-grained. Authentication and Authorization are small in scope, but they are common cross-cutting security capabilities that are often justified as separate services. Based on the diagram alone, Nano Service is unlikely, though security services are the main candidates to review for over-fragmentation.",
+  "involved_services": [
+    "Authentication",
+    "Authorization"
+  ]
+}

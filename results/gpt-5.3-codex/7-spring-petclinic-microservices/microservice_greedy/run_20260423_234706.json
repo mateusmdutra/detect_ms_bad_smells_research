@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.3-codex",
+  "diagram": "7-spring-petclinic-microservices.jpg",
+  "confidence": "3",
+  "explanation": "The \"UI + API Gateway\" appears to combine multiple responsibilities (serving static UI resources and acting as the central API routing/orchestration point to several backend services). It is also a high-dependency hub connected to most domain services, which can create a bottleneck and monolith-like centralization. While backend domain services (customers, pets, vets, genai) still look separated with dedicated data stores, the gateway\u2019s mixed concerns make the greedy smell likely rather than unequivocally clear.",
+  "involved_services": [
+    "UI + API Gateway"
+  ]
+}

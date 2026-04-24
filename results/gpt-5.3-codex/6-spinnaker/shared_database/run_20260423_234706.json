@@ -1,0 +1,15 @@
+{
+  "smell": "shared_database",
+  "model": "gpt-5.3-codex",
+  "diagram": "6-spinnaker.png",
+  "confidence": "3",
+  "explanation": "The diagram shows many services directly interacting with Fiat, suggesting a shared central data/authorization store used across multiple services. This indicates likely shared-database-style coupling. However, the diagram does not explicitly label database instances, so the smell is likely rather than unequivocally clear.",
+  "involved_services": [
+    "Gate",
+    "Keel",
+    "Orca",
+    "Clouddriver",
+    "Front50",
+    "Fiat"
+  ]
+}

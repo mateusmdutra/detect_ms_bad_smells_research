@@ -1,0 +1,14 @@
+{
+  "smell": "no_api_gateway",
+  "model": "gpt-5.3-codex",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "4",
+  "explanation": "The diagram shows the Store UI calling multiple backend microservices directly (Product Catalog, User, Shopping Cart, Search) with no intermediary gateway/BFF/edge service. This indicates external-facing clients are coupled to internal service topology and cross-cutting concerns would need to be handled in each service or client, which is a clear No API Gateway smell.",
+  "involved_services": [
+    "e-commerce Store UI",
+    "Product Catalog Microservice",
+    "User Microservice",
+    "Shopping Cart Microservice",
+    "Search Microservice"
+  ]
+}

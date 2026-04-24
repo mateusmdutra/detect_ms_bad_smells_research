@@ -1,0 +1,8 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.3-codex",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "1",
+  "explanation": "The diagram shows responsibilities split across distinct domain-focused services (Product Catalog, Shopping Cart, Search, User), each with its own tech stack and datastore. There is no visible single backend service accumulating many domains or acting as a central dependency hub; the Store UI is an entry point calling multiple services, which is expected in a microservice frontend pattern.",
+  "involved_services": []
+}

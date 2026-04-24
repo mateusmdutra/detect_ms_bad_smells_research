@@ -1,0 +1,11 @@
+{
+  "smell": "nano_service",
+  "model": "gpt-5.3-codex",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "3",
+  "explanation": "The diagram shows several narrowly scoped backend services with significant cross-service HTTP calls and messaging, suggesting possible over-fragmentation. In particular, 'Spring Boot Admin' appears as a standalone service interacting with multiple domain backends, and 'Customer Core' appears as a thin shared core dependency. These may represent responsibilities that are too small or infrastructural to justify independent deployable units in this topology, increasing communication and operational overhead. However, without runtime sizing/ownership data, this is likely rather than certain.",
+  "involved_services": [
+    "Spring Boot Admin",
+    "Customer Core"
+  ]
+}

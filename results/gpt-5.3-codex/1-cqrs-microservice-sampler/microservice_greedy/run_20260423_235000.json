@@ -1,0 +1,12 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.3-codex",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "2",
+  "explanation": "The diagram shows a fairly standard CQRS split with distinct services for gateway, discovery, command, query, config, messaging (RabbitMQ), and persistence (MongoDB). Responsibilities appear separated rather than concentrated in a single oversized service. While the Command and Query services are central and may grow complex, the architecture as depicted does not clearly indicate one service accumulating excessive cross-cutting responsibilities or dependencies.",
+  "involved_services": [
+    "Command Microservice",
+    "Query Microservice",
+    "Gateway Microservice"
+  ]
+}

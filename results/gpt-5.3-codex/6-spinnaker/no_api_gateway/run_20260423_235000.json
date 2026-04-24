@@ -1,0 +1,12 @@
+{
+  "smell": "no_api_gateway",
+  "model": "gpt-5.3-codex",
+  "diagram": "6-spinnaker.png",
+  "confidence": "1",
+  "explanation": "The diagram shows external clients (Deck and Custom Script/API Caller) entering through a single service, Gate, which acts as a unified entry point before reaching internal services. This indicates an API gateway pattern is present rather than missing.",
+  "involved_services": [
+    "Gate",
+    "Deck",
+    "Custom Script/API Caller"
+  ]
+}

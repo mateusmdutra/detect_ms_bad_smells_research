@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.3-codex",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "2",
+  "explanation": "The diagram shows the API Gateway as a central hub connected to many domain microservices, plus authentication/authorization and protocol translation. While this creates high coupling and potential bottleneck risk, these responsibilities are typical for an API Gateway pattern and do not clearly indicate a domain-responsibility accumulation equivalent to a monolith. No single business microservice appears overloaded with multiple unrelated business capabilities.",
+  "involved_services": [
+    "API Gateway"
+  ]
+}

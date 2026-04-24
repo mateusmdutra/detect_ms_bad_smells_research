@@ -1,0 +1,13 @@
+{
+  "smell": "nano_service",
+  "model": "gpt-5.3-codex",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "2",
+  "explanation": "The core business services appear aligned to distinct bounded contexts (identity, catalog, ordering, basket) and each owns its own datastore, which argues against trivially small nano-services. While some supporting components (e.g., Webhooks API, Web Status, background tasks) are relatively narrow, the diagram does not clearly show them as excessively fragmented deployables causing disproportionate communication overhead.",
+  "involved_services": [
+    "Identity microservice",
+    "Basket microservice",
+    "Catalog microservice",
+    "Ordering microservice"
+  ]
+}

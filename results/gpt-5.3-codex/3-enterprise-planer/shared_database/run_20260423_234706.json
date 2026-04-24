@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "gpt-5.3-codex",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "1",
+  "explanation": "The diagram shows an API Gateway, authentication/authorization components, and multiple domain microservices, but it does not depict any databases or data stores, nor connections from multiple services to a common datastore. Based on the visible elements, there is no explicit evidence of a shared database.",
+  "involved_services": []
+}

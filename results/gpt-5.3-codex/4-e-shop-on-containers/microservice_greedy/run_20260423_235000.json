@@ -1,0 +1,11 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.3-codex",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "2",
+  "explanation": "The diagram shows a relatively well-separated domain decomposition (Identity, Catalog, Ordering, Basket) with dedicated data stores per service and communication through an event bus/API gateway, which argues against a clearly greedy microservice. The Ordering microservice includes both API and background tasks, and Identity combines STS and users, which could indicate slightly broader scope, but not enough evidence of monolith-like responsibility accumulation.",
+  "involved_services": [
+    "Identity microservice",
+    "Ordering microservice"
+  ]
+}

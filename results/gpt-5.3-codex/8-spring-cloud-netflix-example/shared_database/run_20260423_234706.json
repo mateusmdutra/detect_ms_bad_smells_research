@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "gpt-5.3-codex",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "1",
+  "explanation": "The diagram shows Service-A and Service-B clusters interacting with Config Center/Eureka and messaging/monitoring components (RabbitMQ, Zipkin, Hystrix Dashboard, Spring Boot Admin), but no database or shared data store is depicted. Therefore, there is no visible evidence of multiple services sharing the same database.",
+  "involved_services": []
+}

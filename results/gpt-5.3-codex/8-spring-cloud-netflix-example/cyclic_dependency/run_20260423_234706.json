@@ -1,0 +1,8 @@
+{
+  "smell": "cyclic_dependency",
+  "model": "gpt-5.3-codex",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "2",
+  "explanation": "The diagram shows Service-A and Service-B behind Zuul, with connections to Config Center, Eureka, and RabbitMQ, but it does not depict any clear service-to-service call chain that loops back (e.g., A -> B -> A or longer cycle). Most arrows are between infrastructure components and appear discovery/configuration/messaging related rather than explicit mutual runtime dependencies between business services.",
+  "involved_services": []
+}

@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "gpt-5.3-codex",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "1",
+  "explanation": "The diagram shows each microservice paired with its own distinct data store technology: Product Catalog with MongoDB, Shopping Cart with Redis, Search with Elasticsearch, and User with PostgreSQL. There are no depicted connections indicating multiple services sharing the same database instance. Based on the diagram, the Shared Database smell is not present.",
+  "involved_services": []
+}

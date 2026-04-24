@@ -1,0 +1,15 @@
+{
+  "smell": "shared_database",
+  "model": "gpt-5.3-codex",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "2",
+  "explanation": "The diagram shows multiple service-to-service calls (HTTP, gRPC, ActiveMQ) but does not explicitly depict any database/data store nodes being shared by multiple services. Since shared persistence is not shown, Shared Database is unlikely present based on this diagram alone.",
+  "involved_services": [
+    "Customer Management Backend",
+    "Customer Self-Service Backend",
+    "Policy Management Backend",
+    "Risk Management Server",
+    "Customer Core",
+    "Spring Boot Admin"
+  ]
+}

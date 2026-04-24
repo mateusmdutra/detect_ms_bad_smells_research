@@ -1,0 +1,17 @@
+{
+  "smell": "no_api_gateway",
+  "model": "gpt-5.3-codex",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "4",
+  "explanation": "The diagram shows multiple external/client-facing frontends and clients calling backend services directly over HTTP/WebSocket/gRPC (e.g., frontends to Customer Management Backend, Customer Self-Service Backend, Policy Management Backend, and Risk Management Client to Risk Management Server). There is no dedicated API Gateway/BFF entry point mediating inbound traffic. This exposes internal service topology and indicates cross-cutting concerns would be duplicated across services, which clearly matches the No API Gateway smell.",
+  "involved_services": [
+    "Customer Management Frontend",
+    "Customer Self-Service Frontend",
+    "Policy Management Frontend",
+    "Risk Management Client",
+    "Customer Management Backend",
+    "Customer Self-Service Backend",
+    "Policy Management Backend",
+    "Risk Management Server"
+  ]
+}

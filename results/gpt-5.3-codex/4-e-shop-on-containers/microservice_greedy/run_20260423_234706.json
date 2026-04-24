@@ -1,0 +1,13 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.3-codex",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "2",
+  "explanation": "The diagram shows a fairly well-bounded decomposition: separate services for identity, catalog, ordering, and basket, each with its own datastore/cache and event-driven integration via an event bus. No single microservice appears to own an excessive number of unrelated responsibilities. The Ordering microservice contains API and background tasks, which increases scope slightly, but still remains within the ordering domain boundary. Overall, Microservice Greedy is unlikely in this architecture.",
+  "involved_services": [
+    "Identity microservice",
+    "Catalog microservice",
+    "Ordering microservice",
+    "Basket microservice"
+  ]
+}

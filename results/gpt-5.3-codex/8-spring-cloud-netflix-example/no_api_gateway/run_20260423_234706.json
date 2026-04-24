@@ -1,0 +1,12 @@
+{
+  "smell": "no_api_gateway",
+  "model": "gpt-5.3-codex",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "1",
+  "explanation": "The diagram shows external traffic entering through Zuul before reaching internal services (Service-A/Service-B clusters). Zuul serves as a unified entry point/API gateway, so the 'No API Gateway' smell is not present.",
+  "involved_services": [
+    "Zuul",
+    "Service-A",
+    "Service-B"
+  ]
+}

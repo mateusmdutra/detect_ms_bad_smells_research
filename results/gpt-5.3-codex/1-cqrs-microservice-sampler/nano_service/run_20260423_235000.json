@@ -1,0 +1,12 @@
+{
+  "smell": "nano_service",
+  "model": "gpt-5.3-codex",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "2",
+  "explanation": "The diagram shows a standard CQRS/supporting-infrastructure split where Discovery, Config, and Gateway each have narrowly scoped responsibilities, but these are common platform capabilities rather than clear business nano-services. Command and Query are appropriately separated, and MongoDB/RabbitMQ are infrastructure components. Without evidence of excessive service count within business domains or chatty calls caused by over-fragmentation, Nano Service is unlikely, though the support services are the closest candidates.",
+  "involved_services": [
+    "Discovery Microservice",
+    "Config Microservice",
+    "Gateway Microservice"
+  ]
+}

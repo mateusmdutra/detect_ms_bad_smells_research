@@ -1,0 +1,11 @@
+{
+  "smell": "nano_service",
+  "model": "gpt-5.3-codex",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "3",
+  "explanation": "The diagram suggests Authentication and Authorization are isolated as standalone services with very narrow, single-purpose responsibilities (token validation and permission check) and are invoked through the API Gateway. This can indicate over-fragmentation into tiny deployables, especially if they mainly act as thin checks rather than substantial domain capabilities. However, these are also common cross-cutting concerns that are often separated intentionally, so the smell is likely but not unequivocal.",
+  "involved_services": [
+    "Authentication",
+    "Authorization"
+  ]
+}

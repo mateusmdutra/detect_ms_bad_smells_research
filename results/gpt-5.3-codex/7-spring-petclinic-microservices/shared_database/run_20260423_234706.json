@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "gpt-5.3-codex",
+  "diagram": "7-spring-petclinic-microservices.jpg",
+  "confidence": "1",
+  "explanation": "The diagram shows each business service (customers-service, vets-service, pets-service, genai-service) with its own dedicated datastore (separate RDBMS or vector store) and no datastore is depicted as being accessed by multiple services. This suggests database-per-service rather than a shared database.",
+  "involved_services": []
+}

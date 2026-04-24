@@ -1,0 +1,8 @@
+{
+  "smell": "microservice_greedy",
+  "model": "gpt-5.3-codex",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "1",
+  "explanation": "The diagram shows a relatively clean separation of concerns across distinct services (Product Catalog, Shopping Cart, Search, User), each mapped to a specific business capability and its own technology/data stack. There is no single backend service with visibly excessive responsibilities or an unusually high number of dependencies. The UI communicates with multiple services, but that alone does not indicate a greedy microservice.",
+  "involved_services": []
+}
