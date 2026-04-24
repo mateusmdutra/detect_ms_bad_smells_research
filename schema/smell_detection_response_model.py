@@ -9,6 +9,8 @@ class ModelEnum(Enum):
     DEEPSEEK = 'mmdutra14_3974/deepseek-ai/DeepSeek-OCR-2-b91bd70c'
     QWEN = 'qwen-vl-max'
     GEMINI = 'gemini-2.5-pro'
+    LLAMA = 'meta-llama/Llama-3.3-70B-Instruct-Turbo'
+    MISTRAL = 'mistralai/Mistral-Small-24B-Instruct-2501'
 
 class LikertScaleOption(Enum):
     NOT_PRESENT = '1'
