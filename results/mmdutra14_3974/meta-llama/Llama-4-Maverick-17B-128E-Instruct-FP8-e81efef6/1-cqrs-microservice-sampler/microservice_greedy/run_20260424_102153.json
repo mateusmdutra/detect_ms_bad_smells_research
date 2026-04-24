@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "2",
+  "explanation": "The Command Microservice is responsible for command processing, which could be a single responsibility. However, it is connected to MongoDB, indicating it might be handling data storage or retrieval directly, and to RabbitMQ, suggesting it is involved in event distribution. While this indicates some level of dependency and responsibility, the diagram does not clearly show it has 'too many responsibilities' or is behaving like a monolith. The architecture appears to be generally well-structured with clear separation of concerns among services.",
+  "involved_services": [
+    "Command Microservice"
+  ]
+}

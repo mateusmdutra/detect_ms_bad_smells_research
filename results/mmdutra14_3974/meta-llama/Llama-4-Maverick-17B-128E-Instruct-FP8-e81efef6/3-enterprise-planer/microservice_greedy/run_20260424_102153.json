@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "2",
+  "explanation": "The API Gateway is acting as an intermediary for all requests from the front-end application to various microservices, converting JSON requests to Google protobuf and vice versa. While it has a clear responsibility as an entry point, its role in converting data formats for inter-microservice communication could be seen as taking on too much responsibility. However, this is a common pattern in microservice architectures, and the API Gateway is not directly handling business logic or accumulating dependencies in a way that violates the single responsibility principle severely. Thus, the presence of the Microservice Greedy smell is considered unlikely.",
+  "involved_services": [
+    "API Gateway"
+  ]
+}

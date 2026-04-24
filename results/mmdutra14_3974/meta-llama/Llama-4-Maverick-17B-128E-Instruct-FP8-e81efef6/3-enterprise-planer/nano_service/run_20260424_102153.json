@@ -1,0 +1,11 @@
+{
+  "smell": "nano_service",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "2",
+  "explanation": "The 'Authorization' and 'Authentication' services are relatively simple and focused on specific tasks. However, authentication and authorization are typically considered crucial and complex enough to warrant their own services in many architectures. Without more detailed information about their internal complexity or the specific responsibilities they handle beyond what's described, it's hard to definitively classify them as nano services. They might be justified as separate services due to their importance in security and the need for independent scaling or updating.",
+  "involved_services": [
+    "Authorization",
+    "Authentication"
+  ]
+}

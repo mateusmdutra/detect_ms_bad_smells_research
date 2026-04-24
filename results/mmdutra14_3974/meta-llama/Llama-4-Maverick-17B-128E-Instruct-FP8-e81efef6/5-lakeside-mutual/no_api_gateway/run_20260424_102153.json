@@ -1,0 +1,13 @@
+{
+  "smell": "no_api_gateway",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "5-lakeside-mutual.png",
+  "confidence": "4",
+  "explanation": "The diagram shows multiple frontend services (Customer Management Frontend, Customer Self-Service Frontend, Policy Management Frontend, Risk Management Client) directly communicating with various backend services (Customer Management Backend, Customer Self-Service Backend, Policy Management Backend, Risk Management Server) without a unified entry point. This exposes the internal topology and complicates cross-cutting concerns such as authentication, rate limiting, and routing, indicating the presence of the No API Gateway smell.",
+  "involved_services": [
+    "Customer Management Frontend",
+    "Customer Self-Service Frontend",
+    "Policy Management Frontend",
+    "Risk Management Client"
+  ]
+}

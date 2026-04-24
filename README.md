@@ -28,7 +28,7 @@ Previous study: [From Detection to Refactoring of Microservice Bad Smells: A Sys
 | `deepseek` | DeepSeek Coder V2 |
 | `qwen` | Qwen3 Coder Plus |
 | `gemini` | Gemini 2.5 Pro |
-| `llama` |  Llama 3.3 Instruct Turbo |
+| `llama` |  Llama 4 Maverick |
 | `mistral` | Mistral Small Instruct | 
 
 ---

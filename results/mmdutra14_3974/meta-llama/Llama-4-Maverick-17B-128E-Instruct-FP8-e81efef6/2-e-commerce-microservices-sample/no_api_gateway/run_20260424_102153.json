@@ -1,0 +1,14 @@
+{
+  "smell": "no_api_gateway",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "2-e-commerce-microservices-sample.png",
+  "confidence": "4",
+  "explanation": "The e-commerce Store UI directly communicates with multiple internal microservices (Product Catalog Microservice, User Microservice, Shopping Cart Microservice, and Search Microservice), indicating a lack of a unified entry point or API Gateway. This exposes the internal topology and complicates cross-cutting concerns.",
+  "involved_services": [
+    "e-commerce Store UI",
+    "Product Catalog Microservice",
+    "User Microservice",
+    "Shopping Cart Microservice",
+    "Search Microservice"
+  ]
+}

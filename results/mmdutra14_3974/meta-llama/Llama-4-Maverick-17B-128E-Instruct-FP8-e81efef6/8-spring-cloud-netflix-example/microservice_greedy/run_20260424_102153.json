@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "8-spring-cloud-netflix-example.png",
+  "confidence": "2",
+  "explanation": "The Config Center is connected to multiple services (Service A Cluster and Service B Cluster) and other infrastructure components (Eureka, Rabbit MQ), which might indicate a high number of dependencies. However, its role appears to be more related to configuration management, which is a specific responsibility. The number of connections alone is not sufficient to conclusively determine it is 'Microservice Greedy' without understanding the complexity of its responsibilities.",
+  "involved_services": [
+    "Config Center"
+  ]
+}

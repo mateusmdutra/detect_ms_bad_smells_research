@@ -1,0 +1,8 @@
+{
+  "smell": "no_api_gateway",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "1",
+  "explanation": "The diagram clearly shows an API Gateway acting as a single entry point for the frontend application, routing requests to various microservices. This indicates that the 'No API Gateway' smell is not present.",
+  "involved_services": []
+}

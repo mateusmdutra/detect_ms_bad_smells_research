@@ -1,0 +1,10 @@
+{
+  "smell": "shared_database",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "2",
+  "explanation": "The diagram shows that only the Command Microservice is connected to MongoDB, while other microservices are not directly connected to the same database. Although MongoDB is used for persistent event storage, there is no clear indication that it is shared among multiple services. Therefore, the confidence level is 'Unlikely present'.",
+  "involved_services": [
+    "Command Microservice"
+  ]
+}

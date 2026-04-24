@@ -1,0 +1,8 @@
+{
+  "smell": "shared_database",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "3-enterprise-planer.png",
+  "confidence": "2",
+  "explanation": "The diagram does not explicitly show any database or data store being shared among the microservices. While it illustrates multiple microservices, it does not provide information about their data storage or whether they share a database. Therefore, based on the given diagram, it is unlikely to confirm the presence of the Shared Database smell.",
+  "involved_services": []
+}

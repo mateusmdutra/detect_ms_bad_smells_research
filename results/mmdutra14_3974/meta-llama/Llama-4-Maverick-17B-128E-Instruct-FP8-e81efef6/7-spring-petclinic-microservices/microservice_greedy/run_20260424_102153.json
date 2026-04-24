@@ -1,0 +1,10 @@
+{
+  "smell": "microservice_greedy",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "7-spring-petclinic-microservices.jpg",
+  "confidence": "3",
+  "explanation": "The UI + API Gateway service is likely to be greedy because it is handling both UI and API gateway responsibilities, and is directly interacting with multiple other services, which could be a sign of accumulated responsibilities and dependencies.",
+  "involved_services": [
+    "UI + API Gateway"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "smell": "no_api_gateway",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "1-cqrs-microservice-sampler.png",
+  "confidence": "1",
+  "explanation": "The diagram shows a 'Gateway Microservice' that allows traffic to be routed and load balanced, indicating the presence of an API Gateway. This suggests that external clients communicate through a unified entry point, mitigating the 'No API Gateway' smell.",
+  "involved_services": []
+}

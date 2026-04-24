@@ -1,0 +1,8 @@
+{
+  "smell": "no_api_gateway",
+  "model": "mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6",
+  "diagram": "4-e-shop-on-containers.png",
+  "confidence": "1",
+  "explanation": "The diagram shows the presence of 'API Gateways/BFF' which acts as a single entry point for external clients, thus avoiding the 'No API Gateway' smell. The 'eShop mobile app', 'eShop traditional Web app', and 'eShop SPA Web app' all communicate with the internal services through the 'API Gateways/BFF', specifically through 'Mobile-Shopping' and 'Web-Shopping' gateways.",
+  "involved_services": []
+}
