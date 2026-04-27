@@ -3,3 +3,4 @@ openai
 google-generativeai
 pydantic
 python-dotenv
+scikit-learn
