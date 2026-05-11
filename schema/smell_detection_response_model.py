@@ -6,10 +6,9 @@ class ModelEnum(Enum):
     OPENAI = 'gpt-5.4'
     OPENAI_CODEX = 'gpt-5.3-codex'
     CLAUDE = 'claude-sonnet-4-6'
-    DEEPSEEK = 'mmdutra14_3974/deepseek-ai/DeepSeek-OCR-2-b91bd70c'
     QWEN = 'qwen-vl-max'
     GEMINI = 'gemini-2.5-pro'
-    LLAMA = 'mmdutra14_3974/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8-e81efef6'
+    LLAMA = 'llama-4-Maverick'
     GEMMA = 'google/gemma-3n-E4B-it'
 
 class LikertScaleOption(Enum):
