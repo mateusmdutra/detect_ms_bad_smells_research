@@ -2,8 +2,6 @@
 
 Research experiment that uses Large Language Models to detect bad smells in microservice architectures from architecture diagrams.
 
-Previous study: [From Detection to Refactoring of Microservice Bad Smells: A Systematic Literature Review](https://journals-sol.sbc.org.br/index.php/jserd/article/view/5224)
-
 ---
 
 ## Bad Smells Detected
