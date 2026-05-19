@@ -120,8 +120,3 @@ results/<model>/<diagram>/<smell>/run_<YYYYMMDD_HHMMSS>.json
 ├── requirements.txt
 └── .env               # API keys (not committed)
 ```
-
----
-
-**Author:** Mateus Dutra <br/>
-**Affiliation:** Federal University of Minas Gerais
